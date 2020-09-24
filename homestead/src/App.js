@@ -5,6 +5,7 @@ import Calendar from './Calendar';
 import Profile from './Profile';
 import Leaderboard from './Leaderboard';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import SignUp from './SignUp';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/calendar" component={Calendar} />
           <Route path="/leaderboard" component={Leaderboard} />
           <Route path="/profile" component={Profile} />
+          <SignUp path="/signUp" component={SignUp} />
         </Switch>
       </div>
     </Router>
