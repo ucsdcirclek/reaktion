@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
+import * as firebase from 'firebase';
 
-class NameForm extends React.Component {
+class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {emailValue: '', passValue: ''};
@@ -22,8 +23,17 @@ class NameForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name and password was submitted: ' + this.state.value);
+    alert('A name and password was submitted: ' + this.state.emailValue);
     event.preventDefault();
+    
+    const email = this.state.emailValue;
+    const password = this.state.passValue;
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    });
   }
 
   render() {
@@ -55,9 +65,12 @@ function Profile() {
   return (
     <div>
       <h1>Profile Page</h1>
-      <h2>Sign Up</h2>
-      <NameForm />
+      <h2 id="sign-Up">Sign Up</h2>
+      <SignUp />
+      <h2 id="sign-in">Sign In</h2>
+      <SignUp />
     </div>
+
     
   );
 }
