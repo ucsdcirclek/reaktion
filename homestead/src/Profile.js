@@ -5,10 +5,11 @@ import * as firebase from 'firebase';
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {emailValue: '', passValue: ''};
+    this.state = {emailValue: '', passValue: '', passValueVerify: ''};
 
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangePass = this.handleChangePass.bind(this);
+    this.handleChangePassVerify = this.handleChangePassVerify.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -22,18 +23,28 @@ class SignUp extends React.Component {
     this.setState({passValue: event.target.value});
   }
 
+  handleChangePassVerify(event) {
+    this.setState({passValueVerify: event.target.value});
+  }
+
   handleSubmit(event) {
-    alert('A name and password was submitted: ' + this.state.emailValue);
     event.preventDefault();
     
     const email = this.state.emailValue;
     const password = this.state.passValue;
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-    });
+    const passwordVerify = this.state.passValueVerify;
+    if(password !== passwordVerify) {
+      alert("Password Inconsistent");
+      return;
+    } else {
+      alert('A name and password was submitted: ' + this.state.emailValue);
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+      });
+    }
   }
 
   render() {
@@ -54,6 +65,14 @@ class SignUp extends React.Component {
             value={this.state.passValue} 
             onChange={this.handleChangePass} 
             placeholder="password"/><br/>
+        </label>
+        <label for="password">
+          Verify Password:
+          <input 
+            type="password" 
+            value={this.state.passValueVerify} 
+            onChange={this.handleChangePassVerify} 
+            placeholder="type the same password"/><br/>
         </label>
         <input type="submit" value="Submit" />
       </form>
