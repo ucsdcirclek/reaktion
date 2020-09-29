@@ -51,27 +51,36 @@ table {
 * {
   text-decoration: none;
 }
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background: #474747;
-  color: white;
-}
-nav h3 {
-  font-family: helvetica;
-  font-weight: 500;
-  font-size: 20px;
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 10%;
+	background-color: #24252A;
 }
 
-.nav-links {
-  display: flex;
+header h3 {
+	font-familY: "helvetica";
+	font-weight: 600;
+	font-size: 25px;
+	color: #edf0f1;
+	transition: all 0.3s ease 0s;
+}
+
+header h3:hover {
+	color: #17a2b8;
 }
 
 .nav-links li {
-  margin-left: 20px;
-  font-family: helvetica;
-  font-weight: 500;
-  font-size: 16px;
+	font-familY: "helvetica";
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	display: inline-block;
+	padding: 0px 20px;
+	transition: all 0.3s ease 0s;
+}
+
+.nav-links li:hover {
+	color: #17a2b8;
 }
