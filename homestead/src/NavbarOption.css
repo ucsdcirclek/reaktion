@@ -1,0 +1,27 @@
+.navbarOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+}
+
+.navbarOption:hover {
+  background-color: var(--circlek-light);
+  border-radius: 30px;
+  color: var(--circlek-color);
+  transition: color 100ms ease-out;
+}
+
+.navbarOption > .MuiSvgIcon-root {
+  padding: 20px;
+}
+
+.navbarOption > h2 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.navbarOption--active {
+  color: var(--circlek-color);
+}

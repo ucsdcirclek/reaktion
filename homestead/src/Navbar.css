@@ -1,0 +1,11 @@
+.navbar {
+  border-right: 1px solid var(--circlek-light);
+  background-color: var(--circlek-background);
+  padding-top: 20px;
+  padding-bottom: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 180px;
+  z-index: 100;
+  position: fixed;
+}
