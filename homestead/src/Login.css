@@ -1,0 +1,6 @@
+.login {
+  border-left: 1px solid var(--circlek-light);
+  background-color: var(--circlek-background);
+  min-width: 300px;
+
+}

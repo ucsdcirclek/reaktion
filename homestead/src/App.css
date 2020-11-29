@@ -7,4 +7,6 @@ body {
 
 .app {
   background-color: var(--circlek-background-dark);
+  display: flex;
+  justify-content: space-between;
 }

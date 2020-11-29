@@ -1,3 +1,34 @@
-.footer_masthead {
+.footer {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.footer_socialmedia > a > .MuiSvgIcon-root {
+  color: var(--circlek-light);
+  width: 35px;
+}
+
+.footer_socialmedia > a > .MuiSvgIcon-root:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.footer_copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_copyright > .MuiSvgIcon-root {
+  color: var(--circlek-light);
+  width: 20px;
+}
+
+.footer_copyright > p {
+  color: var(--circlek-light);
+  font-size: 14px;
+}
+
+.footer_image {
   max-width: 1000px;
 }
