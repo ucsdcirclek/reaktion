@@ -1,4 +1,89 @@
 .about {
   max-width: 1000px;
   margin-left: 192px;
+  text-align: center;
+}
+
+.about_ckiLogo {
+  width: 200px;
+  background-color: var(--circlek-light);
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 30px
+}
+
+.about_upper {
+  margin: 20px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: var(--circlek-light);
+}
+
+.about_upper > h2 {
+  margin-bottom: 10px;
+}
+
+.about_upper > p {
+  margin-bottom: 10px;
+}
+
+.about_upper > p > a {
+  text-decoration: none;
+}
+
+.about_mid {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+
+.about_structure {
+  margin: 20px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: var(--circlek-light);
+}
+
+.about_structure > h2 {
+  margin-bottom: 10px;
+}
+
+.about_structure > p {
+  margin-bottom: 10px;
+}
+
+.about_structure > p > a {
+  text-decoration: none;
+}
+
+.about_executiveBoardRow1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+
+.about_executiveBoardRow2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 170px;
+}
+
+.about_appointedBoardRow1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+
+.about_appointedBoardRow2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+
+.about_appointedBoardRow3 {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 170px;
 }

@@ -1,0 +1,28 @@
+.aboutHeader {
+  display: flex;
+  background-color: var(--circlek-background);
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.aboutHeader_link {
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.aboutHeader_link:hover {
+  background-color: var(--circlek-light);
+  border-radius: 30px;
+  color: var(--circlek-color);
+  transition: color 100ms ease-out;
+}
+
+.aboutHeader_link--active {
+  color: var(--circlek-color);
+  font-weight: 500;
+  font-size: 25px;
+  padding: 5px;
+}

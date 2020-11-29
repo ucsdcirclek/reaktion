@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutHeader from './AboutHeader.js';
 import Board from './Board.js';
 import Footer from '../Footer.js';
 import './About.css';
@@ -20,6 +21,7 @@ import Jerome from '../images/board/Jerome.jpg';
 function About() {
   return (
     <div className="about">
+      <AboutHeader />
       <img className="about_ckiLogo" src={ckiLogo}/>
       <div className="about_upper">
         <h2>Mission</h2>
@@ -74,8 +76,8 @@ function About() {
         projects per year. UCSD Circle K is closely associated with the Kiwanis Club
         of La Jolla which is proud to serve the needs of La Jolla Village and its
         surrounding neighborhood communities</p>
-        <p>Kiwanis International website can be found here</p>
-        <p>Kiwanis Club of La Jolla can be found here</p>
+        <p>Kiwanis International website can be found <a href="https://www.kiwanis.org/">here</a>.</p>
+        <p>Kiwanis Club of La Jolla can be found <a href="http://kiwanisclublajolla.org/">here</a>.</p>
       </div>
       <div className="about_structure">
         <h2>Structure</h2>
@@ -114,12 +116,12 @@ function About() {
             <Board image={Ruthie} name='Ruthie Navarra' title='Kiwanis Family Chair' email='kfam@ucsdcki.org'/>
             <Board image={Shannon} name='Shannon Lo' title='Public Relations' email='pr@ucsdcki.org'/>
           </div>
-          <div className="aboutBodyUCSDCKI_appointedBoardRow2">
+          <div className="about_appointedBoardRow2">
             <Board image={Christina} name='Christina Tang' title='Member Relations' email='mr@ucsdcki.org'/>
             <Board image={EmilyK} name='Emily Kim' title='Member Development and Education' email='mde@ucsdcki.org'/>
             <Board image={An} name='An Nguyen' title='Fellowship' email='fellowship@ucsdcki.org'/>
           </div>
-          <div className="aboutBodyUCSDCKI_appointedBoardRow3">
+          <div className="about_appointedBoardRow3">
             <Board image={Blanchie} name='Blanchie Lui' title='Service' email='service@ucsdcki.org'/>
             <Board image={Jerome} name='Jerome Lam' title='Technology' email='technology@ucsdcki.org'/>
           </div>
@@ -129,7 +131,7 @@ function About() {
         Circle K is part of Paradise Division, one of the eight divisions of Cal-Nev-Ha
         and is made up of seven schools ranging from California to Hawaii. Our division’s
         mascots are the toucan and a pineapple.</p>
-        <p>Paradise division's website can be found here</p>
+        <p>Paradise division's website can be found <a href="http://www.cnhcirclek.org/divisions/paradise/">here</a>.</p>
 
         <h2>Paradise Clubs</h2>
         <p>Palomar College</p>
@@ -150,8 +152,8 @@ function About() {
         UCSD Circle K is part of the largest district in CKI, the Cal-Nev-Ha district, which
         comprises California, Nevada, and Hawaii. Our district spans over 2700 miles and holds
         40 clubs with over hundreds of members.</p>
-        <p>CNH Circle K's website can be found here</p>
-        <p>CNH district resources can be found here</p>
+        <p>CNH Circle K's website can be found <a href="http://www.cnhcirclek.org/">here</a>.</p>
+        <p>CNH district resources can be found <a href="http://resources.cnhcirclek.org/">here</a>.</p>
 
         <h2>Major District Events</h2>
         <p>District Convention(DCON)</p>
@@ -168,8 +170,8 @@ function About() {
         <p>Circle K International comprises 30 districts total. At this level, there
         is an International President and Vice President as well as 7 elected Sub-regional
         Trustees and a Trustee-at-Large.</p>
-        <p>The International Circle K's website can be found here</p>
-        <p>The International Circle K's resources can be found here</p>
+        <p>The International Circle K's website can be found <a href="https://circlek.org/">here</a>.</p>
+        <p>The International Circle K's resources can be found <a href="https://www.circlek.org/resources-main/">here</a>.</p>
       </div>
       <Footer />
     </div>
