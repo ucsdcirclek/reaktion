@@ -1,0 +1,17 @@
+.committees {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--circlek-light);
+  width: 860px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.committees_logo {
+  position: absolute;
+  clip:rect(0px,200px,180px,0px);
+}
+
+.committees_info {
+  margin-left: 200px;
+}

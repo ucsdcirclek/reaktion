@@ -7,24 +7,28 @@
 .about_ckiLogo {
   width: 200px;
   background-color: var(--circlek-light);
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 10px 30px;
-  border-radius: 30px
+  border-radius: 3px
 }
 
 .about_upper {
-  margin: 20px;
+  margin: 15px 20px 20px 20px;
   padding: 20px 20px;
-  border-radius: 10px;
+  border-radius: 3px;
   background-color: var(--circlek-light);
 }
 
 .about_upper > h2 {
   margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .about_upper > p {
   margin-bottom: 10px;
+  font-weight: 450;
+  font-size: 16px;
 }
 
 .about_upper > p > a {
@@ -39,19 +43,47 @@
   margin-bottom: 10px;
 }
 
+.about_themes > h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.about_themes > p {
+  margin-bottom: 10px;
+  font-weight: 450;
+  font-size: 16px;
+}
+
+.about_events > h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.about_events > p {
+  margin-bottom: 10px;
+  font-weight: 450;
+  font-size: 16px;
+}
+
 .about_structure {
   margin: 20px;
   padding: 20px 20px;
-  border-radius: 10px;
+  border-radius: 3px;
   background-color: var(--circlek-light);
 }
 
 .about_structure > h2 {
   margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .about_structure > p {
   margin-bottom: 10px;
+  font-weight: 450;
+  font-size: 16px;
 }
 
 .about_structure > p > a {

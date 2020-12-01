@@ -31,8 +31,8 @@ function About() {
         <h2>Pledge</h2>
         <p>I pledge to uphold the Objects of Circle K International, to foster compassion
         and goodwill toward others through service and leadership, to develop my abilities
-        and the abilities of all people, AND TO DEDICATE MYSELF TO THE REALIZATION OF
-        MANKIND'S POTENTIAL!</p>
+        and the abilities of all people,<b> AND TO DEDICATE MYSELF TO THE REALIZATION OF
+        MANKIND'S POTENTIAL!</b></p>
         <h2>Overview</h2>
         <p>First chartered in 1977, Circle K International at UC San Diego is the largest
         community service organization on campus. UCSD CKI distinguishes itself from other

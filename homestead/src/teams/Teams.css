@@ -1,0 +1,25 @@
+.teams {
+  margin-left: 192px;
+  max-width: 1000px;
+  padding-bottom: 100%;
+}
+
+.teams_header {
+  display: flex;
+  background-color: var(--circlek-background);
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  min-width: 600px;
+  color: var(--circlek-color);
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.teams_secondHeader {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--circlek-light);
+  border-radius: 10px;
+  text-align: center;
+}

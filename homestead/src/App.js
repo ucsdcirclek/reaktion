@@ -3,6 +3,9 @@ import Navbar from './Navbar.js';
 import Home from './Home.js';
 import Login from './Login.js';
 import About from './about/About.js';
+import Teams from './teams/Teams.js';
+import AboutMembership from './about/AboutMembership.js';
+import AboutCommunity from './about/AboutCommunity.js';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -22,11 +25,11 @@ function App() {
           <Route path="/about/community/farmersoverflowers"></Route>
           <Route path="/about/community/breathofthesun"></Route>
           <Route path="/about/community/headintheclouds"></Route>
-          <Route path="/about/membership"></Route>
-          <Route path="/about/community"></Route>
+          <Route path="/about/membership"><AboutMembership /></Route>
+          <Route path="/about/community"><AboutCommunity /></Route>
           <Route path="/about"><About /></Route>
           <Route path="/calendar"></Route>
-          <Route path="/teams"></Route>
+          <Route path="/teams"><Teams /></Route>
           <Route path="/admin"></Route>
           <Route path="/"><Home /></Route>
           </Switch>

@@ -30,6 +30,7 @@ export default class Login extends Component {
         {this.state.isSignedIn ? (
           <span>
             <h1>Signed In!</h1>
+            <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
           </span>
         ) : (
           <StyledFirebaseAuth

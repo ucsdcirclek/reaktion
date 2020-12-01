@@ -8,6 +8,7 @@ import ReactPlayer from 'react-player';
 import service from './images/Service.png';
 import leadership from './images/Leadership.png';
 import fellowship from './images/Fellowship.png';
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -36,10 +37,10 @@ function Home() {
       <FbWidget />
       </div>
       <div className="home_families">
-        <Family image="https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg" title="Head in the Clouds"/>
-        <Family image="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aab9a42b-4e91-4401-9be5-7daa7fb5013a/daqqs1n-569dc135-49b4-467c-ac6a-d0c0c6699e54.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYWFiOWE0MmItNGU5MS00NDAxLTliZTUtN2RhYTdmYjUwMTNhXC9kYXFxczFuLTU2OWRjMTM1LTQ5YjQtNDY3Yy1hYzZhLWQwYzBjNjY5OWU1NC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.h5reVPqJlaXJ8gu2zFEu4BJXsKth9bNrWaxWVJFPwAM" title="White Lotus"/>
-        <Family image="https://i.pinimg.com/736x/0b/fb/3f/0bfb3fb2e2239635a4819b353829d7d2.jpg" title="Farmers over Flowers"/>
-        <Family image="https://wallpapercave.com/wp/wp5244984.jpg" title="Breath of the Sun"/>
+        <Link to= "/about/community/headintheclouds" style={{ textDecoration: 'none' }} className="home_family"><Family image="https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg" title="Head in the Clouds"/></Link>
+        <Link to= "/about/community/whitelotus" style={{ textDecoration: 'none' }} className="home_family"><Family image="https://i.pinimg.com/originals/84/e6/18/84e61804536e07d96ba088ede497d4dc.png" title="White Lotus"/></Link>
+        <Link to= "/about/community/farmersoverflowers" style={{ textDecoration: 'none' }} className="home_family"><Family image="https://c4.wallpaperflare.com/wallpaper/877/604/1005/anime-one-piece-minimalist-monkey-d-luffy-wallpaper-preview.jpg" title="Farmers over Flowers"/></Link>
+        <Link to= "/about/community/breathofthesun" style={{ textDecoration: 'none' }} className="home_family"><Family image="https://wallpapercave.com/wp/wp5244984.jpg" title="Breath of the Sun"/></Link>
       </div>
       <div className="home_tenents">
         <Tenent image={service} title='Service'/>
