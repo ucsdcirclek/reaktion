@@ -9,7 +9,12 @@
 
 .impactTeams_logo {
   position: absolute;
-  clip:rect(0px,200px,180px,0px);
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .impactTeams_info {

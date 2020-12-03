@@ -1,5 +1,8 @@
 .teams {
-  margin-left: 192px;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  left:100px;
   max-width: 1000px;
   padding-bottom: 100%;
 }
