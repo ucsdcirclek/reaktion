@@ -2,6 +2,6 @@
   border-left: 1px solid var(--circlek-light);
   background-color: var(--circlek-background);
   min-width: 300px;
-  z-index: 100;
+  z-index: 99;
   /* position: fixed; */
 }
