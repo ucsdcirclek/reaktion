@@ -1,9 +1,3 @@
 .fbWidget {
-    height: 500px;
-    margin-top: 50px;
-    margin-left: 10px;
-    margin-right: 20px;
-    padding: 10px 10px;
-    border-radius: 3px;
-    background-color: var(--circlek-light);
+  margin-left: 40px;
 }

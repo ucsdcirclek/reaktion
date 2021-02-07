@@ -1,11 +1,10 @@
 import React from 'react';
 import './NavbarOption.css';
 
-function NavbarOption({ active, text, Icon }) {
+function NavbarOption({text}) {
   return (
-    <div className={`navbarOption ${active && "navbarOption--active"}`}>
-      <Icon />
-      <h2>{text}</h2>
+    <div className='navbarOption'>
+      <h1>{text}</h1>
     </div>
   );
 }

@@ -5,7 +5,7 @@ function Board({ title, name, email, image}) {
   return (
     <div className='board'>
       <img src={image} className='board_image'/>
-      <h2>{name}</h2>
+      <h3>{name}</h3>
       <p>{title}</p>
       <p>{email}</p>
     </div>

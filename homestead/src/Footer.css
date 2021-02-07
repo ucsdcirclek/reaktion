@@ -1,15 +1,15 @@
 .footer {
-  max-width: 1000px;
+  margin-top: 15px;
   text-align: center;
 }
 
 .footer_socialmedia > a > .MuiSvgIcon-root {
-  color: var(--circlek-light);
+  color: black;
   width: 35px;
 }
 
 .footer_socialmedia > a > .MuiSvgIcon-root:hover {
-  color: white;
+  color: #84de83;
   cursor: pointer;
 }
 
@@ -20,15 +20,15 @@
 }
 
 .footer_copyright > .MuiSvgIcon-root {
-  color: var(--circlek-light);
+  color: black;
   width: 20px;
 }
 
 .footer_copyright > p {
-  color: var(--circlek-light);
+  color: black;
   font-size: 14px;
 }
 
 .footer_image {
-  max-width: 1000px;
+  width: 90%;
 }

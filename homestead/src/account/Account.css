@@ -1,0 +1,207 @@
+.account_title {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 24px;
+}
+
+button {
+  border: none;
+  background-color: #84de83;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.account_upper {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  margin-top: 10px;
+  display: flex;
+}
+
+.account_bigLittle {
+  flex: 0.5;
+  padding: 20px;
+}
+
+.account_bigLittle h2 {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 22px;
+}
+
+.account_bigLittle p {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 18px;
+}
+
+.account_families {
+  flex: 0.5;
+  padding: 20px;
+}
+
+.account_families h2 {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 22px;
+}
+
+.account_families p {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 18px;
+}
+
+.account_presentFamilies {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  margin-top: 10px;
+}
+
+.account_presentFamilies h2 {
+  text-align: center;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 22px;
+}
+
+.account_presentFamilies h3 {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 20px;
+}
+
+.account_mid {
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.account_mid > h2 {
+  text-align: center;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 22px;
+}
+
+.account_midStart {
+  display: flex;
+}
+
+.account_midService {
+  flex: 0.5;
+  padding: 20px 10rem;
+  text-align: center;
+}
+
+.account_midService h2 {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 20px;
+}
+
+.account_midService p {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 16px;
+}
+
+.account_midGBM {
+  flex: 0.5;
+  padding: 20px 10rem;
+  text-align: center;
+}
+
+.account_midGBM h2 {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 20px;
+}
+
+.account_midGBM p {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 16px;
+}
+
+.account_ready h2 {
+  text-align: center;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 20px;
+}
+
+.account_ready p {
+  text-align: center;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 16px;
+}
+
+.account_lower {
+  display: flex;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  margin-top: 10px;
+}
+
+.account_lower h2 {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 20px;
+}
+
+.account_lower p {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 16px;
+}
+
+.account_lowerApp {
+  flex: 0.33;
+  text-align: center;
+  padding: 20px 5rem;
+}
+
+.account_lowerMembership {
+  flex: 0.34;
+  text-align: center;
+  padding: 20px 5rem;
+}
+
+.account_lowerCST {
+  flex: 0.33;
+  text-align: center;
+  padding: 20px 5rem;
+}
+
+.account_account {
+  text-align: center;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 14px;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  margin-top: 10px;
+  justify-content: center;
+}

@@ -1,27 +1,10 @@
 .navbarOption {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: white;
+  color: black;
+  padding: 5px;
+  font-size: 14px;
+  font-family: 'Tenor Sans', sans-serif;
 }
-
 .navbarOption:hover {
-  background-color: var(--circlek-light);
-  border-radius: 30px;
-  color: var(--circlek-color);
-  transition: color 100ms ease-out;
-}
-
-.navbarOption > .MuiSvgIcon-root {
-  padding: 20px;
-}
-
-.navbarOption > h2 {
-  font-weight: 500;
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.navbarOption--active {
-  color: var(--circlek-color);
+  background-color: #84de83;
+  border-radius: 5px;
 }
