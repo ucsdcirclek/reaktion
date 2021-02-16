@@ -1,0 +1,47 @@
+.calendar_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar_months {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 16px;
+}
+
+.calendar_monthIcon {
+  background-color: #84de83;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 6px;
+}
+
+.calendar_monthIcon:hover {
+  cursor: pointer;
+}
+
+.calendar_calendar {
+  margin-top: 5px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+
+.calendar_calendarDays {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 16px;
+}
+
+tr {
+  line-height: 30px;
+}
+
+th {
+  background-color: #eee;
+  width: 150px;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,17 @@
+.login {
+  min-width: 300px;
+
+  /* position: fixed; */
+}
+
+.login_total {
+  display: flex;
+}
+
+.login_entry {
+  flex: 0.5;
+}
+
+.login_signout {
+  flex: 0.5;
+}
