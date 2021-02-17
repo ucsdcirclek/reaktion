@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Entry from './Entry.js';
 import Login from './Login0.js';
+import Footer from '../Footer.js';
 import './Calendar.css';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
@@ -180,8 +181,8 @@ function Calendar() {
       </div>
       <div className='calendarLogin'>
         <Login />
-        <h1>Place Holder</h1>
       </div>
+      <Footer />
     </div>
   );
 }

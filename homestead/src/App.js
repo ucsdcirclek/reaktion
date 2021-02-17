@@ -1,15 +1,18 @@
-import React from 'react';
-import Navbar from './Navbar.js';
-import Home from './Home.js';
-import About from './about/About.js';
-import Account from './account/Account.js';
-import Calendar from './calendar/Calendar.js';
-import './App.css';
+import React from "react";
+import Navbar from "./Navbar.js";
+import Home from "./Home.js";
+import About from "./about/About.js";
+import Account from "./account/Account.js";
+import Calendar from "./calendar/Calendar.js";
+import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className='app'>
+    <div className="app">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+      </style>
       <Router>
         {/*Navbar*/}
         <Navbar />

@@ -32,28 +32,34 @@ function CalendarInput() {
   return (
     <div className='calendarInput'>
     <form className='calendarInput_form'>
-      <input
-        value={startTime}
-        onChange={(e) => setStartTime(e.target.value)}
-        type="time"
-        className="input"
-        placeholder={`Start Time: 0:00 a.m.`} />
-      <input
-        value={endTime}
-        onChange={e => setEndTime(e.target.value)}
-        type="time"
-        className="input"
-        placeholder={`End Time: 0:00 a.m.`} />
+      <div className='calendarInput_time'>
+        <h2>Start Time: </h2>
+        <input
+          value={startTime}
+          onChange={(e) => setStartTime(e.target.value)}
+          type="time"
+          className="input"
+          placeholder={`Start Time: 0:00 a.m.`} />
+      </div>
+      <div className='calendarInput_time'>
+        <h2>End Time: </h2>
+        <input
+          value={endTime}
+          onChange={e => setEndTime(e.target.value)}
+          type="time"
+          className="input"
+          placeholder={`End Time: 0:00 a.m.`} />
+      </div>
       <input
         value={title}
         onChange={e => setTitle(e.target.value)}
         className="input"
         placeholder={`Title`} />
-      <input
+      <textarea
         value={description}
         onChange={e => setDescription(e.target.value)}
         type="text"
-        className="input"
+        className="input_large"
         placeholder={`Description`} />
       <input
         value={todayDate}

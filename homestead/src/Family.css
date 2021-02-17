@@ -10,4 +10,5 @@
 
 .family > h3 {
   text-align: center;
+  font-family: var(--font-style);
 }

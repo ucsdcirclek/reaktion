@@ -1,8 +1,7 @@
 body {
-  --circlek-color: #50b7f5;
-  --circlek-background: #282828;
-  --circlek-light: #e8f5fe;
-  --circlek-background-dark: #1c1c1c;
+  --circlek-color: #84de83;
+  --background-color: #eee;
+  --font-style: 'Tenor Sans', sans-serif;
 }
 
 .app {

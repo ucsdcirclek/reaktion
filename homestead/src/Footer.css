@@ -3,28 +3,28 @@
   text-align: center;
 }
 
-.footer_socialmedia > a > .MuiSvgIcon-root {
+.footer_socialMedia > a > .MuiSvgIcon-root {
   color: black;
   width: 35px;
 }
 
-.footer_socialmedia > a > .MuiSvgIcon-root:hover {
-  color: #84de83;
+.footer_socialMedia > a > .MuiSvgIcon-root:hover {
+  color: var(--circlek-color);
   cursor: pointer;
 }
 
-.footer_copyright {
+.footer_copyRight {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.footer_copyright > .MuiSvgIcon-root {
+.footer_copyRight > .MuiSvgIcon-root {
   color: black;
   width: 20px;
 }
 
-.footer_copyright > p {
+.footer_copyRight > p {
   color: black;
   font-size: 14px;
 }

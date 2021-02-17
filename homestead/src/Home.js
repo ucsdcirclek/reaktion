@@ -1,14 +1,14 @@
-import React from 'react';
-import FbWidget from './FbWidget.js';
-import Family from './Family.js';
-import Tenent from './Tenent.js';
-import Footer from './Footer.js';
-import './Home.css';
-import ReactPlayer from 'react-player';
-import Service from './images/Service.png';
-import Leadership from './images/Leadership.png';
-import Fellowship from './images/Fellowship.png';
-import Masthead from './images/CKIMasthead.png';
+import React from "react";
+import FbWidget from "./FbWidget.js";
+import Family from "./Family.js";
+import Tenent from "./Tenent.js";
+import Footer from "./Footer.js";
+import "./Home.css";
+import ReactPlayer from "react-player";
+import Service from "./images/Service.png";
+import Leadership from "./images/Leadership.png";
+import Fellowship from "./images/Fellowship.png";
+import Masthead from "./images/CKIMasthead.png";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -30,7 +30,7 @@ function Home() {
             width="480"
             height="270px"
             controls
-            url='https://www.youtube.com/watch?v=7D_sK6KqeI4'
+            url="https://www.youtube.com/watch?v=7D_sK6KqeI4"
           />
         </div>
       </div>
@@ -46,7 +46,7 @@ function Home() {
         </div>
       </div>
       <div className="home_lower">
-      <h2>UCSD CKI Families</h2>
+        <h2>UCSD CKI Families</h2>
         <div className="home_family">
           <Family image="https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg" title="Head in the Clouds"/>
           <Family image="https://i.pinimg.com/originals/84/e6/18/84e61804536e07d96ba088ede497d4dc.png" title="White Lotus"/>

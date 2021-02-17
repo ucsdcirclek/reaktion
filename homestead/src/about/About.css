@@ -1,79 +1,73 @@
 .about_upper {
   display: flex;
-  background-color: #eee;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0px;
   max-width: 90%;
-  margin-top: 10px;
+  background-color: var(--background-color);
 }
 
 .about_mission {
+  flex: 0.3;
   padding: 20px;
   border-right: 1px solid black;
-  flex: 0.3;
 }
 
-.about_mission h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.about_mission > h2 {
+  font-family: var(--font-style);
   font-size: 24px;
 }
 
-.about_mission p {
-  font-family: 'Tenor Sans', sans-serif;
+.about_mission > p {
+  font-family: var(--font-style);
   font-size: 18px;
 }
 
 .about_overview {
-  padding: 20px;
   flex: 0.7;
+  padding: 20px;
 }
 
-.about_overview h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.about_overview > h2 {
+  font-family: var(--font-style);
   font-size: 24px;
 }
 
-.about_overview p {
-  font-family: 'Tenor Sans', sans-serif;
+.about_overview > p {
+  font-family: var(--font-style);
   font-size: 18px;
 }
 
 .about_upperMid {
   display: flex;
-  background-color: #eee;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0px;
   max-width: 90%;
-  margin-top: 10px;
+  background-color: var(--background-color);
 }
 
-.about_upperMid h2 {
+.about_upperMid > h2 {
   flex: 0.07;
   padding: 20px;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 24px;
 }
 
-.about_upperMid p {
-  flex: 0.98;
+.about_upperMid > p {
+  flex: 0.93;
   padding: 10px;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 18px;
 }
 
 .about_lowerMid {
   display: flex;
-  background-color: #eee;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0px;
   max-width: 90%;
-  margin-top: 10px;
+  background-color: var(--background-color);
 }
 
 .about_gbm {
@@ -82,13 +76,13 @@
   border-right: 1px solid black;
 }
 
-.about_gbm h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.about_gbm > h2 {
+  font-family: var(--font-style);
   font-size: 24px;
 }
 
-.about_gbm p {
-  font-family: 'Tenor Sans', sans-serif;
+.about_gbm > p {
+  font-family: var(--font-style);
   font-size: 18px;
 }
 
@@ -98,13 +92,13 @@
   text-align: center;
 }
 
-.about_events h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.about_events > h2 {
+  font-family: var(--font-style);
   font-size: 24px;
 }
 
-.about_events p {
-  font-family: 'Tenor Sans', sans-serif;
+.about_events > p {
+  font-family: var(--font-style);
   font-size: 16px;
 }
 
@@ -114,25 +108,23 @@
   text-align: center;
 }
 
-.about_themes h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.about_themes > h2 {
+  font-family: var(--font-style);
   font-size: 24px;
 }
 
-.about_themes p {
-  font-family: 'Tenor Sans', sans-serif;
+.about_themes > p {
+  font-family: var(--font-style);
   font-size: 16px;
 }
 
 .about_lower {
-  background-color: #eee;
-  padding: 10px 20px;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 90%;
-  margin-top: 10px;
   border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px auto 0px;
+  max-width: 90%;
+  background-color: var(--background-color);
 }
 
 .about_kiwanis {
@@ -142,13 +134,13 @@
   border-right: 1px solid black;
 }
 
-.about_kiwanis h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.about_kiwanis > h2 {
+  font-family: var(--font-style);
   font-size: 24px;
 }
 
-.about_kiwanis p {
-  font-family: 'Tenor Sans', sans-serif;
+.about_kiwanis > p {
+  font-family: var(--font-style);
   font-size: 16px;
 }
 
@@ -157,19 +149,14 @@
   text-align: center;
 }
 
-.about_executiveBoard h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.about_executiveBoard > h2 {
+  font-family: var(--font-style);
   font-size: 22px;
 }
 
 .about_executiveBoard h3 {
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 20px;
-}
-
-.about_executiveBoard h3 {
-  font-family: 'Tenor Sans', sans-serif;
-  font-size: 16px;
 }
 
 .about_executiveBoardRow1 {
@@ -186,29 +173,29 @@
 }
 
 .about_appointedBoard {
-  background-color: #eee;
-  padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 90%;
-  margin-top: 10px;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px auto 0px;
+  max-width: 90%;
+  background-color: var(--background-color);
 }
 
-.about_appointedBoard h2 {
-  font-family: 'Tenor Sans', sans-serif;
-  font-size: 22px;
+.about_appointedBoard > h2 {
   padding-bottom: 20px;
+  font-family: var(--font-style);
+  font-size: 22px;
 }
 
 .about_appointedBoard h3 {
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 20px;
 }
 
 .about_appointedBoard p {
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 16px;
 }
 

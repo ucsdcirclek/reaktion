@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './Login.css';
-import firebase from 'firebase';
+import React, { Component } from "react";
+import "./Login.css";
+import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 
 export default class Login extends Component {
   state={isSignedIn:false}
@@ -26,15 +26,15 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className='login'>
+      <div className="login">
         {this.state.isSignedIn ? (
           <span>
-            <div className='login_signout'>
-            <h1>Signed In!</h1>
-            <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
-            </div>
-            <div className='login_entry'>
-            </div>
+            <div className="login_signout">
+              <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
+              <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
+              <h3>Go to our Calendar to sign up for events!</h3>
+              <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
+              </div>
           </span>
         ) : (
           <StyledFirebaseAuth

@@ -1,21 +1,21 @@
-import React from 'react';
-import Board from './Board.js';
-import Footer from '../Footer.js';
-import './About.css';
-import ckiLogo from '../images/logo_CKI.png';
-import JustinFong from '../images/board/Fongers.jpg';
-import Evan from '../images/board/Evan2.0.jpg';
-import Ramtin from '../images/board/Ramtin.jpg';
-import Danielle from '../images/board/Danielle.jpg';
-import Juicy from '../images/board/Juicy.jpg';
-import EmilyC from '../images/board/EmilyC.jpg';
-import Ruthie from '../images/board/Ruthie.jpg';
-import Shannon from '../images/board/Shannon.jpg';
-import Christina from '../images/board/Christina.jpg';
-import EmilyK from '../images/board/EmilyK.jpg';
-import An from '../images/board/An.jpg';
-import Blanchie from '../images/board/Blanchie.jpg';
-import Jerome from '../images/board/Jerome.jpg';
+import React from "react";
+import Board from "./Board.js";
+import Footer from "../Footer.js";
+import "./About.css";
+import ckiLogo from "../images/logo_CKI.png";
+import JustinFong from "../images/board/Fongers.jpg";
+import Evan from "../images/board/Evan2.0.jpg";
+import Ramtin from "../images/board/Ramtin.jpg";
+import Danielle from "../images/board/Danielle.jpg";
+import Juicy from "../images/board/Juicy.jpg";
+import EmilyC from "../images/board/EmilyC.jpg";
+import Ruthie from "../images/board/Ruthie.jpg";
+import Shannon from "../images/board/Shannon.jpg";
+import Christina from "../images/board/Christina.jpg";
+import EmilyK from "../images/board/EmilyK.jpg";
+import An from "../images/board/An.jpg";
+import Blanchie from "../images/board/Blanchie.jpg";
+import Jerome from "../images/board/Jerome.jpg";
 
 function About() {
   return (

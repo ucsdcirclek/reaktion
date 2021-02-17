@@ -8,10 +8,36 @@
   display: flex;
 }
 
-.login_entry {
-  flex: 0.5;
-}
-
 .login_signout {
   flex: 0.5;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  font-family: var(--font-style);
+  text-align: center;
+}
+
+.login_singout img {
+  max-width: 150px;
+}
+
+.login_signout > button {
+  border: none;
+  margin: 10px 20px 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--circlek-color);
+  font-family: var(--font-style);
+  font-size: 20px;
+}
+
+.login_signout > button:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login_entry {
+  flex: 0.5;
+  margin: 20px;
 }

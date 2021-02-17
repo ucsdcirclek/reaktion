@@ -1,10 +1,10 @@
 .navbarOption {
-  color: black;
   padding: 5px;
+  color: black;
   font-size: 14px;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
 }
 .navbarOption:hover {
-  background-color: #84de83;
+  background-color: var(--circlek-color);
   border-radius: 5px;
 }

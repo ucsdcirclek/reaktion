@@ -31,11 +31,12 @@ export default class Login extends Component {
         {this.state.isSignedIn ? (
             <div className='login_total'>
               <div className='login_signout'>
-              <h1>Signed In!</h1>
-              <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
-              </div>
-              <div className='login_entry'>
-                <CalendarInput/>
+                <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
+                <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
+                <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
+                <div className='login_entry'>
+                  <CalendarInput/>
+                </div>
               </div>
             </div>
         ) : (

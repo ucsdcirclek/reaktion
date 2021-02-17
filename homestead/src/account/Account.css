@@ -1,40 +1,38 @@
 .account_title {
-  background-color: #eee;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0px;
   max-width: 90%;
-  margin-top: 10px;
   text-align: center;
-  font-family: 'Tenor Sans', sans-serif;
+  background-color: var(--background-color);
+  font-family: var(--font-style);
   font-size: 24px;
 }
 
-button {
+.account button {
   border: none;
-  background-color: #84de83;
-  padding: 10px;
   border-radius: 5px;
+  padding: 10px;
   margin-top: 10px;
-  font-family: 'Tenor Sans', sans-serif;
+  background-color: var(--circlek-color);
+  font-family: var(--font-style);
   font-size: 16px;
 }
 
-button:hover {
+.account button:hover {
   cursor: pointer;
   font-weight: bold;
 }
 
 .account_upper {
-  background-color: #eee;
+  display: flex;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0px;
   max-width: 90%;
-  margin-top: 10px;
-  display: flex;
+  text-align: center;
+  background-color: var(--background-color);
+  font-family: var(--font-style);
 }
 
 .account_bigLittle {
@@ -42,13 +40,13 @@ button:hover {
   padding: 20px;
 }
 
-.account_bigLittle h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.account_bigLittle > h2 {
+  font-family: var(--font-family);
   font-size: 22px;
 }
 
-.account_bigLittle p {
-  font-family: 'Tenor Sans', sans-serif;
+.account_bigLittle > p {
+  font-family: var(--font-family);
   font-size: 18px;
 }
 
@@ -57,51 +55,42 @@ button:hover {
   padding: 20px;
 }
 
-.account_families h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.account_families > h2 {
+  font-family: var(--font-family);
   font-size: 22px;
 }
 
-.account_families p {
-  font-family: 'Tenor Sans', sans-serif;
+.account_families > p {
+  font-family: var(--font-family);
   font-size: 18px;
 }
 
 .account_presentFamilies {
-  background-color: #eee;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0px;
   max-width: 90%;
-  margin-top: 10px;
+  background-color: var(--background-color);
 }
 
-.account_presentFamilies h2 {
+.account_presentFamilies > h2 {
   text-align: center;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 22px;
 }
 
-.account_presentFamilies h3 {
-  font-family: 'Tenor Sans', sans-serif;
-  font-size: 20px;
-}
-
 .account_mid {
-  background-color: #eee;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto;
   max-width: 90%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  text-align: center;
+  background-color: var(--background-color)
 }
 
 .account_mid > h2 {
   text-align: center;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 22px;
 }
 
@@ -115,13 +104,13 @@ button:hover {
   text-align: center;
 }
 
-.account_midService h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.account_midService > h2 {
+  font-family: var(--font-style);
   font-size: 20px;
 }
 
-.account_midService p {
-  font-family: 'Tenor Sans', sans-serif;
+.account_midService > p {
+  font-family: var(--font-style);
   font-size: 16px;
 }
 
@@ -131,46 +120,45 @@ button:hover {
   text-align: center;
 }
 
-.account_midGBM h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.account_midGBM > h2 {
+  font-family: var(--font-style);
   font-size: 20px;
 }
 
-.account_midGBM p {
-  font-family: 'Tenor Sans', sans-serif;
+.account_midGBM > p {
+  font-family: var(--font-style);
   font-size: 16px;
 }
 
-.account_ready h2 {
+.account_ready > h2 {
   text-align: center;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 20px;
 }
 
-.account_ready p {
+.account_ready > p {
   text-align: center;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: var(--font-style);
   font-size: 16px;
 }
 
 .account_lower {
   display: flex;
-  background-color: #eee;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto;
   max-width: 90%;
-  margin-top: 10px;
+  text-align: center;
+  background-color: var(--background-color)
 }
 
-.account_lower h2 {
-  font-family: 'Tenor Sans', sans-serif;
+.account_lower > h2 {
+  font-family: var(--font-style);
   font-size: 20px;
 }
 
-.account_lower p {
-  font-family: 'Tenor Sans', sans-serif;
+.account_lower > p {
+  font-family: var(--font-style);
   font-size: 16px;
 }
 
@@ -194,14 +182,11 @@ button:hover {
 
 .account_account {
   text-align: center;
-  font-family: 'Tenor Sans', sans-serif;
-  font-size: 14px;
-  background-color: #eee;
+  background-color: var(--background-color);
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0px;
   max-width: 90%;
-  margin-top: 10px;
-  justify-content: center;
+  font-family: var(--font-style);
+  font-size: 14px;
 }
