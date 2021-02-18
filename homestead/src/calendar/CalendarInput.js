@@ -31,6 +31,7 @@ function CalendarInput() {
 
   return (
     <div className='calendarInput'>
+    <h2>Create an Event!</h2>
     <form className='calendarInput_form'>
       <div className='calendarInput_time'>
         <h2>Start Time: </h2>

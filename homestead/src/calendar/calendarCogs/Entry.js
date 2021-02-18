@@ -6,8 +6,8 @@ function Entry({ number, shiftIndex, daysOfMonth }) {
     return(<div></div>);
   } else if (number <= shiftIndex + daysOfMonth) {
     return (
-      <div className='entry'>
-        <p className='entry_number'>{number - shiftIndex}</p>
+      <div className="entry">
+        <p className="entry_number">{number - shiftIndex}</p>
       </div>
     );
   } else { return (<div></div>); }

@@ -1,44 +1,11 @@
-.calendar_content {
+.calendar_lower {
   display: flex;
-  flex-direction: column;
 }
 
-.calendar_months {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  font-family: var(--font-style);
-  font-size: 16px;
+.calendar_login {
+  flex: 0.5;
 }
 
-.calendar_monthIcon {
-  background-color: var(--circlek-color);
-  border-radius: 5px;
-  margin: 6px 10px;
-}
-
-.calendar_monthIcon:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.calendar_calendar {
-  border-radius: 5px;
-  margin: 5px auto;
-  max-width: 90%;
-}
-
-.calendar_calendarDays {
-  font-family: var(--font-style);
-  font-size: 16px;
-}
-
-tr {
-  line-height: 80px;
-}
-
-th {
-  background-color: var(--background-color);
-  border-radius: 5px;
-  min-width: 150px;
+.calendar_event {
+  flex: 0.5;
 }
