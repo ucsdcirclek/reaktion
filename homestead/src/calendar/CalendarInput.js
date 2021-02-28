@@ -3,7 +3,7 @@ import "./CalendarInput.css";
 import firebase from "firebase";
 import db from "../firebase";
 
-function CalendarInput() {
+function CalendarInput({ pid }) {
   /*Input things into the database*/
   const[startTime, setStartTime] = useState("");
   const[endTime, setEndTime] = useState("");
@@ -19,7 +19,8 @@ function CalendarInput() {
       endtime: endTime,
       starttime: startTime,
       title: title,
-      description: description
+      description: description,
+      list: [pid]
     })
 
     setStartTime("");

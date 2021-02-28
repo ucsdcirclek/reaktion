@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import CalendarInput from './CalendarInput.js';
-import './LoginC.css';
-import firebase from 'firebase';
+import React, { Component } from "react";
+import CalendarInput from "./CalendarInput.js";
+import "./LoginC.css";
+import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import { auth } from "../firebase";
+import db, { auth } from "../firebase";
 
 export default class Login extends Component {
   state={isSignedIn:false}
@@ -25,17 +25,31 @@ export default class Login extends Component {
     })
   }
 
+  componentDidUpdate = () => {
+    if (this.state.isSignedIn) {
+      let user_id = firebase.auth().currentUser.uid
+      db.collection('users').doc(user_id).set({
+        name: firebase.auth().currentUser.displayName,
+        serviceHours: 0,
+        leadershipHours: 0,
+        fellowshipHours: 0
+      })
+    } else {
+      console.log("not logged in")
+    }
+  }
+
   render() {
     return (
-      <div className='login'>
+      <div className="login">
         {this.state.isSignedIn ? (
-            <div className='login_total'>
-              <div className='login_signout'>
+            <div className="login_total">
+              <div className="login_signout">
                 <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
                 <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
                 <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
-                <div className='login_entry'>
-                  <CalendarInput/>
+                <div className="login_entry">
+                  <CalendarInput pid={firebase.auth().currentUser.uid}/>
                 </div>
               </div>
             </div>

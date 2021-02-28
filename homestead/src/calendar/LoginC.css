@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.login_singout img {
+.login_singout > img {
   max-width: 150px;
 }
 
