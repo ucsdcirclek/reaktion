@@ -9,14 +9,14 @@ function EntryEntry({ key, endtime, starttime, title, description, list, docID }
   if (parseInt(beginTime) > 12) {
     beginTime = (beginTime - 12) + "p";
   } else {
-    beginTime = beginTime + "a";
+    beginTime = (beginTime - 0) + "a";
   }
 
   let lastTime = String(endtime).substring(0, 2);
   if (parseInt(lastTime) > 12) {
     lastTime = (lastTime - 12) + "p";
   } else {
-    lastTime = lastTime + "a";
+    lastTime = (lastTime - 0) + "a";
   }
 
   const[isOpen, setIsOpen] = useState(false)

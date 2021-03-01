@@ -1,4 +1,6 @@
 import React, {useEffect} from 'react';
+import CloseIcon from '@material-ui/icons/Close';
+import "./Modal.css";
 import firebase from "firebase";
 import db from "../../firebase";
 
@@ -31,17 +33,35 @@ export default function Modal({ open, children, onClose, key, endtime, starttime
     updateList.update({list: list});
   }
 
+  let beginTime = String(starttime).substring(0, 2);
+  let beginMidTime = String(starttime).substring(2, 5);
+  if (parseInt(beginTime) > 12) {
+    beginTime = (beginTime - 12) + beginMidTime + "pm";
+  } else {
+    beginTime = (beginTime - 0) + beginMidTime + "am";
+  }
+
+  let lastTime = String(endtime).substring(0, 2);
+  let lastMidTime = String(endtime).substring(2, 5);
+  if (parseInt(lastTime) > 12) {
+    lastTime = (lastTime - 12) + lastMidTime + "pm";
+  } else {
+    lastTime = (lastTime - 0) + lastMidTime + "am";
+  }
 
   if (!open) return null
   return (
     <div style={OVERLAY_STYLES}>
-      <div style={MODAL_STYLES}>
-        <p>{title}</p>
-        <p>{starttime} - {endtime}</p>
+      <div style={MODAL_STYLES} className="modal_styles">
+        <CloseIcon onClick={onClose} className="modal_closeIcon"/>
+        <h1>{title}</h1>
+        <p>{beginTime} - {lastTime}</p>
         <p>{description}</p>
-        <p>People Going: {veryNewList}</p>
+        <div className="modal_rsvp">
+          <h2>People Going:</h2>
+          <p>{veryNewList}</p>
+        </div>
         <button onClick={addPerson}>RVSP Now!</button>
-        <button onClick={onClose}>Close Modal</button>
       </div>
     </div>
   )

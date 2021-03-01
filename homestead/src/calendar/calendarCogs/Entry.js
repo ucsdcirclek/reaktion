@@ -5,8 +5,6 @@ import firebase from "firebase";
 import db from "../../firebase";
 
 function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
-  /*month returns the index of the month*/
-  /*year returns the entire year*/
   let awesomeMonth = month + 1;
   if (awesomeMonth < 10) {
     awesomeMonth = "0" + awesomeMonth;
@@ -17,18 +15,19 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
   let awesomeNumber = 0;
   if ((parseInt(number)) < 10) {
     awesomeNumber = "0" + (parseInt(number) - 1);
-  }
-  else {
+  }  else {
     awesomeNumber = (parseInt(number) - 1);
   }
+
   let awesomeDate = year + "-" + awesomeMonth + "-" + awesomeNumber;
 
   const [posts, setPosts] = useState([]);
+
   useEffect(() => {
     db.collection("posts").where("date", "==", awesomeDate).onSnapshot((snapshot) =>
       setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
     );
-  }, []);
+  }, [month]);
 
   if (number <= shiftIndex) {
     return(<div></div>);

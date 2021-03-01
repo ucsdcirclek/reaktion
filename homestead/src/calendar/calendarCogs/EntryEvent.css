@@ -1,0 +1,15 @@
+.entryEvent > button {
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: red;
+  border-radius: 5px;
+  font-size: 16px;
+  max-width: 200px;
+  font-family: var(--font-style)
+}
+
+.entryEvent > button:hover {
+  cursor: pointer;
+  color: grey;
+}

@@ -12,11 +12,13 @@ function CalendarInput({ pid }) {
   const[description, setDescription] = useState("");
   const[todayDate, setTodayDate] = useState("");
   const[location, setLocation] = useState("");
+  const[occupancy, setOccupancy] = useState("");
   const[category, setCategory] = useState("service");
 
   const[titleError, setTitleError] = useState("Title");
   const[descriptionError, setDescriptionError] = useState("Description");
   const[locationError, setLocationError] = useState("Location");
+  const[occupancyError, setOccupancyError] = useState("Maximum Number of People");
 
   const options = [
     {value: "service", label: "Service"},
@@ -40,7 +42,9 @@ function CalendarInput({ pid }) {
         location: location,
         description: description,
         list: [pid],
-        categories: category
+        categories: category,
+        occupancy: occupancy
+
         //when get back need to actually add values to respective fields
       })
 
@@ -50,16 +54,19 @@ function CalendarInput({ pid }) {
       setDescription("");
       setTodayDate("");
       setLocation("");
+      setOccupancy("");
     //  setType("");
 
       setTitleError("Title");
       setDescriptionError("Description");
       setLocationError("Location");
+      setOccupancyError("Maximum Number of People");
     } else {
 
       setTitleError("Please fill out Title field.");
       setDescriptionError("Please fill out Description field.");
       setLocationError("Please fill out Location field.");
+      setOccupancyError("Please fill out Occupancy field.")
     }
   };
 
@@ -94,6 +101,12 @@ function CalendarInput({ pid }) {
         onChange={e => setTitle(e.target.value)}
         className="input"
         placeholder={titleError} />
+      <input
+        value={occupancy}
+        onChange={e => setOccupancy(e.target.value)}
+        className="input"
+        type="number"
+        placeholder={occupancyError} />
       <input
         value={location}
         onChange={e => setLocation(e.target.value)}

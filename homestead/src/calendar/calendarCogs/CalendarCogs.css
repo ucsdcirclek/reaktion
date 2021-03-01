@@ -18,22 +18,20 @@
 }
 
 .calendarCogs_calendar {
-  border-radius: 5px;
   margin: 5px auto;
-  max-width: 90%;
 }
 
 .calendarCogs_days {
   font-family: var(--font-style);
-  font-size: 16px;
+  font-size: 20px;
 }
 
 tr {
-  line-height: 80px;
+  height: 120px;
 }
 
 th {
   border-radius: 5px;
-  min-width: 150px;
+  width: 200px;
   background-color: var(--background-color);
 }

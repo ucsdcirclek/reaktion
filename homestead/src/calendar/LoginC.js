@@ -32,7 +32,8 @@ export default class Login extends Component {
         name: firebase.auth().currentUser.displayName,
         serviceHours: 0,
         leadershipHours: 0,
-        fellowshipHours: 0
+        fellowshipHours: 0,
+        priority: 1
       })
     } else {
       console.log("not logged in")
