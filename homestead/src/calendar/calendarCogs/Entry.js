@@ -5,24 +5,23 @@ import firebase from "firebase";
 import db from "../../firebase";
 
 function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
+  /*This is responsible for calculating the date to match with firestore*/
   let awesomeMonth = month + 1;
   if (awesomeMonth < 10) {
     awesomeMonth = "0" + awesomeMonth;
   } else {
     awesomeMonth = awesomeMonth;
   }
-
   let awesomeNumber = 0;
   if ((parseInt(number)) < 10) {
     awesomeNumber = "0" + (parseInt(number) - 1);
   }  else {
     awesomeNumber = (parseInt(number) - 1);
   }
-
   let awesomeDate = year + "-" + awesomeMonth + "-" + awesomeNumber;
 
+  /*Responsible for grabbing from the database a specific date depending on the month*/
   const [posts, setPosts] = useState([]);
-
   useEffect(() => {
     db.collection("posts").where("date", "==", awesomeDate).onSnapshot((snapshot) =>
       setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
@@ -38,12 +37,14 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
         {posts.map((post) => (
           <EntryEvent
             docID = {post.id}
-            key={post.data.id}
-            endtime = {post.data.endtime}
-            starttime = {post.data.starttime}
             title = {post.data.title}
+            starttime = {post.data.starttime}
+            endtime = {post.data.endtime}
+            occupancy = {post.data.occupancy}
+            location = {post.data.location}
             description = {post.data.description}
             list = {post.data.list}
+            category = {post.data.categories}
           />
         ))}
       </div>

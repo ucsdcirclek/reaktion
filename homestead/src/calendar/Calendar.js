@@ -16,7 +16,9 @@ function Calendar() {
         <h1 className="calendar_categroiesDivision">Division/District</h1>
       </div>
       <CalendarCogs/>
-      <LoginC className="calendar_login"/>
+      <div className="calendar_profile">
+        <LoginC className="calendar_login"/>
+      </div>
       <Footer />
     </div>
   );

@@ -31,8 +31,11 @@ export default class Login extends Component {
       db.collection('users').doc(user_id).set({
         name: firebase.auth().currentUser.displayName,
         serviceHours: 0,
-        leadershipHours: 0,
-        fellowshipHours: 0,
+        socialHours: 0,
+        committeeHours: 0,
+        kiwanisHours: 0,
+        fundraisingHours: 0,
+        divisionHours: 0,
         priority: 1
       })
     } else {

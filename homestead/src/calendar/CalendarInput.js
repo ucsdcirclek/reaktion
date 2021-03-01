@@ -26,7 +26,7 @@ function CalendarInput({ pid }) {
     {value: "committee", label: "Committee"},
     {value: "kiwanis", label: "Kiwanis"},
     {value: "fundraising", label: "Fundraising"},
-    {value: "division/district", label: "Division/District"}
+    {value: "division", label: "Division/District"}
   ]
 
   const handleSubmit = (e) => {
@@ -106,6 +106,7 @@ function CalendarInput({ pid }) {
         onChange={e => setOccupancy(e.target.value)}
         className="input"
         type="number"
+        min="1"
         placeholder={occupancyError} />
       <input
         value={location}

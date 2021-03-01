@@ -13,25 +13,33 @@
 }
 
 .calendar_categoriesService {
-  background-color: #fa6150;
+  background-color: var(--service-color);
 }
 
 .calendar_categoriesSocial {
-  background-color: #40dbe3;
+  background-color: var(--social-color);
 }
 
 .calendar_categoriesCommittee {
-  background-color: #71b2e3;
+  background-color: var(--committee-color);
 }
 
 .calendar_categoriesKiwanis {
-  background-color: #b071eb;
+  background-color: var(--kiwanis-color);
 }
 
 .calendar_categoriesFundraising {
-  background-color: #8eeb86;
+  background-color: var(--fundraising-color);
 }
 
 .calendar_categroiesDivision {
-  background-color: #535bed;
+  background-color: var(--division-color);
+}
+
+.calendar_profile {
+  display: flex;
+}
+
+.calendar_login {
+  flex: 0.5;
 }

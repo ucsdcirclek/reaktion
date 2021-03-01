@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import "./Modal.css";
 import firebase from "firebase";
@@ -25,14 +25,8 @@ const OVERLAY_STYLES = {
   zIndex: 1000
 }
 
-export default function Modal({ open, children, onClose, key, endtime, starttime, title, description, list, docID, veryNewList }) {
-  function addPerson() {
-    let pid = firebase.auth().currentUser.uid;
-    let updateList = db.collection("posts").doc(docID);
-    list.push(pid);
-    updateList.update({list: list});
-  }
-
+export default function Modal({ open, onClose, catchError, isListed, addPerson, deletePerson, title, starttime, endtime, occupancy, location, description, list, veryNewList }) {
+  /*firestore stores times as military so this converts this back to regular*/
   let beginTime = String(starttime).substring(0, 2);
   let beginMidTime = String(starttime).substring(2, 5);
   if (parseInt(beginTime) > 12) {
@@ -49,19 +43,33 @@ export default function Modal({ open, children, onClose, key, endtime, starttime
     lastTime = (lastTime - 0) + lastMidTime + "am";
   }
 
+  /*renders the RSVP buttons!*/
   if (!open) return null
   return (
     <div style={OVERLAY_STYLES}>
       <div style={MODAL_STYLES} className="modal_styles">
         <CloseIcon onClick={onClose} className="modal_closeIcon"/>
         <h1>{title}</h1>
-        <p>{beginTime} - {lastTime}</p>
+        <h2>{beginTime} - {lastTime}</h2>
+        <div className="modal_rsvp">
+          <h2>Maximum Amount of People:</h2>
+          <h3>{occupancy}</h3>
+        </div>
+        <div className="modal_rsvp">
+          <h2>Location:</h2>
+          <h3>{location}</h3>
+        </div>
         <p>{description}</p>
         <div className="modal_rsvp">
-          <h2>People Going:</h2>
+          <h2>Whos Going:</h2>
           <p>{veryNewList}</p>
         </div>
-        <button onClick={addPerson}>RVSP Now!</button>
+        {(isListed == false) ? (
+          <button onClick={addPerson}>RSVP Now!</button>
+        ):(
+          <button onClick={deletePerson}>unRSVP</button>
+        )}
+        <p>{catchError}</p>
       </div>
     </div>
   )

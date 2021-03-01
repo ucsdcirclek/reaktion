@@ -2,6 +2,12 @@ body {
   --circlek-color: #84de83;
   --background-color: #eee;
   --font-style: 'Tenor Sans', sans-serif;
+  --service-color: #fa6150;
+  --social-color: #40dbe3;
+  --committee-color: #71b2e3;
+  --kiwanis-color: #b071eb;
+  --fundraising-color: #8eeb86;
+  --division-color: #535bed;
 }
 
 .app {
