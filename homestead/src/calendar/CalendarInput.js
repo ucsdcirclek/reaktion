@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./CalendarInput.css";
 import firebase from "firebase";
 import db from "../firebase";
+import Select from "react-select";
 
 function CalendarInput({ pid }) {
   /*Input things into the database*/
@@ -10,38 +11,75 @@ function CalendarInput({ pid }) {
   const[title, setTitle] = useState("");
   const[description, setDescription] = useState("");
   const[todayDate, setTodayDate] = useState("");
+  const[location, setLocation] = useState("");
+  const[category, setCategory] = useState("service");
+
+  const[titleError, setTitleError] = useState("Title");
+  const[descriptionError, setDescriptionError] = useState("Description");
+  const[locationError, setLocationError] = useState("Location");
+
+  const options = [
+    {value: "service", label: "Service"},
+    {value: "social", label: "Social"},
+    {value: "committee", label: "Committee"},
+    {value: "kiwanis", label: "Kiwanis"},
+    {value: "fundraising", label: "Fundraising"},
+    {value: "division/district", label: "Division/District"}
+  ]
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // some clever db stuff
-    db.collection("posts").add({
-      date: todayDate,
-      endtime: endTime,
-      starttime: startTime,
-      title: title,
-      description: description,
-      list: [pid]
-    })
+    if (startTime != "" && endTime != "" && title != "" && description != "" && todayDate != "" && location != "") {
 
-    setStartTime("");
-    setEndTime("");
-    setTitle("");
-    setDescription("");
-    setTodayDate("");
+      db.collection("posts").add({
+        date: todayDate,
+        endtime: endTime,
+        starttime: startTime,
+        title: title,
+        location: location,
+        description: description,
+        list: [pid],
+        categories: category
+        //when get back need to actually add values to respective fields
+      })
+
+      setStartTime("");
+      setEndTime("");
+      setTitle("");
+      setDescription("");
+      setTodayDate("");
+      setLocation("");
+    //  setType("");
+
+      setTitleError("Title");
+      setDescriptionError("Description");
+      setLocationError("Location");
+    } else {
+
+      setTitleError("Please fill out Title field.");
+      setDescriptionError("Please fill out Description field.");
+      setLocationError("Please fill out Location field.");
+    }
   };
+
+  function onChangeInput(value) {
+    let awesomeItem = Object.values(value);
+    setCategory(awesomeItem[0]);
+  }
 
   return (
     <div className='calendarInput'>
     <h2>Create an Event!</h2>
     <form className='calendarInput_form'>
+      <Select options={options} onChange={onChangeInput}/>
       <div className='calendarInput_time'>
         <h2>Start Time: </h2>
         <input
           value={startTime}
           onChange={(e) => setStartTime(e.target.value)}
           type="time"
-          className="input"
-          placeholder={`Start Time: 0:00 a.m.`} />
+          className="input" />
       </div>
       <div className='calendarInput_time'>
         <h2>End Time: </h2>
@@ -49,26 +87,29 @@ function CalendarInput({ pid }) {
           value={endTime}
           onChange={e => setEndTime(e.target.value)}
           type="time"
-          className="input"
-          placeholder={`End Time: 0:00 a.m.`} />
+          className="input"  />
       </div>
       <input
         value={title}
         onChange={e => setTitle(e.target.value)}
         className="input"
-        placeholder={`Title`} />
+        placeholder={titleError} />
+      <input
+        value={location}
+        onChange={e => setLocation(e.target.value)}
+        className="input"
+        placeholder={locationError}  />
       <textarea
         value={description}
         onChange={e => setDescription(e.target.value)}
         type="text"
         className="input_large"
-        placeholder={`Description`} />
+        placeholder={descriptionError} />
       <input
         value={todayDate}
         onChange={e => setTodayDate(e.target.value)}
         type="date"
-        className="input"
-        placeholder={`Date: 00/00/0000`} />
+        className="input"/>
       <button onClick={handleSubmit} type="submit">
         Submit
       </button>

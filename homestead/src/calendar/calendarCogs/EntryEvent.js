@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "./Modal.js";
 import "./EntryEvent.css";
 import firebase from "firebase";
@@ -22,22 +22,21 @@ function EntryEntry({ key, endtime, starttime, title, description, list, docID }
   const[isOpen, setIsOpen] = useState(false)
   var veryNewList = [];
 
-  function listMaker() {
-    setIsOpen(true)
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
     let newList = Object.values(list);
     for (var i = 0; i < newList.length; i++) {
-      db.collection("users").doc(newList[i]).get().then((doc) => {
-        let listItem = doc.data().getString("name")
-        veryNewList.append(listItem)
-      }).catch((error) => {
-        console.log("Error getting document:", error);
+      db.collection("users").doc(newList[i]).onSnapshot((doc) => {
+        veryNewList.push((doc.data().name) + ", ");
       });
     }
-  }
+    setUsers(veryNewList)
+  }, []);
+
 
   return (
     <div className='entryEvent'>
-      <button onClick={listMaker}>{beginTime}-{lastTime} {title}</button>
+      <button onClick={() => setIsOpen(true)}>{beginTime}-{lastTime} {title}</button>
       <Modal open={isOpen} onClose={() => setIsOpen(false)}
        key={key}
        starttime = {starttime}
@@ -45,8 +44,9 @@ function EntryEntry({ key, endtime, starttime, title, description, list, docID }
        title = {title}
        list = {list}
        docID = {docID}
-       veryNewList = {veryNewList}
-    />
+       description = {description}
+       veryNewList = {users}
+       />
     </div>
   );
 }
