@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Modal from "./Modal.js";
 import "./EntryEvent.css";
 import firebase from "firebase";
 import db from "../../firebase";
 
-function EntryEntry({ docID, title, starttime, endtime, occupancy, location, description, list, category }) {
-  /*firestore stores times as military so this converts this back to regular*/
+function EntryEntry({ docID, title, starttime, endtime, occupancy, location, description, list, category, userList }) {
+  /*Firestore records input type time as military so this converts military time to regular*/
   let beginTime = String(starttime).substring(0, 2);
   if (parseInt(beginTime) > 12) {
     beginTime = (beginTime - 12) + "p";
@@ -20,75 +20,78 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
     lastTime = (lastTime - 0) + "a";
   }
 
-  /*this is responsible for the pop-up when a button is pressed*/
+  /*This sets css elements to create pop-up when a button is pressed*/
   const[isOpen, setIsOpen] = useState(false)
 
+  /*Checks if user is already RSVP'd and Logged In*/
+  const isListed = useRef(false);
+  const whatsListed = useRef(false);
   const[catchError, setCatchError] = useState("");
-  const[isListed, setIsListed] = useState(false);
+  const[initialLogged, setInitialLogged] = useState("notLoggedIn");
+  const isMounted = useRef(false);
+  const [cypherList, setCypherList] = useState([]);
 
-  function addPerson() {
+  useEffect(() => {
+    /*Checks if user is already RSVP'd and Logged In*/
+    //Create Prop that reads if user is logged in!
     try {
       let pid = firebase.auth().currentUser.uid;
-      let updateList = db.collection("posts").doc(docID);
-      list.push(pid);
-      updateList.update({list: list});
-      setIsListed(true);
+      for (var i = 0; i < list.length; i++) {
+        if (list[i] == pid) {
+          isListed.current = true;
+        }
+      }
+      setInitialLogged("LoggedIn");
       setCatchError("");
     } catch(error) {
-      setCatchError("Please Login to RSVP");
+      setCatchError("Please login to RSVP");
+      isListed.current = false;
     }
+  },  []);
+
+  /*Adds a person's ID to the list*/
+  function addPerson() {
+      list.push(firebase.auth().currentUser.uid);
+      userList.push(firebase.auth().currentUser.displayName);
+      db.collection("posts").doc(docID).update({  userList: userList, list: list  });
+      isListed.current = true;
   }
 
-  /*if person is already listed and wants to unRSVP*/
-  /*for some reason doesn't delete first person of list neat*/
+  /*Deletes all current user's ID from list*/
   function deletePerson() {
-    setIsListed(false);
     let pid = firebase.auth().currentUser.uid;
     let updateList = db.collection("posts").doc(docID);
     for (var i = 0; i < list.length; i++) {
       if (list[i] == pid) {
-        list.splice(i, 1)
+        list.splice(i, 1);
+        userList.splice(i, 1);
       }
-    updateList.update({list: list});
     }
+    updateList.update({ userList: userList, list: list});
+    isListed.current = false;
   }
-
-
-
-  /*this is responsible for the decoding list of participants*/
-  var veryNewList = [];
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    let newList = Object.values(list);
-    for (var i = 0; i < newList.length; i++) {
-      db.collection("users").doc(newList[i]).onSnapshot((doc) => {
-        veryNewList.push((doc.data().name) + ", ");
-      });
-    }
-    setUsers(veryNewList)
-  }, []);
-
 
   return (
     <div className={category}>
       <div className="entryEvent">
         <button onClick={() => setIsOpen(true)}>{beginTime}-{lastTime} {title}</button>
-        <Modal
-          open={isOpen}
-          onClose={() => setIsOpen(false)}
-          catchError={catchError}
-          isListed={isListed}
-          addPerson={addPerson}
-          deletePerson={deletePerson}
-          title={title}
-          starttime={starttime}
-          endtime={endtime}
-          occupancy={occupancy}
-          location={location}
-          description={description}
-          list={list}
-          veryNewList={users}
-       />
+          <Modal
+            id="modal"
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+            catchError={catchError}
+            isListed={isListed.current}
+            addPerson={addPerson}
+            deletePerson={deletePerson}
+            initialLogged={initialLogged}
+            title={title}
+            starttime={starttime}
+            endtime={endtime}
+            occupancy={occupancy}
+            location={location}
+            description={description}
+            userList={userList}
+         />
        </div>
     </div>
   );

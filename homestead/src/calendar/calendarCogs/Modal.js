@@ -25,8 +25,8 @@ const OVERLAY_STYLES = {
   zIndex: 1000
 }
 
-export default function Modal({ open, onClose, catchError, isListed, addPerson, deletePerson, title, starttime, endtime, occupancy, location, description, list, veryNewList }) {
-  /*firestore stores times as military so this converts this back to regular*/
+export default function Modal({ open, onClose, catchError, isListed, addPerson, deletePerson, initialLogged, title, starttime, endtime, occupancy, location, description, userList }) {
+  /*Firestore records input type time as military so this converts military time to regular*/
   let beginTime = String(starttime).substring(0, 2);
   let beginMidTime = String(starttime).substring(2, 5);
   if (parseInt(beginTime) > 12) {
@@ -43,7 +43,6 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
     lastTime = (lastTime - 0) + lastMidTime + "am";
   }
 
-  /*renders the RSVP buttons!*/
   if (!open) return null
   return (
     <div style={OVERLAY_STYLES}>
@@ -62,12 +61,12 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
         <p>{description}</p>
         <div className="modal_rsvp">
           <h2>Whos Going:</h2>
-          <p>{veryNewList}</p>
+          <p>{userList}</p>
         </div>
         {(isListed == false) ? (
-          <button onClick={addPerson}>RSVP Now!</button>
+          <button className={initialLogged} onClick={addPerson}>RSVP Now!</button>
         ):(
-          <button onClick={deletePerson}>unRSVP</button>
+          <button className={initialLogged} onClick={deletePerson}>unRSVP</button>
         )}
         <p>{catchError}</p>
       </div>

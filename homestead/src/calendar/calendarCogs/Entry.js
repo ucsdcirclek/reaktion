@@ -36,6 +36,7 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
         <p className="entry_number">{number - shiftIndex}</p>
         {posts.map((post) => (
           <EntryEvent
+            userList = {post.data.userList}
             docID = {post.id}
             title = {post.data.title}
             starttime = {post.data.starttime}

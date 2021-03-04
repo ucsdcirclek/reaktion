@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CalendarInput from "./CalendarInput.js";
+import MyEvents from "./MyEvents.js";
 import "./LoginC.css";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
@@ -28,7 +29,7 @@ export default class Login extends Component {
   componentDidUpdate = () => {
     if (this.state.isSignedIn) {
       let user_id = firebase.auth().currentUser.uid
-      db.collection('users').doc(user_id).set({
+      db.collection("users").doc(user_id).set({
         name: firebase.auth().currentUser.displayName,
         serviceHours: 0,
         socialHours: 0,
@@ -36,7 +37,8 @@ export default class Login extends Component {
         kiwanisHours: 0,
         fundraisingHours: 0,
         divisionHours: 0,
-        priority: 1
+        priority: 1,
+        myevents: ""
       })
     } else {
       console.log("not logged in")
@@ -52,9 +54,10 @@ export default class Login extends Component {
                 <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
                 <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
                 <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
-                <div className="login_entry">
-                  <CalendarInput pid={firebase.auth().currentUser.uid}/>
-                </div>
+                <CalendarInput className="login_input" pid={firebase.auth().currentUser.uid} name={firebase.auth().currentUser.displayName}/>
+              </div>
+              <div className="login_entry">
+                <MyEvents className="login_myEvents"/>
               </div>
             </div>
         ) : (

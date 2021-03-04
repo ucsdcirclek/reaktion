@@ -61,3 +61,12 @@
 .modal_styles > button:hover {
   cursor: pointer;
 }
+
+.LoggedIn {
+  background-color: var(--circlek-color);
+}
+
+.notLoggedIn {
+  background-color: var(--background-color);
+  pointer-events: none;
+}

@@ -1,9 +1,13 @@
 .login {
   min-width: 300px;
-  flex: 0.5;
+}
+
+.login_total {
+  display: flex;
 }
 
 .login_signout {
+  flex: 0.5;
   margin: 20px;
   padding: 10px;
   border-radius: 5px;
@@ -33,4 +37,5 @@
 
 .login_entry {
   margin: 20px;
+  flex: 0.5;
 }

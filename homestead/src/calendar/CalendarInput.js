@@ -4,7 +4,7 @@ import firebase from "firebase";
 import db from "../firebase";
 import Select from "react-select";
 
-function CalendarInput({ pid }) {
+function CalendarInput({ pid, name }) {
   /*Input things into the database*/
   const[startTime, setStartTime] = useState("");
   const[endTime, setEndTime] = useState("");
@@ -43,8 +43,8 @@ function CalendarInput({ pid }) {
         description: description,
         list: [pid],
         categories: category,
-        occupancy: occupancy
-
+        occupancy: occupancy,
+        userList: [name]
         //when get back need to actually add values to respective fields
       })
 
