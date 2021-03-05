@@ -12,6 +12,7 @@ function App() {
     <div className="app">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
       </style>
       <Router>
         {/*Navbar*/}

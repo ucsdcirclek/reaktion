@@ -1,10 +1,20 @@
 .navbarOption {
   padding: 5px;
-  color: black;
   font-size: 14px;
   font-family: var(--font-style);
+  color: var(--dark-color);
+  font-weight: lighter;
 }
-.navbarOption:hover {
-  background-color: var(--circlek-color);
-  border-radius: 5px;
+
+@media only screen and (min-width: 768px) {
+  .navbarOption {
+    padding: 5px;
+    color: black;
+    font-size: 14px;
+    font-family: var(--font-style);
+  }
+  .navbarOption:hover {
+    background-color: var(--circlek-color);
+    border-radius: 5px;
+  }
 }

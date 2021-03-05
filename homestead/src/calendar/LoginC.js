@@ -57,7 +57,7 @@ export default class Login extends Component {
                 <CalendarInput className="login_input" pid={firebase.auth().currentUser.uid} name={firebase.auth().currentUser.displayName}/>
               </div>
               <div className="login_entry">
-                <MyEvents className="login_myEvents"/>
+                <MyEvents className="login_myEvents" pid={firebase.auth().currentUser.uid}/>
               </div>
             </div>
         ) : (
