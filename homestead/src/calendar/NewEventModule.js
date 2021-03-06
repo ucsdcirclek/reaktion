@@ -8,7 +8,7 @@ import Select from "react-select";
 const MODAL_STYLES = {
   position: 'fixed',
   top: '50%',
-  left: '50%',
+  left: '30%',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#FFF',
   padding: '50px',
@@ -27,16 +27,16 @@ const OVERLAY_STYLES = {
   zIndex: 1000
 }
 
-export default function NewEventModule({ id, open, onClose, docID  }) {
+export default function NewEventModule({ open, onClose, docID, oldTitle, oldEndtime, oldStarttime, oldOccupancy, oldDescription, oldLocation, oldDate, oldCategory }) {
   /*Firestore records input type time as military so this converts military time to regular*/
-  const[startTime, setStartTime] = useState("");
-  const[endTime, setEndTime] = useState("");
-  const[title, setTitle] = useState("");
-  const[description, setDescription] = useState("");
-  const[todayDate, setTodayDate] = useState("");
-  const[location, setLocation] = useState("");
-  const[occupancy, setOccupancy] = useState("");
-  const[category, setCategory] = useState("service");
+  const[startTime, setStartTime] = useState(oldStarttime);
+  const[endTime, setEndTime] = useState(oldEndtime);
+  const[title, setTitle] = useState(oldTitle);
+  const[description, setDescription] = useState(oldDescription);
+  const[todayDate, setTodayDate] = useState(oldDate);
+  const[location, setLocation] = useState(oldLocation);
+  const[occupancy, setOccupancy] = useState(oldOccupancy);
+  const[category, setCategory] = useState(oldCategory);
 
   const[titleError, setTitleError] = useState("Title");
   const[descriptionError, setDescriptionError] = useState("Description");
@@ -55,39 +55,29 @@ export default function NewEventModule({ id, open, onClose, docID  }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // some clever db stuff
-    if (startTime != "" && endTime != "" && title != "" && description != "" && todayDate != "" && location != "") {
+    try {
+      if (startTime != "" && endTime != "" && title != "" && description != "" && todayDate != "" && location != "" && category != "") {
+        db.collection("posts").doc(docID).update({
+          date: todayDate,
+          endtime: endTime,
+          starttime: startTime,
+          title: title,
+          location: location,
+          description: description,
+          categories: category,
+          occupancy: occupancy
+        })
 
-      db.collection("posts").doc(docID).update({
-        date: todayDate,
-        endtime: endTime,
-        starttime: startTime,
-        title: title,
-        location: location,
-        description: description,
-        categories: category,
-        occupancy: occupancy
-        //when get back need to actually add values to respective fields
-      })
+        onClose();
+      } else {
 
-      setStartTime("");
-      setEndTime("");
-      setTitle("");
-      setDescription("");
-      setTodayDate("");
-      setLocation("");
-      setOccupancy("");
-    //  setType("");
-
-      setTitleError("Title");
-      setDescriptionError("Description");
-      setLocationError("Location");
-      setOccupancyError("Maximum Number of People");
-    } else {
-
-      setTitleError("Please fill out Title field.");
-      setDescriptionError("Please fill out Description field.");
-      setLocationError("Please fill out Location field.");
-      setOccupancyError("Please fill out Occupancy field.")
+        setTitleError("Please fill out Title field.");
+        setDescriptionError("Please fill out Description field.");
+        setLocationError("Please fill out Location field.");
+        setOccupancyError("Please fill out Occupancy field.")
+      }
+    } catch(error) {
+      console.log("error")
     }
   };
 
@@ -101,55 +91,55 @@ export default function NewEventModule({ id, open, onClose, docID  }) {
   if (!open) return null
   return (
     <div style={OVERLAY_STYLES}>
-      <div style={MODAL_STYLES} className="modal_styles">
-      <CloseIcon onClick={onClose} className="modal_closeIcon"/>
-      <h2>Create an Event!</h2>
-      <form className='calendarInput_form'>
+      <div style={MODAL_STYLES} className="modal_styles1">
+      <CloseIcon onClick={onClose} className="modal_closeIcon1"/>
+      <h2>Edit my Event!</h2>
+      <form className='calendarInput_form1'>
         <Select options={options} onChange={onChangeInput}/>
-        <div className='calendarInput_time'>
+        <div className='calendarInput_time1'>
           <h2>Start Time: </h2>
           <input
             value={startTime}
             onChange={(e) => setStartTime(e.target.value)}
             type="time"
-            className="input" />
+            className="input1" />
         </div>
-        <div className='calendarInput_time'>
+        <div className='calendarInput_time1'>
           <h2>End Time: </h2>
           <input
             value={endTime}
             onChange={e => setEndTime(e.target.value)}
             type="time"
-            className="input"  />
+            className="input1"  />
         </div>
         <input
           value={title}
           onChange={e => setTitle(e.target.value)}
-          className="input"
+          className="input1"
           placeholder={titleError} />
         <input
           value={occupancy}
           onChange={e => setOccupancy(e.target.value)}
-          className="input"
+          className="input1"
           type="number"
           min="1"
           placeholder={occupancyError} />
         <input
           value={location}
           onChange={e => setLocation(e.target.value)}
-          className="input"
+          className="input1"
           placeholder={locationError}  />
         <textarea
           value={description}
           onChange={e => setDescription(e.target.value)}
           type="text"
-          className="input_large"
+          className="input_large1"
           placeholder={descriptionError} />
         <input
           value={todayDate}
           onChange={e => setTodayDate(e.target.value)}
           type="date"
-          className="input"/>
+          className="input1"/>
         <button onClick={handleSubmit} type="submit">
           Submit
         </button>

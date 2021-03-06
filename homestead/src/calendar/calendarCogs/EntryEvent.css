@@ -16,18 +16,49 @@
 .division > .entryEvent > button {
   background-color: var(--division-color);
 }
-
 .entryEvent > button {
   border: none;
-  overflow: hidden;
-  white-space: nowrap;
   border-radius: 5px;
   font-size: 16px;
-  max-width: 200px;
-  font-family: var(--font-style)
+  max-width: 100%;
+  font-family: var(--font-style);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.entryEvent > button:hover {
-  cursor: pointer;
-  color: grey;
+
+@media only screen and (min-width: 768px) {
+  .service > .entryEvent > button {
+    background-color: var(--service-color);
+  }
+  .social > .entryEvent > button {
+    background-color: var(--social-color);
+  }
+  .committee > .entryEvent > button {
+    background-color: var(--committee-color);
+  }
+  .kiwanis > .entryEvent > button {
+    background-color: var(--kiwanis-color);
+  }
+  .fundraising > .entryEvent > button {
+    background-color: var(--fundraising-color);
+  }
+  .division > .entryEvent > button {
+    background-color: var(--division-color);
+  }
+
+  .entryEvent > button {
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 16px;
+    max-width: 200px;
+    font-family: var(--font-style)
+  }
+
+  .entryEvent > button:hover {
+    cursor: pointer;
+    color: grey;
+  }
 }

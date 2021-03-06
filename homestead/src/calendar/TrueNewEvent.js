@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import NewEventModule from "./NewEventModule.js";
 import "./TrueNewEvent.css";
 
@@ -18,41 +18,61 @@ function TrueNewEvents({ userList, title, starttime, endtime, occupancy, locatio
   let eventDate = date.substring(5, 7);
   let eventIndex = parseInt(eventDate);
 
-
   /*This sets css elements to create pop-up when a button is pressed*/
-  const[isOpen, setIsOpen] = useState(false)
+  //&& (eventIndex == startingIndex || eventIndex == startingIndex-1 || eventIndex == startingIndex+1)
+  const[isOpen, setIsOpen] = useState(false);
+  const isValid = useRef(false);
+  const isHost = useRef(false);
 
-  //works!
   for (var i = 0; i < list.length; i++) {
-    if (list[i] == pid && (eventIndex == startingIndex || eventIndex == startingIndex-1 || eventIndex == startingIndex+1)) {
-      return (
-        <div className={category}>
-          <p>{title}</p>
-          <p>{starttime} - {endtime}</p>
-          <p>{occupancy}</p>
-          <p>{location}</p>
-          <p>{description}</p>
-          <p>{userList}</p>
-          <p>{date}</p>
-
-          {(list[0] == pid) ? (
-            <div>
-              <button onClick={() => setIsOpen(true)}>Edit Event</button>
-              <NewEventModule
-                open={isOpen}
-                onClose={() => setIsOpen(false)}
-
-              />
-            </div>
-          ):(
-            <div></div>
-          )}
-        </div>
-      );
-    } else {
-      return (<div></div>);
+    if (list[i] == pid) {
+        isValid.current = true;
+      break;
     }
   }
+
+  if (list[0] == pid) {
+    isHost.current = true;
+  }
+
+  category = category + "1";
+
+  if (isValid.current == true) {
+    return (
+      <div className={category}>
+        <h1>{title}</h1>
+        <p><b>Date:</b> {date}</p>
+        <p><b>Time:</b> {starttime} - {endtime}</p>
+        <p><b>Maximum Occupancy:</b> {occupancy}</p>
+        <p><b>Location:</b> {location}</p>
+        <p>{description}</p>
+        <p><b>Whos Going?</b> {userList}</p>
+        {isHost.current ? (
+          <div className="button_class">
+            <button onClick={() => setIsOpen(true)}>Edit Event</button>
+            <NewEventModule
+              open={isOpen}
+              onClose={() => setIsOpen(false)}
+              oldTitle={title}
+              oldStarttime={starttime}
+              oldEndtime={endtime}
+              oldOccupancy={occupancy}
+              oldLocation={location}
+              oldDescription={description}
+              oldDate={date}
+              docID={docID}
+              oldCategory={category}
+            />
+          </div>
+        ):(
+          <div></div>
+        )}
+      </div>
+    );
+  } else {
+    return null;
+  }
+
 }
 
 export default TrueNewEvents;

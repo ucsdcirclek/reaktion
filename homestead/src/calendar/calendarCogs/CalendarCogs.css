@@ -9,7 +9,7 @@
 .calendarCogs_monthIcon {
   background-color: var(--circlek-color);
   border-radius: 5px;
-  margin: 6px 10px;
+  margin: 10px;
 }
 
 .calendarCogs_monthIcon:hover {
@@ -18,12 +18,15 @@
 }
 
 .calendarCogs_calendar {
-  margin: 5px auto;
+  table-layout: fixed;
+  width: 100%;
 }
 
 .calendarCogs_days {
   font-family: var(--font-style);
   font-size: 20px;
+  text-wrap: nowrap;
+  overflow: hidden;
 }
 
 tr {
@@ -32,6 +35,45 @@ tr {
 
 th {
   border-radius: 5px;
-  width: 200px;
-  background-color: var(--background-color);
+  background-color: var(--light-accent-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .calendarCogs_months {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: var(--font-style);
+    font-size: 16px;
+  }
+
+  .calendarCogs_monthIcon {
+    background-color: var(--circlek-color);
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  .calendarCogs_monthIcon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .calendarCogs_calendar {
+    margin: 5px auto;
+  }
+
+  .calendarCogs_days {
+    font-family: var(--font-style);
+    font-size: 20px;
+  }
+
+  tr {
+    height: 120px;
+  }
+
+  th {
+    border-radius: 5px;
+    width: 200px;
+    background-color: var(--light-accent-color);
+  }
 }

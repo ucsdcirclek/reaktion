@@ -1,13 +1,17 @@
 .modal_styles {
   border-radius: 5px;
+  max-height: 800px;
+  width: 300px;
 }
 
 .modal_styles > h1 {
   font-family: var(--font-style);
+  font-size: 18px;
 }
 
 .modal_styles > h2 {
   font-family: var(--font-style);
+  font-size: 16px;
 }
 
 .modal_styles > p {
@@ -16,24 +20,36 @@
   font-weight: lighter;
 }
 
-.modal_rsvp {
+.modal_rsvp1 {
   display: flex;
   align-items: center;
 }
 
-.modal_rsvp > h2 {
+.modal_rsvp1 > h2 {
   font-family: var(--font-style);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bolder;
   margin-right: 5px;
 }
 
-.modal_rsvp > h3 {
+.modal_rsvp1 > h3 {
   font-weight: lighter;
   font-family: var(--font-style);
 }
 
-.modal_rsvp > p {
+.modal_rsvp2 > h2 {
+  font-family: var(--font-style);
+  text-align: left;
+  font-size: 16px;
+}
+
+.modal_rsvp3 > h2 {
+  font-family: var(--font-style);
+  text-align: left;
+  font-size: 16px;
+}
+
+.modal_rsvp3 > p {
   font-family: var(--font-style);
   font-size: 16px;
   font-weight: lighter;
@@ -44,12 +60,6 @@
   color: red;
 }
 
-.modal_closeIcon:hover {
-  cursor: pointer;
-  background-color: var(--background-color);
-  border-radius: 50%;
-}
-
 .modal_styles > button {
   border: none;
   font-family: var(--font-style);
@@ -58,15 +68,86 @@
   margin: 10px;
 }
 
-.modal_styles > button:hover {
-  cursor: pointer;
-}
-
 .LoggedIn {
-  background-color: var(--circlek-color);
+  background-color: var(--fellowship-color);
 }
 
 .notLoggedIn {
   background-color: var(--background-color);
   pointer-events: none;
+}
+@media only screen and (min-width: 768px) {
+  .modal_styles {
+    border-radius: 5px;
+    width: 500px;
+  }
+
+  .modal_styles > h1 {
+    font-family: var(--font-style);
+  }
+
+  .modal_styles > h2 {
+    font-family: var(--font-style);
+  }
+
+  .modal_styles > p {
+    font-family: var(--font-style);
+    text-align: left;
+    font-weight: lighter;
+  }
+
+  .modal_rsvp {
+    display: flex;
+    align-items: center;
+  }
+
+  .modal_rsvp > h2 {
+    font-family: var(--font-style);
+    font-size: 18px;
+    font-weight: bolder;
+    margin-right: 5px;
+  }
+
+  .modal_rsvp > h3 {
+    font-weight: lighter;
+    font-family: var(--font-style);
+  }
+
+  .modal_rsvp > p {
+    font-family: var(--font-style);
+    font-size: 16px;
+    font-weight: lighter;
+  }
+
+  .modal_closeIcon {
+    margin-top: -100px !important;
+    color: red;
+  }
+
+  .modal_closeIcon:hover {
+    cursor: pointer;
+    background-color: var(--background-color);
+    border-radius: 50%;
+  }
+
+  .modal_styles > button {
+    border: none;
+    font-family: var(--font-style);
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  .modal_styles > button:hover {
+    cursor: pointer;
+  }
+
+  .LoggedIn {
+    background-color: var(--circlek-color);
+  }
+
+  .notLoggedIn {
+    background-color: var(--background-color);
+    pointer-events: none;
+  }
 }

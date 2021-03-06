@@ -4,7 +4,7 @@ import firebase from "firebase";
 import db from "../firebase";
 import Select from "react-select";
 
-function CalendarInput({ pid, name }) {
+function CalendarInput({ pid, name, priority }) {
   /*Input things into the database*/
   const[startTime, setStartTime] = useState("");
   const[endTime, setEndTime] = useState("");
@@ -32,7 +32,7 @@ function CalendarInput({ pid, name }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // some clever db stuff
-    if (startTime != "" && endTime != "" && title != "" && description != "" && todayDate != "" && location != "") {
+    if (startTime != "" && endTime != "" && title != "" && description != "" && todayDate != "" && location != "" && category != "") {
 
       db.collection("posts").add({
         date: todayDate,
@@ -75,61 +75,65 @@ function CalendarInput({ pid, name }) {
     setCategory(awesomeItem[0]);
   }
 
-  return (
-    <div className='calendarInput'>
-    <h2>Create an Event!</h2>
-    <form className='calendarInput_form'>
-      <Select options={options} onChange={onChangeInput}/>
-      <div className='calendarInput_time'>
-        <h2>Start Time: </h2>
+  if (priority == 1) {
+    return (
+      <div className='calendarInput'>
+      <h2>Create an Event!</h2>
+      <form className='calendarInput_form'>
+        <Select options={options} onChange={onChangeInput}/>
+        <div className='calendarInput_time'>
+          <h2>Start Time: </h2>
+          <input
+            value={startTime}
+            onChange={(e) => setStartTime(e.target.value)}
+            type="time"
+            className="input" />
+        </div>
+        <div className='calendarInput_time'>
+          <h2>End Time: </h2>
+          <input
+            value={endTime}
+            onChange={e => setEndTime(e.target.value)}
+            type="time"
+            className="input"  />
+        </div>
         <input
-          value={startTime}
-          onChange={(e) => setStartTime(e.target.value)}
-          type="time"
-          className="input" />
-      </div>
-      <div className='calendarInput_time'>
-        <h2>End Time: </h2>
+          value={title}
+          onChange={e => setTitle(e.target.value)}
+          className="input"
+          placeholder={titleError} />
         <input
-          value={endTime}
-          onChange={e => setEndTime(e.target.value)}
-          type="time"
-          className="input"  />
+          value={occupancy}
+          onChange={e => setOccupancy(e.target.value)}
+          className="input"
+          type="number"
+          min="1"
+          placeholder={occupancyError} />
+        <input
+          value={location}
+          onChange={e => setLocation(e.target.value)}
+          className="input"
+          placeholder={locationError}  />
+        <textarea
+          value={description}
+          onChange={e => setDescription(e.target.value)}
+          type="text"
+          className="input_large"
+          placeholder={descriptionError} />
+        <input
+          value={todayDate}
+          onChange={e => setTodayDate(e.target.value)}
+          type="date"
+          className="input"/>
+        <button onClick={handleSubmit} type="submit">
+          Submit
+        </button>
+      </form>
       </div>
-      <input
-        value={title}
-        onChange={e => setTitle(e.target.value)}
-        className="input"
-        placeholder={titleError} />
-      <input
-        value={occupancy}
-        onChange={e => setOccupancy(e.target.value)}
-        className="input"
-        type="number"
-        min="1"
-        placeholder={occupancyError} />
-      <input
-        value={location}
-        onChange={e => setLocation(e.target.value)}
-        className="input"
-        placeholder={locationError}  />
-      <textarea
-        value={description}
-        onChange={e => setDescription(e.target.value)}
-        type="text"
-        className="input_large"
-        placeholder={descriptionError} />
-      <input
-        value={todayDate}
-        onChange={e => setTodayDate(e.target.value)}
-        type="date"
-        className="input"/>
-      <button onClick={handleSubmit} type="submit">
-        Submit
-      </button>
-    </form>
-    </div>
-  );
+    );
+  } else {
+    return(null);
+  }
 }
 
 export default CalendarInput;

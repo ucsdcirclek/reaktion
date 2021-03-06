@@ -3,7 +3,7 @@ import TrueNewEvent from "./TrueNewEvent.js";
 import "./MyEvents.css";
 import firebase from "firebase";
 import db from "../firebase";
-//import MyEvents from "./MyEvents.js";
+
 
 function MyEvents({pid}) {
   const [posts, setPosts] = useState([]);

@@ -1,10 +1,10 @@
 .account_title {
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 10px auto 0px;
-  max-width: 90%;
+  margin: 10px 0px;
   text-align: center;
-  background-color: var(--background-color);
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--circlek-color);
   font-family: var(--font-style);
   font-size: 24px;
 }
@@ -14,33 +14,26 @@
   border-radius: 5px;
   padding: 10px;
   margin-top: 10px;
-  background-color: var(--circlek-color);
+  background-color: var(--fellowship-color);
   font-family: var(--font-style);
   font-size: 16px;
 }
 
-.account button:hover {
-  cursor: pointer;
-  font-weight: bold;
-}
-
 .account_upper {
-  display: flex;
   border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px auto 0px;
-  max-width: 90%;
+  margin: 10px 0px;
   text-align: center;
-  background-color: var(--background-color);
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--leadership-color);
   font-family: var(--font-style);
 }
 
 .account_bigLittle {
-  flex: 0.5;
   padding: 20px;
 }
 
 .account_bigLittle > h2 {
+  margin: 0px 0px 10px;
   font-family: var(--font-family);
   font-size: 22px;
 }
@@ -48,32 +41,35 @@
 .account_bigLittle > p {
   font-family: var(--font-family);
   font-size: 18px;
+  margin: 0px 5px;
 }
 
 .account_families {
-  flex: 0.5;
-  padding: 20px;
+  padding: 0px 0px 20px;
 }
 
 .account_families > h2 {
   font-family: var(--font-family);
   font-size: 22px;
+  margin: 0px 0px 10px;
 }
 
 .account_families > p {
   font-family: var(--font-family);
   font-size: 18px;
+  margin: 0px 10px;
 }
 
 .account_presentFamilies {
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 10px auto 0px;
-  max-width: 90%;
-  background-color: var(--background-color);
+  margin: 20px auto;
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--fellowship-color);
 }
 
 .account_presentFamilies > h2 {
+  margin: 10px 0px 0px;
   text-align: center;
   font-family: var(--font-style);
   font-size: 22px;
@@ -81,11 +77,11 @@
 
 .account_mid {
   border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px auto;
-  max-width: 90%;
+  padding: 20px 0px;
+  margin: 10px 0px;
   text-align: center;
-  background-color: var(--background-color)
+  border-top: 5px solid var(--service-color);
+  background-color: var(--light-accent-color)
 }
 
 .account_mid > h2 {
@@ -94,13 +90,8 @@
   font-size: 22px;
 }
 
-.account_midStart {
-  display: flex;
-}
-
 .account_midService {
-  flex: 0.5;
-  padding: 20px 10rem;
+  padding: 20px 5px;
   text-align: center;
 }
 
@@ -111,12 +102,11 @@
 
 .account_midService > p {
   font-family: var(--font-style);
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .account_midGBM {
-  flex: 0.5;
-  padding: 20px 10rem;
+  padding: 20px 5px;
   text-align: center;
 }
 
@@ -127,7 +117,7 @@
 
 .account_midGBM > p {
   font-family: var(--font-style);
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .account_ready > h2 {
@@ -139,54 +129,244 @@
 .account_ready > p {
   text-align: center;
   font-family: var(--font-style);
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .account_lower {
-  display: flex;
   border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px auto;
-  max-width: 90%;
+  padding: 10px 10px;
+  margin: 20px 0px;
   text-align: center;
-  background-color: var(--background-color)
+  border-top: 5px solid var(--leadership-color);
+  background-color: var(--light-accent-color)
 }
 
-.account_lower > h2 {
+.account_lower h2 {
   font-family: var(--font-style);
   font-size: 20px;
 }
 
-.account_lower > p {
+.account_lower p {
   font-family: var(--font-style);
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .account_lowerApp {
-  flex: 0.33;
   text-align: center;
-  padding: 20px 5rem;
+  padding: 20px 2rem;
 }
 
 .account_lowerMembership {
-  flex: 0.34;
   text-align: center;
-  padding: 20px 5rem;
+  padding: 20px 2rem;
 }
 
 .account_lowerCST {
-  flex: 0.33;
   text-align: center;
-  padding: 20px 5rem;
+  padding: 20px 2rem;
 }
 
 .account_account {
   text-align: center;
-  background-color: var(--background-color);
+  background-color: var(--light-accent-color);
   border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px auto 0px;
-  max-width: 90%;
+  padding: 20px 0px;
+  margin: 10px 0px;
   font-family: var(--font-style);
   font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .account_title {
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px auto 0px;
+    max-width: 90%;
+    text-align: center;
+    background-color: var(--light-accent-color);
+    font-family: var(--font-style);
+    font-size: 24px;
+  }
+
+  .account button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: var(--circlek-color);
+    font-family: var(--font-style);
+    font-size: 16px;
+  }
+
+  .account button:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .account_upper {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px auto 0px;
+    max-width: 90%;
+    text-align: center;
+    background-color: var(--light-accent-color);
+    font-family: var(--font-style);
+  }
+
+  .account_bigLittle {
+    flex: 0.5;
+    padding: 20px;
+  }
+
+  .account_bigLittle > h2 {
+    font-family: var(--font-family);
+    font-size: 22px;
+  }
+
+  .account_bigLittle > p {
+    font-family: var(--font-family);
+    font-size: 18px;
+  }
+
+  .account_families {
+    flex: 0.5;
+    padding: 20px;
+  }
+
+  .account_families > h2 {
+    font-family: var(--font-family);
+    font-size: 22px;
+  }
+
+  .account_families > p {
+    font-family: var(--font-family);
+    font-size: 18px;
+  }
+
+  .account_presentFamilies {
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px auto 0px;
+    max-width: 90%;
+    background-color: var(--light-accent-color);
+  }
+
+  .account_presentFamilies > h2 {
+    text-align: center;
+    font-family: var(--font-style);
+    font-size: 22px;
+  }
+
+  .account_mid {
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    max-width: 90%;
+    text-align: center;
+    background-color: var(--light-accent-color)
+  }
+
+  .account_mid > h2 {
+    text-align: center;
+    font-family: var(--font-style);
+    font-size: 22px;
+  }
+
+  .account_midStart {
+    display: flex;
+  }
+
+  .account_midService {
+    flex: 0.5;
+    padding: 20px 10rem;
+    text-align: center;
+  }
+
+  .account_midService > h2 {
+    font-family: var(--font-style);
+    font-size: 20px;
+  }
+
+  .account_midService > p {
+    font-family: var(--font-style);
+    font-size: 16px;
+  }
+
+  .account_midGBM {
+    flex: 0.5;
+    padding: 20px 10rem;
+    text-align: center;
+  }
+
+  .account_midGBM > h2 {
+    font-family: var(--font-style);
+    font-size: 20px;
+  }
+
+  .account_midGBM > p {
+    font-family: var(--font-style);
+    font-size: 16px;
+  }
+
+  .account_ready > h2 {
+    text-align: center;
+    font-family: var(--font-style);
+    font-size: 20px;
+  }
+
+  .account_ready > p {
+    text-align: center;
+    font-family: var(--font-style);
+    font-size: 16px;
+  }
+
+  .account_lower {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    max-width: 90%;
+    text-align: center;
+    background-color: var(--light-accent-color)
+  }
+
+  .account_lower > h2 {
+    font-family: var(--font-style);
+    font-size: 20px;
+  }
+
+  .account_lower > p {
+    font-family: var(--font-style);
+    font-size: 16px;
+  }
+
+  .account_lowerApp {
+    flex: 0.33;
+    text-align: center;
+    padding: 20px 5rem;
+  }
+
+  .account_lowerMembership {
+    flex: 0.34;
+    text-align: center;
+    padding: 20px 5rem;
+  }
+
+  .account_lowerCST {
+    flex: 0.33;
+    text-align: center;
+    padding: 20px 5rem;
+  }
+
+  .account_account {
+    text-align: center;
+    background-color: var(--light-accent-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px auto 0px;
+    max-width: 90%;
+    font-family: var(--font-style);
+    font-size: 14px;
+  }
 }

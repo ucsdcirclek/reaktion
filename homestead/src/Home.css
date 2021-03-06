@@ -78,7 +78,7 @@
     border-radius: 5px;
     padding: 20px;
     max-width: 90%;
-    background-color: var(--background-color);
+    background-color: var(--light-accent-color);
   }
 
   .home_propagandaBubble {
@@ -112,7 +112,7 @@
     border-radius: 5px;
     padding: 20px;
     max-width: 90%;
-    background-color: var(--background-color);
+    background-color: var(--light-accent-color);
   }
   .home_tenents {
     flex: 0.5;
@@ -134,7 +134,7 @@
     border-radius: 5px;
     padding: 20px;
     max-width: 90%;
-    background-color: var(--background-color);
+    background-color: var(--light-accent-color);
   }
 
   .home_lower > h2 {

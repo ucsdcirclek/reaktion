@@ -92,8 +92,8 @@ function About() {
           <h2>"We Bare Board"</h2>
           <h2>Executive Board</h2>
           <div className="about_executiveBoardRow1">
-            <Board image={JustinFong} name='Justin Fong' title='Vice President of Administration' email='vpa@ucsdcki.org'/>
             <Board image={Evan} name='Evan Lin' title='President' email='president@ucsdcki.org'/>
+            <Board image={JustinFong} name='Justin Fong' title='Vice President of Administration' email='vpa@ucsdcki.org'/>
             <Board image={Ramtin} name='Ramtin Azarbard' title='Vice President of Service' email='vps@ucsdcki.org'/>
           </div>
           <div className="about_executiveBoardRow2">

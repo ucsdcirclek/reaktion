@@ -52,7 +52,7 @@
     flex: 20;
     text-wrap: none;
     border-radius: 5px;
-    background-color: var(--circlek-color);
+    background-color: var(--fellowship-color);
   }
 
   .navbar_before {
@@ -75,7 +75,7 @@
     justify-content: space-between;
     padding: 5px 10%;
     margin: 0px 10%;
-    background-color: var(--background-color);
+    background-color: var(--light-accent-color);
     border-radius: 5px;
   }
 }

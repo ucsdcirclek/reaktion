@@ -10,8 +10,8 @@ const MODAL_STYLES = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#FFF',
-  padding: '50px',
-  maxheight: '50px',
+  padding: '25px',
+  maxheight: '100px',
   zIndex: 1000,
 }
 
@@ -43,6 +43,10 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
     lastTime = (lastTime - 0) + lastMidTime + "am";
   }
 
+  for (var i = 0; i < userList.length; i++) {
+    userList[i] = " " + String(userList[i]) + " " ;
+  }
+
   if (!open) return null
   return (
     <div style={OVERLAY_STYLES}>
@@ -50,16 +54,15 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
         <CloseIcon onClick={onClose} className="modal_closeIcon"/>
         <h1>{title}</h1>
         <h2>{beginTime} - {lastTime}</h2>
-        <div className="modal_rsvp">
-          <h2>Maximum Amount of People:</h2>
+        <div className="modal_rsvp1">
+          <h2>Max Occupancy:</h2>
           <h3>{occupancy}</h3>
         </div>
-        <div className="modal_rsvp">
-          <h2>Location:</h2>
-          <h3>{location}</h3>
+        <div className="modal_rsvp2">
+          <h2><b>Location:</b> {location}</h2>
         </div>
         <p>{description}</p>
-        <div className="modal_rsvp">
+        <div className="modal_rsvp3">
           <h2>Whos Going:</h2>
           <p>{userList}</p>
         </div>

@@ -8,6 +8,7 @@ import db, { auth } from "../firebase";
 
 export default class Login extends Component {
   state={isSignedIn:false}
+  state={isPrio:false}
   uiConfig = {
     signInFlow: "popup",
     signInOptions: [
@@ -37,8 +38,11 @@ export default class Login extends Component {
         kiwanisHours: 0,
         fundraisingHours: 0,
         divisionHours: 0,
-        priority: 1,
         myevents: ""
+      }, {merge: true})
+
+      db.collection("users").doc(user_id).get().then(documentSnapshot => {
+        this.setState({isPrio: documentSnapshot.data().priority})
       })
     } else {
       console.log("not logged in")
@@ -54,9 +58,11 @@ export default class Login extends Component {
                 <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
                 <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
                 <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
-                <CalendarInput className="login_input" pid={firebase.auth().currentUser.uid} name={firebase.auth().currentUser.displayName}/>
+                <CalendarInput className="login_input" pid={firebase.auth().currentUser.uid} name={firebase.auth().currentUser.displayName} priority={this.state.isPrio}/>
+                <h2> Profiles Coming Soon! </h2>
               </div>
               <div className="login_entry">
+                <h1>My Events</h1>
                 <MyEvents className="login_myEvents" pid={firebase.auth().currentUser.uid}/>
               </div>
             </div>

@@ -1,0 +1,199 @@
+.service1 {
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--service-color);
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.service1 > p {
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.service1 > h1 {
+  font-family: var(--font-style);
+  font-size: 24px;
+}
+
+.service1 > .button_class > button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px 0px;
+  background-color: var(--service-color);
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.service1 > .button_class > button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social1 {
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--social-color);
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.social1 > p {
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.social1 > h1 {
+  font-family: var(--font-style);
+  font-size: 24px;
+}
+
+.social1 > .button_class > button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px 0px;
+  background-color: var(--social-color);
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.social1 > .button_class > button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.committee1 {
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--committee-color);
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.committee1 > p {
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.committee1 > h1 {
+  font-family: var(--font-style);
+  font-size: 24px;
+}
+
+.committee1 > .button_class > button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px 0px;
+  background-color: var(--committee-color);
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.committee1 > .button_class > button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.kiwanis1 {
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--kiwanis-color);
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.kiwanis1 > p {
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.kiwanis1 > h1 {
+  font-family: var(--font-style);
+  font-size: 24px;
+}
+
+.kiwanis1 > .button_class > button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px 0px;
+  background-color: var(--kiwanis-color);
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.kiwanis1 > .button_class > button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fundraising1 {
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--fundraising-color);
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.fundraising1 > p {
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.fundraising1 > h1 {
+  font-family: var(--font-style);
+  font-size: 24px;
+}
+
+.fundraising1 > .button_class > button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px 0px;
+  background-color: var(--fundraising-color);
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.fundraising1 > .button_class > button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.division1 {
+  background-color: var(--light-accent-color);
+  border-top: 5px solid var(--division-color);
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.division1 > p {
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.division1 > h1 {
+  font-family: var(--font-style);
+  font-size: 24px;
+}
+
+.division1 > .button_class > button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px 0px;
+  background-color: var(--division-color);
+  font-family: var(--font-style);
+  font-size: 18px;
+}
+
+.division1 > .button_class > button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}

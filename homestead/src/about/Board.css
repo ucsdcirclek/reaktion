@@ -6,4 +6,18 @@
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  padding: 10px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .board_image {
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
 }

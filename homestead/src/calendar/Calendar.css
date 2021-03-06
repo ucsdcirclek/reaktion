@@ -1,16 +1,32 @@
 .calendar_categories {
-  display: flex;
   justify-content: center;
   margin: 10px 0px;
 }
 
-.calendar_categories > h1 {
+.calendar_categories1 {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar_categories1 > h1 {
   padding: 10px 20px;
   font-family: var(--font-style);
-  font-size: 22px;
-  border-radius: 20px;
-  margin: 0px 10px;
+  font-size: 18px;
+  border-radius: 10px;
 }
+
+.calendar_categories2 {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar_categories2 > h1 {
+  padding: 10px 20px;
+  font-family: var(--font-style);
+  font-size: 18px;
+  border-radius: 10px;
+}
+
 
 .calendar_categoriesService {
   background-color: var(--service-color);
@@ -34,4 +50,61 @@
 
 .calendar_categroiesDivision {
   background-color: var(--division-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .calendar_categories {
+    justify-content: center;
+    margin: 10px 0px;
+    display: flex;
+  }
+
+  .calendar_categories1 {
+    display: flex;
+  }
+
+  .calendar_categories1 > h1 {
+    padding: 10px 20px;
+    font-family: var(--font-style);
+    font-size: 22px;
+    border-radius: 20px;
+    margin: 0px 10px;
+  }
+
+  .calendar_categories2 {
+      display: flex;
+  }
+
+  .calendar_categories2 > h1 {
+    padding: 10px 20px;
+    font-family: var(--font-style);
+    font-size: 22px;
+    border-radius: 20px;
+    margin: 0px 10px;
+  }
+
+
+  .calendar_categoriesService {
+    background-color: var(--service-color);
+  }
+
+  .calendar_categoriesSocial {
+    background-color: var(--social-color);
+  }
+
+  .calendar_categoriesCommittee {
+    background-color: var(--committee-color);
+  }
+
+  .calendar_categoriesKiwanis {
+    background-color: var(--kiwanis-color);
+  }
+
+  .calendar_categoriesFundraising {
+    background-color: var(--fundraising-color);
+  }
+
+  .calendar_categroiesDivision {
+    background-color: var(--division-color);
+  }
 }

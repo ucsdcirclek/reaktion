@@ -1,0 +1,78 @@
+.modal_styles1 {
+  max-height: 80%;
+  width: 500px;
+}
+
+.modal_closeIcon1 {
+  color: red;
+  padding: 2px;
+  position: relative;
+  margin: -20px 0px;
+}
+
+.modal_styles1 > h2 {
+  font-family: var(--font-style);
+  font-size: 18px;
+  text-align: center;
+}
+
+.modal_closeIcon1:hover {
+  background-color: var(--light-accent-color);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.calendarInput_form1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendarInput_time1 {
+  display: flex;
+}
+
+.calendarInput_time1 > h2 {
+  font-family: var(--font-style);
+  font-size: 16px;
+  margin: 10px 10px 10px 0;
+  background-color: white;
+  border-radius: 5px;
+  flex: 0.2;
+  padding: 10px;
+}
+
+.calendarInput_time1 input {
+  flex: 0.8;
+}
+
+.input1 {
+  border-radius: 5px;
+  border: none;
+  margin: 5px 0px;
+  padding: 10px;
+  font-family: var(--font-style);
+}
+
+.input_large1 {
+  border-radius: 5px;
+  border: none;
+  margin: 5px 0px;
+  height: 100px;
+  padding: 10px;
+  font-family: var(--font-style);
+}
+
+.calendarInput_form1 > button {
+  border: none;
+  margin: 10px 0px 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--circlek-color);
+  font-family: var(--font-style);
+  font-size: 20px;
+}
+
+.calendarInput_form1 > button:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
