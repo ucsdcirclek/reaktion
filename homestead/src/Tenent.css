@@ -8,6 +8,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-height: 150px;
 }
 
 .tenent_text {

@@ -106,7 +106,6 @@
 .about_kiwanis {
   flex: 0.3;
   padding: 10px 20px;
-  max-width: 90%;
   border-radius: 5px;
   background-color: var(--light-accent-color);
   border-top: 5px solid var(--service-color);
@@ -173,7 +172,7 @@
   font-size: 18px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1366px) {
   .about_upper {
     display: flex;
     border-radius: 5px;

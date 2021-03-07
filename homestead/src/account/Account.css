@@ -176,7 +176,7 @@
   font-size: 14px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .account_title {
     border-radius: 5px;
     padding: 10px 20px;

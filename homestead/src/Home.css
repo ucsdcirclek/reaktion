@@ -38,7 +38,6 @@
   margin: 20px 0px 0px;
   border-radius: 5px;
   padding: 20px;
-  max-width: 90%;
   border-top: 5px solid var(--leadership-color);
   background-color: var(--light-accent-color);
 }
@@ -65,7 +64,7 @@
   font-size: 24px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .home_masthead {
     display: block;
     margin: 0px auto;

@@ -38,7 +38,7 @@ th {
   background-color: var(--light-accent-color);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .calendarCogs_months {
     display: flex;
     justify-content: center;

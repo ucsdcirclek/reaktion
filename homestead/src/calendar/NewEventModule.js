@@ -8,7 +8,7 @@ import Select from "react-select";
 const MODAL_STYLES = {
   position: 'fixed',
   top: '50%',
-  left: '30%',
+  left: '50%',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#FFF',
   padding: '50px',

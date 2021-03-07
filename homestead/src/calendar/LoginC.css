@@ -8,6 +8,15 @@
   text-align: center;
 }
 
+.login_entry > h1 {
+  font-family: var(--font-style);
+  font-size: 26px;
+  text-align: center;
+  background-color: var(--light-accent-color);
+  padding: 5px 0px;
+  border-radius: 5px;
+}
+
 .login_singout > img {
   max-width: 150px;
 }

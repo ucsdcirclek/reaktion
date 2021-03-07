@@ -52,7 +52,7 @@
   background-color: var(--division-color);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .calendar_categories {
     justify-content: center;
     margin: 10px 0px;
