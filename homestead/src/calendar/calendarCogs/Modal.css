@@ -73,7 +73,7 @@
 }
 
 .notLoggedIn {
-  background-color: var(--background-color);
+  background-color: var(--light-accent-color);
   pointer-events: none;
 }
 @media only screen and (min-width: 768px) {
@@ -126,7 +126,7 @@
 
   .modal_closeIcon:hover {
     cursor: pointer;
-    background-color: var(--background-color);
+    background-color: var(--light-accent-color);
     border-radius: 50%;
   }
 
@@ -147,7 +147,7 @@
   }
 
   .notLoggedIn {
-    background-color: var(--background-color);
+    background-color: var(--light-accent-color);
     pointer-events: none;
   }
 }

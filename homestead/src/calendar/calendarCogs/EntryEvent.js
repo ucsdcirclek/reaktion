@@ -47,14 +47,17 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
       setCatchError("Please login to RSVP");
       isListed.current = false;
     }
-  },  []);
+  },  [isOpen]);
 
   /*Adds a person's ID to the list*/
   function addPerson() {
+    try {
       list.push(firebase.auth().currentUser.uid);
       userList.push(firebase.auth().currentUser.displayName);
       db.collection("posts").doc(docID).update({  userList: userList, list: list  });
       isListed.current = true;
+    } catch(error) {
+    }
   }
 
   /*Deletes all current user's ID from list*/
