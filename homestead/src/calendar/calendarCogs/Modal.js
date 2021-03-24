@@ -44,7 +44,7 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
   }
 
   for (var i = 0; i < userList.length; i++) {
-    userList[i] = " " + String(userList[i]) + " " ;
+    userList[i] = String(userList[i]) + " ";
   }
 
   if (!open) return null
