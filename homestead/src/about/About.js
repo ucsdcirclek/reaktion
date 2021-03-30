@@ -3,19 +3,18 @@ import Board from "./Board.js";
 import Footer from "../Footer.js";
 import "./About.css";
 import ckiLogo from "../images/logo_CKI.png";
-import JustinFong from "../images/board/Fongers.jpg";
-import Evan from "../images/board/Evan2.0.jpg";
-import Ramtin from "../images/board/Ramtin.jpg";
-import Danielle from "../images/board/Danielle.jpg";
-import Juicy from "../images/board/Juicy.jpg";
-import EmilyC from "../images/board/EmilyC.jpg";
-import Ruthie from "../images/board/Ruthie.jpg";
-import Shannon from "../images/board/Shannon.jpg";
-import Christina from "../images/board/Christina.jpg";
-import EmilyK from "../images/board/EmilyK.jpg";
+import Amber from "../images/board/Amber.jpg";
 import An from "../images/board/An.jpg";
-import Blanchie from "../images/board/Blanchie.jpg";
+import Anna from "../images/board/Anna.png";
+import EmilyC from "../images/board/EmilyC.jpg";
+import EmilyKw from "../images/board/EmilyKw.jpg";
+import Helen from "../images/board/Helen.jpg";
 import Jerome from "../images/board/Jerome.jpg";
+import Joaquin from "../images/board/Joaquin.jpg";
+import Marlenne from "../images/board/Marlenne.jpg";
+import Sarah from "../images/board/Sarah.jpg";
+import Shannon from "../images/board/Shannon.jpg";
+import Sophia from "../images/board/Sophia.jpg";
 
 function About() {
   return (
@@ -92,28 +91,27 @@ function About() {
           <h2>"We Bare Board"</h2>
           <h2>Executive Board</h2>
           <div className="about_executiveBoardRow1">
-            <Board image={Evan} name='Evan Lin' title='President' email='president@ucsdcki.org'/>
-            <Board image={JustinFong} name='Justin Fong' title='Vice President of Administration' email='vpa@ucsdcki.org'/>
-            <Board image={Ramtin} name='Ramtin Azarbard' title='Vice President of Service' email='vps@ucsdcki.org'/>
+            <Board image={Shannon} name='Shannon Lo' title='President' email='president@ucsdcki.org'/>
+            <Board image={An} name='An Nguyen' title='Vice President of Administration' email='vpa@ucsdcki.org'/>
+            <Board image={Helen} name='Helen Huynh' title='Vice President of Service' email='vps@ucsdcki.org'/>
           </div>
           <div className="about_executiveBoardRow2">
-            <Board image={Danielle} name='Danielle Lee' title='Secretary' email='secretary@ucsdcki.org'/>
-            <Board image={Juicy} name='Justin Luc' title='Treasurer' email='treasurer@ucsdcki.org'/>
+            <Board image={Joaquin} name='Joauin Ramento' title='Secretary' email='secretary@ucsdcki.org'/>
+            <Board image={EmilyC} name='Emily Chiew' title='Treasurer' email='treasurer@ucsdcki.org'/>
           </div>
         </div>
       </div>
       <div className="about_appointedBoard">
         <h2>Appointed Board</h2>
         <div className="about_appointedBoardRow1">
-          <Board image={EmilyC} name='Emily Chiew' title='Fundraising Chair' email='fundraising@ucsdcki.org'/>
-          <Board image={Ruthie} name='Ruthie Navarra' title='Kiwanis Family Chair' email='kfam@ucsdcki.org'/>
-          <Board image={Shannon} name='Shannon Lo' title='Public Relations' email='pr@ucsdcki.org'/>
-          <Board image={Christina} name='Christina Tang' title='Member Relations' email='mr@ucsdcki.org'/>
+          <Board image={Sophia} name='Shopia Jordan' title='Kiwanis Family Chair' email='kfam@ucsdcki.org'/>
+          <Board image={Sarah} name='Sarah Fan' title='Public Relations' email='pr@ucsdcki.org'/>
+          <Board image={Amber} name='Amber Pan' title='Member Relations' email='mr@ucsdcki.org'/>
         </div>
         <div className="about_appointedBoardRow2">
-          <Board image={EmilyK} name='Emily Kim' title='Member Development and Education' email='mde@ucsdcki.org'/>
-          <Board image={An} name='An Nguyen' title='Fellowship' email='fellowship@ucsdcki.org'/>
-          <Board image={Blanchie} name='Blanchie Lui' title='Service' email='service@ucsdcki.org'/>
+          <Board image={EmilyKw} name='Emily Kwong' title='Social' email='social@ucsdcki.org'/>
+          <Board image={Anna} name='Anna Zhou' title='Fellowship' email='fellowship@ucsdcki.org'/>
+          <Board image={Marlenne} name='Marlenne Cota' title='Service' email='service@ucsdcki.org'/>
           <Board image={Jerome} name='Jerome Lam' title='Technology' email='technology@ucsdcki.org'/>
         </div>
       </div>

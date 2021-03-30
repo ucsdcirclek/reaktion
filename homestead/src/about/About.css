@@ -378,13 +378,13 @@
     display: flex;
     justify-content: space-between;
     padding-left: 150px;
-    padding-right: 10px;
+    padding-right: 150px;
   }
 
   .about_appointedBoardRow2 {
     display: flex;
     justify-content: space-between;
-    padding-right: 150px;
-    padding-left: 10px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
