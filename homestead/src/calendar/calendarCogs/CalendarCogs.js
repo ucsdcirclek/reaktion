@@ -64,7 +64,6 @@ function CalendarCogs() {
     const daysPerMonth = [31, leapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     setShift(prevShift => (prevShift + daysPerMonth[index]) % 7);
   }
-  console.log(shift)
 
   /*Determines if Current Year is Leap Year*/
   let leapYear = 28;

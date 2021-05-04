@@ -9,7 +9,7 @@ function FbWidget() {
         height="500px"
         style={{border: "none", overflow:"hidden"}}
         scrolling="no"
-        frameborder="0"
+        frameBorder="0"
         allowfullscreen="true"
         allow="encrypted-media">
       </iframe>

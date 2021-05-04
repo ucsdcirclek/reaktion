@@ -4,26 +4,28 @@ import "./Entry.css";
 import db from "../../firebase";
 
 function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
-  /*This is responsible for calculating the date to match with firestore*/
-  let awesomeMonth = month + 1;
-  if (awesomeMonth < 10) {
-    awesomeMonth = "0" + awesomeMonth;
+  /*Calculates the date associated with the Calendar Cell to match firestore*/
+  month = month + 1;
+  if (month < 10) {
+    month = "0" + month;
   }
-  let awesomeNumber = 0;
-  if ((parseInt(number)) < 10) {
-    awesomeNumber = "0" + (parseInt(number) - 1);
-  }  else {
-    awesomeNumber = (parseInt(number) - 1);
+  let numberIndex = parseInt(number) - shiftIndex;
+  if (parseInt(numberIndex) < 10) {
+    numberIndex = "0" + (parseInt(numberIndex));
   }
-  let awesomeDate = year + "-" + awesomeMonth + "-" + awesomeNumber;
+  let date = year + "-" + month + "-" + numberIndex;
+  console.log(date)
 
-  /*Responsible for grabbing from the database a specific date depending on the month*/
+
+  /*Grabs from the database a specific depending on date*/
   const [posts, setPosts] = useState([]);
+
   useEffect(() => {
-    db.collection("posts").where("date", "==", awesomeDate).onSnapshot((snapshot) =>
+    db.collection("posts").where("date", "==", date).onSnapshot((snapshot) =>
       setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
     );
   }, [month]);
+  console.log(posts);
 
   if (number <= shiftIndex) {
     return(<div></div>);

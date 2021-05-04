@@ -3,7 +3,6 @@ import Family from "../Family.js";
 import Footer from "../Footer.js";
 import Login from "./Login.js";
 import "./Account.css";
-import { Link } from "react-router-dom";
 import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
 import PaymentIcon from "@material-ui/icons/Payment";
 import CommuteIcon from "@material-ui/icons/Commute";

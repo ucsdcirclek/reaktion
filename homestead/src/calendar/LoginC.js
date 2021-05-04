@@ -4,7 +4,7 @@ import MyEvents from "./MyEvents.js";
 import "./LoginC.css";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import db, { auth } from "../firebase";
+import db from "../firebase";
 
 export default class Login extends Component {
   state={isSignedIn:false}
@@ -56,7 +56,7 @@ export default class Login extends Component {
             <div className="login_total">
               <div className="login_signout">
                 <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
-                <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
+                <img alt="profile" src={firebase.auth().currentUser.photoURL} />
                 <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
                 <CalendarInput className="login_input" pid={firebase.auth().currentUser.uid} name={firebase.auth().currentUser.displayName} priority={this.state.isPrio}/>
                 <h2> Profiles Coming Soon! </h2>
