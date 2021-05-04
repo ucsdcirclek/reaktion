@@ -14,7 +14,6 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
     numberIndex = "0" + (parseInt(numberIndex));
   }
   let date = year + "-" + month + "-" + numberIndex;
-  console.log(date)
 
 
   /*Grabs from the database a specific depending on date*/
@@ -25,7 +24,6 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
       setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
     );
   }, [month]);
-  console.log(posts);
 
   if (number <= shiftIndex) {
     return(<div></div>);

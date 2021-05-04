@@ -21,7 +21,7 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
   }
 
   /*This sets css elements to create pop-up when a button is pressed*/
-  const[isOpen, setIsOpen] = useState(false)
+  const[isOpen, setIsOpen] = useState(false);
 
   /*Checks if user is already RSVP'd and Logged In*/
   const isListed = useRef(false);
