@@ -4,95 +4,72 @@ import "./CalendarCogs.css";
 import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
+/*Constants we need for the Days*/
+const fullDate = new Date();
+const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const fullPresent = fullDate.getDate();
+let shiftIndex = fullDate.getDay();
+
+/*Constants we need for the Months*/
+const fullMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const monthIndex = fullDate.getMonth();
+
+/*Constants we need for Years*/
+const fullYear = fullDate.getFullYear();
+
 function CalendarCogs() {
-  /*Constants we need for Months*/
-  let startingIndex = 0;
-  let shiftIndex = 0;
-  const fullMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  const abbreviatedMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  /*Creates a shift for the present Month*/
+  let startingShift = Math.abs((shiftIndex + 7) - ((fullPresent % 7) - 1));
 
-  /*Grabs Date*/
-  let date = Date();
-
-  /*Grabs Correct Index of Current Month*/
-  const parseMonth = date.substring(4, 7);
-  for (var i = 0; i < 12; i++) {
-    if (abbreviatedMonths[i] == parseMonth) {
-      startingIndex = i;
-    }
-  }
-
-  /*Grabs Integer Value of the Current Year*/
-  const parseYear = parseInt(date.substring(11, 15));
-
-  /*Creates the Initial Shift Needed for the Calendar*/
-  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-  const parseDay = date.substring(0, 3);
-  for (var i = 0; i < 7; i++) {
-    if (daysOfWeek[i] == parseDay) {
-      shiftIndex = i;
-    }
-  }
-
-  /*Gives us Current Day of the Month*/
-  const parsePresent = parseInt(date.substring(7, 10));
-  let startingShift = Math.abs((shiftIndex + 1) - (parsePresent % 7));
-
-  /*Adds One or Subtracts One from Index to Get New Month*/
-  /*Adds One or Subtracts One from Year*/
-  /*Adds or Subtracts Previous Number of Days to Get Proper Shift*/
-  /*Note usestate doesn't change until after the function is complete*/
-  const [index, setIndex] = useState(startingIndex);
-  const [year, setYear] = useState(parseYear);
+  const [year, setYear] = useState(fullYear);
+  const [index, setIndex] = useState(monthIndex);
   const [shift, setShift] = useState(startingShift);
 
   function decrementIndex() {
-    let lastIndex = 0;
-    lastIndex = index - 1;
-    if (lastIndex == -1) {
-      lastIndex = 11;
-    }
-    /*Responsible for Month and Year*/
+    /*Decrements after function ends*/
     setIndex(prevIndex => prevIndex - 1);
-    if (index == 0) {
+    if (index === 0) {
       setIndex(prevIndex => prevIndex + 12);
       setYear(prevYear => prevYear - 1);
     }
-    /*Determines if Current Year is Leap Year*/
-    let lYear = 'Error';
-    if (year % 4 != 0) {
-      lYear = 28;
-    } else {
-      lYear = 29;
+
+    /*Calculates the Future Index*/
+    let futureIndex = index - 1;
+    if (futureIndex == -1) {
+      futureIndex = 11;
     }
-    const daysPerMonth = [31, lYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    setShift(prevShift => (42 + (prevShift - daysPerMonth[lastIndex])) % 7);
+
+    /*Determines if Current Year is Leap Year*/
+    let leapYear = 28;
+    if (year % 4 === 0) {
+      leapYear = 29;
+    }
+    const daysPerMonth = [31, leapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    setShift(prevShift => ((42 + (prevShift - daysPerMonth[futureIndex])) % 7));
   }
 
   function incrementIndex() {
+    /*Increments after function ends*/
     setIndex(prevIndex => prevIndex + 1);
     if (index == 11) {
-    setIndex(prevIndex => prevIndex - 12);
-    setYear(prevYear => prevYear + 1);
+      setIndex(prevIndex => prevIndex - 12);
+      setYear(prevYear => prevYear + 1);
     }
+
     /*Determines if Current Year is Leap Year*/
-    let lYear = 'Error';
-    if (year % 4 != 0) {
-      lYear = 28;
-    } else {
-      lYear = 29;
+    let leapYear = 28;
+    if (year % 4 === 0) {
+      leapYear = 29;
     }
-    const daysPerMonth = [31, lYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const daysPerMonth = [31, leapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     setShift(prevShift => (prevShift + daysPerMonth[index]) % 7);
   }
+  console.log(shift)
 
   /*Determines if Current Year is Leap Year*/
-  let leapYear = 'Error';
-  if (year % 4 != 0) {
-    leapYear = 28;
-  }
-  else {
-    leapYear = 29;
+  let leapYear = 28;
+  if (year % 4 === 0) {
+    leapYear = 20;
   }
   const daysPerMonths = [31, leapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 

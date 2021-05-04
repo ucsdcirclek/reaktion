@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import "./NewEventModule.css";
-import firebase from "firebase";
 import db from "../firebase";
 import Select from "react-select";
 
@@ -56,7 +55,7 @@ export default function NewEventModule({ open, onClose, docID, oldTitle, oldEndt
     e.preventDefault();
     // some clever db stuff
     try {
-      if (startTime != "" && endTime != "" && title != "" && description != "" && todayDate != "" && location != "" && category != "") {
+      if (startTime !== "" && endTime !== "" && title !== "" && description !== "" && todayDate !== "" && location !== "" && category !== "") {
         db.collection("posts").doc(docID).update({
           date: todayDate,
           endtime: endTime,

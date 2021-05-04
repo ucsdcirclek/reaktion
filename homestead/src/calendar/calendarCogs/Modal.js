@@ -1,8 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import "./Modal.css";
-import firebase from "firebase";
-import db from "../../firebase";
 
 const MODAL_STYLES = {
   position: 'fixed',
@@ -66,7 +64,7 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
           <h2>Whos Going:</h2>
           <p>{userList}</p>
         </div>
-        {(isListed == false) ? (
+        {(isListed === false) ? (
           <button className={initialLogged} onClick={addPerson}>RSVP Now!</button>
         ):(
           <button className={initialLogged} onClick={deletePerson}>unRSVP</button>

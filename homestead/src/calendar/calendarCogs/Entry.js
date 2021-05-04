@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import EntryEvent from "./EntryEvent.js";
 import "./Entry.css";
-import firebase from "firebase";
 import db from "../../firebase";
 
 function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
@@ -9,8 +8,6 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
   let awesomeMonth = month + 1;
   if (awesomeMonth < 10) {
     awesomeMonth = "0" + awesomeMonth;
-  } else {
-    awesomeMonth = awesomeMonth;
   }
   let awesomeNumber = 0;
   if ((parseInt(number)) < 10) {

@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CalendarCogs from "./calendarCogs/CalendarCogs.js";
 import LoginC from "./LoginC.js";
 import Footer from "../Footer.js";
 import "./Calendar.css";
-import firebase from "firebase";
-import db from "../firebase";
 
 function Calendar() {
   return (

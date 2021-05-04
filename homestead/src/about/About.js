@@ -2,7 +2,6 @@ import React from "react";
 import Board from "./Board.js";
 import Footer from "../Footer.js";
 import "./About.css";
-import ckiLogo from "../images/logo_CKI.png";
 import Amber from "../images/board/Amber.jpg";
 import An from "../images/board/An.jpg";
 import Anna from "../images/board/Anna.png";

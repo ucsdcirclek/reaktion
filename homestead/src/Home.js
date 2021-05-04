@@ -9,12 +9,11 @@ import Service from "./images/Service.png";
 import Leadership from "./images/Leadership.png";
 import Fellowship from "./images/Fellowship.png";
 import Masthead from "./images/CKIMasthead.png";
-import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className="home">
-      <img src={Masthead} className="home_masthead"/>
+      <img src={Masthead} alt="CircleK Masthead" className="home_masthead"/>
       <div className="home_upper">
         <div className="home_propagandaBubble">
           <h2>Welcome to Circle K</h2>

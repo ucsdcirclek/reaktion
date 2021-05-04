@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./CalendarInput.css";
-import firebase from "firebase";
 import db from "../firebase";
 import Select from "react-select";
 
@@ -32,7 +31,7 @@ function CalendarInput({ pid, name, priority }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // some clever db stuff
-    if (startTime != "" && endTime != "" && title != "" && description != "" && todayDate != "" && location != "" && category != "") {
+    if (startTime !== "" && endTime !== "" && title !== "" && description !== "" && todayDate !== "" && location !== "" && category !== "") {
 
       db.collection("posts").add({
         date: todayDate,
@@ -75,7 +74,7 @@ function CalendarInput({ pid, name, priority }) {
     setCategory(awesomeItem[0]);
   }
 
-  if (priority == 1) {
+  if (priority === 1) {
     return (
       <div className='calendarInput'>
       <h2>Create an Event!</h2>

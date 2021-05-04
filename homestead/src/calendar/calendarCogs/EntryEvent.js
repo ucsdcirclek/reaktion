@@ -25,11 +25,8 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
 
   /*Checks if user is already RSVP'd and Logged In*/
   const isListed = useRef(false);
-  const whatsListed = useRef(false);
   const[catchError, setCatchError] = useState("");
   const[initialLogged, setInitialLogged] = useState("notLoggedIn");
-  const isMounted = useRef(false);
-  const [cypherList, setCypherList] = useState([]);
 
   useEffect(() => {
     /*Checks if user is already RSVP'd and Logged In*/
@@ -37,7 +34,7 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
     try {
       let pid = firebase.auth().currentUser.uid;
       for (var i = 0; i < list.length; i++) {
-        if (list[i] == pid) {
+        if (list[i] === pid) {
           isListed.current = true;
         }
       }
@@ -65,7 +62,7 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
     let pid = firebase.auth().currentUser.uid;
     let updateList = db.collection("posts").doc(docID);
     for (var i = 0; i < list.length; i++) {
-      if (list[i] == pid) {
+      if (list[i] === pid) {
         list.splice(i, 1);
         userList.splice(i, 1);
       }

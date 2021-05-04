@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TrueNewEvent from "./TrueNewEvent.js";
 import "./MyEvents.css";
-import firebase from "firebase";
 import db from "../firebase";
 
 
