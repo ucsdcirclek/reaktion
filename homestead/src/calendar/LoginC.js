@@ -29,9 +29,10 @@ function LoginC() {
   }, []);
 
   if (signedIn === true) {
-    db.collection("users").doc(firebase.auth().currentUser.uid).get().then(documentSnapshot => {
-      setPriority(documentSnapshot.data().priority)
-    })
+      db.collection("users").doc(firebase.auth().currentUser.uid).get().then(documentSnapshot => {
+        try {setPriority(documentSnapshot.data().priority)}
+        catch(err) {}
+      })
   }
 
 
