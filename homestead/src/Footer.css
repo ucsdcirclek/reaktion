@@ -1,6 +1,11 @@
 .footer {
   margin-top: 15px;
   text-align: center;
+  background-image: url("./images/White+Masthead.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+  height: 200px;
 }
 
 .footer_socialMedia > a > .MuiSvgIcon-root {

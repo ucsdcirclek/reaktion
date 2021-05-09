@@ -18,7 +18,6 @@ function Footer() {
         <CopyrightIcon />
         <p>2017-2020 UC San Diego Circle K International</p>
       </div>
-      <img src={masthead} alt="footer_image" className="footer_image"/>
     </div>
   );
 }
