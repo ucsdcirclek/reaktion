@@ -23,6 +23,7 @@ const OVERLAY_STYLES = {
   zIndex: 1000
 }
 
+
 export default function Modal({ open, onClose, catchError, isListed, addPerson, deletePerson, initialLogged, title, starttime, endtime, occupancy, location, description, userList }) {
   /*Firestore records input type time as military so this converts military time to regular*/
   let beginTime = String(starttime).substring(0, 2);
