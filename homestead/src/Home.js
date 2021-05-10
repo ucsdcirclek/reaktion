@@ -1,7 +1,7 @@
 import React from "react";
 import FbWidget from "./FbWidget.js";
 import Family from "./Family.js";
-import Tenent from "./Tenent.js";
+import Tenet from "./Tenent.js";
 import Footer from "./Footer.js";
 import "./Home.css";
 import ReactPlayer from "react-player";
@@ -35,10 +35,10 @@ function Home() {
       </div>
       <div className="home_mid">
         <div className="home_tenents">
-          <h2>Tenents</h2>
-          <Tenent title="Service" image={Service} hours="2103"/>
-          <Tenent title="Fellowship" image={Fellowship} hours="1358"/>
-          <Tenent title="Leadership" image={Leadership} hours="2576"/>
+          <h2>Tenets</h2>
+          <Tenet title="Service" image={Service} hours="2103"/>
+          <Tenet title="Fellowship" image={Fellowship} hours="1358"/>
+          <Tenet title="Leadership" image={Leadership} hours="2576"/>
         </div>
         <div className="home_fb">
           <FbWidget />
