@@ -95,7 +95,7 @@ function About() {
             <Board image={Helen} name='Helen Huynh' title='Vice President of Service' email='vps@ucsdcki.org'/>
           </div>
           <div className="about_executiveBoardRow2">
-            <Board image={Joaquin} name='Joauin Ramento' title='Secretary' email='secretary@ucsdcki.org'/>
+            <Board image={Joaquin} name='Joaquin Ramento' title='Secretary' email='secretary@ucsdcki.org'/>
             <Board image={EmilyC} name='Emily Chiew' title='Treasurer' email='treasurer@ucsdcki.org'/>
           </div>
         </div>
@@ -103,7 +103,7 @@ function About() {
       <div className="about_appointedBoard">
         <h2>Appointed Board</h2>
         <div className="about_appointedBoardRow1">
-          <Board image={Sophia} name='Shopia Jordan' title='Kiwanis Family Chair' email='kfam@ucsdcki.org'/>
+          <Board image={Sophia} name='Sophia Jordan' title='Kiwanis Family Chair' email='kfam@ucsdcki.org'/>
           <Board image={Sarah} name='Sarah Fan' title='Public Relations' email='pr@ucsdcki.org'/>
           <Board image={Amber} name='Amber Pan' title='Member Relations' email='mr@ucsdcki.org'/>
         </div>
