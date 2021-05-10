@@ -29,10 +29,14 @@ function LoginC() {
   }, []);
 
   if (signedIn === true) {
-      db.collection("users").doc(firebase.auth().currentUser.uid).get().then(documentSnapshot => {
-        try {setPriority(documentSnapshot.data().priority)}
-        catch(err) {}
-      })
+    db.collection("users").doc(firebase.auth().currentUser.uid).get().then(documentSnapshot => {
+      try {setPriority(documentSnapshot.data().priority)}
+      catch(err) {}
+    })
+    let user_id = firebase.auth().currentUser.uid
+    db.collection("users").doc(user_id).set({
+      name: firebase.auth().currentUser.displayName,
+    }, {merge: true})
   }
 
 
