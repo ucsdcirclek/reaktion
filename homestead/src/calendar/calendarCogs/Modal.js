@@ -42,8 +42,9 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
     lastTime = (lastTime - 0) + lastMidTime + "am";
   }
 
-  for (var i = 0; i < userList.length; i++) {
-    userList[i] = String(userList[i]) + " ";
+  let protoList = userList.slice(0);
+  for (var i = 0; i < protoList.length; i++) {
+    protoList[i] = String(protoList[i]) + ", ";
   }
 
   if (!open) return null
@@ -63,7 +64,7 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
         <p>{description}</p>
         <div className="modal_rsvp3">
           <h2>Whos Going:</h2>
-          <p>{userList}</p>
+          <p>{protoList}</p>
         </div>
         {(isListed === false) ? (
           <button className={initialLogged} onClick={addPerson}>RSVP Now!</button>

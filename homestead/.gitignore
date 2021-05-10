@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # firebase cache
-.firebase/*
+dir_to_ignore/.firebase
 
 # env credentials
 .env.local

@@ -28,9 +28,9 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
   const[catchError, setCatchError] = useState("");
   const[initialLogged, setInitialLogged] = useState("notLoggedIn");
 
+  /*Checks if user is already RSVP'd and Logged In*/
+  /*Create Prop that reads if user is logged in!*/
   useEffect(() => {
-    /*Checks if user is already RSVP'd and Logged In*/
-    //Create Prop that reads if user is logged in!
     try {
       let pid = firebase.auth().currentUser.uid;
       for (var i = 0; i < list.length; i++) {
@@ -41,10 +41,11 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
       setInitialLogged("LoggedIn");
       setCatchError("");
     } catch(error) {
+      setInitialLogged("notLoggedIn");
       setCatchError("Please login to RSVP");
       isListed.current = false;
     }
-  },  [isOpen]);
+  }, [isOpen]);
 
   /*Adds a person's ID to the list*/
   function addPerson() {
@@ -60,14 +61,13 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
   /*Deletes all current user's ID from list*/
   function deletePerson() {
     let pid = firebase.auth().currentUser.uid;
-    let updateList = db.collection("posts").doc(docID);
     for (var i = 0; i < list.length; i++) {
       if (list[i] === pid) {
         list.splice(i, 1);
         userList.splice(i, 1);
       }
     }
-    updateList.update({ userList: userList, list: list});
+    db.collection("posts").doc(docID).update({ userList: userList, list: list});
     isListed.current = false;
   }
 
