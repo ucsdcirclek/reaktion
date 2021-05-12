@@ -1,16 +1,23 @@
 body {
+  --font-form: 'Comfortaa', cursive;
+  --light-circlek-color: #4E6E93;
+  --leadership-color: #FF715B;
+  --service-color: #EDDE95;
+  --committee-color: #B9DBE2;
+  --social-color: #EFD8D8;
+  --fundraising-color: #DBCFEB;
+  --kiwanis-color: #B6D5C8;
+  --division-color: #DAC6AF;
+
+
   --font-style: 'EB Garamond', serif;
   --leadership-color: #FF715B;
-  --service-color: #00B2CA;
   --background-color: #fffcf9;
   --fellowship-color: #48BF84;
   --accent-color: #4C5454;
   --light-accent-color: #DDE1E4;
-  --circlek-color: #256EFF;
+  --circlek-color: #174274;
   --dark-color: #191516;
-  --social-color: #F9DC5C;
-  --committee-color: #81F4E1;
-  --kiwanis-color: #62C370;
-  --fundraising-color: #EF2D56;
-  --division-color: #B27092;
+
 }
+

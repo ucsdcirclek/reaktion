@@ -1,6 +1,6 @@
 import React from 'react';
-import CloseIcon from '@material-ui/icons/Close';
 import "./Modal.css";
+import CloseIcon from '@material-ui/icons/CancelOutlined';
 
 const MODAL_STYLES = {
   position: 'fixed',
@@ -51,15 +51,17 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
   return (
     <div style={OVERLAY_STYLES}>
       <div style={MODAL_STYLES} className="modal_styles">
-        <CloseIcon onClick={onClose} className="modal_closeIcon"/>
-        <h1>{title}</h1>
+        <div className="modal_upper">
+          <h1>{title}</h1>
+          <CloseIcon onClick={onClose} className="modal_closeIcon"/>
+        </div>
         <h2>{beginTime} - {lastTime}</h2>
         <div className="modal_rsvp1">
-          <h2>Max Occupancy:</h2>
-          <h3>{occupancy}</h3>
+          <h2><b>Location:</b> {location}</h2>
         </div>
         <div className="modal_rsvp2">
-          <h2><b>Location:</b> {location}</h2>
+          <h2>Max Occupancy:</h2>
+          <h3>{occupancy}</h3>
         </div>
         <p>{description}</p>
         <div className="modal_rsvp3">

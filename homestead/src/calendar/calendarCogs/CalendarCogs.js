@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Entry from "./Entry.js";
 import "./CalendarCogs.css";
-import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
-import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+import ArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeftSharp';
+import ArrowRightIcon from '@material-ui/icons/KeyboardArrowRightSharp';
 
 /*Constants we need for the Days*/
 const fullDate = new Date();
-const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const fullPresent = fullDate.getDate();
 let shiftIndex = fullDate.getDay();
 
@@ -78,9 +77,11 @@ function CalendarCogs() {
   return (
     <div className="calendarCogs">
       <div className="calendarCogs_months">
-        <ArrowLeftIcon className="calendarCogs_monthIcon" onClick={decrementIndex}/>
         <h1>{fullMonths[index]} {year}</h1>
-        <ArrowRightIcon className="calendarCogs_monthIcon" onClick={incrementIndex}/>
+        <div className="calendarCogs_monthSwitch">
+          <ArrowLeftIcon className="calendarCogs_monthIcon_left" onClick={decrementIndex}/>
+          <ArrowRightIcon className="calendarCogs_monthIcon_right" onClick={incrementIndex}/>
+        </div>
       </div>
       <table className="calendarCogs_calendar">
         <tbody>
@@ -93,7 +94,7 @@ function CalendarCogs() {
           <th className="calendarCogs_days">Friday</th>
           <th className="calendarCogs_days">Saturday</th>
         </tr>
-        <tr>
+        <tr className="calendarCogs_week">
           <th><Entry number="1" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="2" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="3" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -102,7 +103,7 @@ function CalendarCogs() {
           <th><Entry number="6" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="7" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
         </tr>
-        <tr>
+        <tr className="calendarCogs_week">
           <th><Entry number="8" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="9" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="10" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -111,7 +112,7 @@ function CalendarCogs() {
           <th><Entry number="13" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="14" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
         </tr>
-        <tr>
+        <tr className="calendarCogs_week">
           <th><Entry number="15" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="16" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="17" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -120,7 +121,7 @@ function CalendarCogs() {
           <th><Entry number="20" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="21" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
         </tr>
-        <tr>
+        <tr className="calendarCogs_week">
           <th><Entry number="22" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="23" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="24" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -129,7 +130,7 @@ function CalendarCogs() {
           <th><Entry number="27" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="28" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
         </tr>
-        <tr>
+        <tr className="calendarCogs_week"> 
           <th><Entry number="29" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="30" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="31" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -138,7 +139,7 @@ function CalendarCogs() {
           <th><Entry number="34" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="35" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
         </tr>
-        <tr>
+        <tr className="calendarCogs_week">
           <th><Entry number="36" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="37" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="38" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>

@@ -16,18 +16,24 @@
 .division > .entryEvent > button {
   background-color: var(--division-color);
 }
-.entryEvent > button {
+.entryEvent_button {
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   font-size: 16px;
-  max-width: 100%;
-  font-family: var(--font-style);
+  width: 100%;
+  font-family: var(--font-form);
   overflow: hidden;
   white-space: nowrap;
+  text-align: left;
+}
+
+.entryEvent_button:hover {
+  cursor: pointer;
+  color: grey;
 }
 
 
-@media only screen and (min-width: 768px) {
+/*@media only screen and (min-width: 768px) {
   .service > .entryEvent > button {
     background-color: var(--service-color);
   }
@@ -62,3 +68,4 @@
     color: grey;
   }
 }
+*/

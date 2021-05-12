@@ -13,13 +13,6 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
     beginTime = (beginTime - 0) + "a";
   }
 
-  let lastTime = String(endtime).substring(0, 2);
-  if (parseInt(lastTime) > 12) {
-    lastTime = (lastTime - 12) + "p";
-  } else {
-    lastTime = (lastTime - 0) + "a";
-  }
-
   /*This sets css elements to create pop-up when a button is pressed*/
   const[isOpen, setIsOpen] = useState(false);
 
@@ -74,7 +67,7 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
   return (
     <div className={category}>
       <div className="entryEvent">
-        <button onClick={() => setIsOpen(true)}>{beginTime}-{lastTime} {title}</button>
+        <button onClick={() => setIsOpen(true)} className="entryEvent_button"><b>{beginTime}</b> {title}</button>
           <Modal
             id="modal"
             open={isOpen}

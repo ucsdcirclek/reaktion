@@ -1,13 +1,13 @@
-.entry > p {
-  font-family: var(--font-style);
-  font-size: 16px;
-  text-align: left;
-  margin-left: 5px;
+.entry_number {
+  font-family: var(--font-form);
+  font-size: 20px;
+  text-align: right;
+  padding-right: 5px;
   margin-top: -55px;
   position: static;
 }
 
-@media only screen and (min-width: 768px) {
+/*@media only screen and (min-width: 768px) {
   .entry > p {
     font-family: var(--font-style);
     font-size: 16px;
@@ -16,4 +16,4 @@
     margin-top: -55px;
     position: static;
   }
-}
+}*/

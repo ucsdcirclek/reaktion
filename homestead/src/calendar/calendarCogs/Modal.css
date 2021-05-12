@@ -1,153 +1,118 @@
 .modal_styles {
-  border-radius: 5px;
-  max-height: 800px;
-  width: 300px;
+  border-radius: 3px;
+  width: 1100px;
 }
 
-.modal_styles > h1 {
-  font-family: var(--font-style);
-  font-size: 18px;
+.modal_upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 20px 2px;
+}
+
+.modal_upper > h1 {
+  font-family: var(--font-form);
+  text-align: left;
 }
 
 .modal_styles > h2 {
-  font-family: var(--font-style);
-  font-size: 16px;
-}
-
-.modal_styles > p {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   text-align: left;
-  font-weight: lighter;
+  margin: 0 20px 30px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.modal_rsvp1 {
+.modal_closeIcon {
+  color: #D93A32;
+  transform: scale(1.5);
+}
+
+.modal_closeIcon:hover {
+  cursor: pointer;
+  color: #FF6961;
+}
+
+.modal_rsvp1 > h2 {
+  font-family: var(--font-form);
+  text-align: left;
+  margin: 20px 20px 2px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.modal_rsvp2 {
   display: flex;
   align-items: center;
 }
 
-.modal_rsvp1 > h2 {
-  font-family: var(--font-style);
-  font-size: 16px;
-  font-weight: bolder;
-  margin-right: 5px;
-}
-
-.modal_rsvp1 > h3 {
-  font-weight: lighter;
-  font-family: var(--font-style);
-}
-
 .modal_rsvp2 > h2 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   text-align: left;
-  font-size: 16px;
+  margin: 0 5px 10px 20px;
+  font-size: 22px;
+}
+
+.modal_rsvp2 > h3 {
+  font-family: var(--font-form);
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.modal_styles > p {
+  font-family: var(--font-form);
+  font-size: 18px;
+  text-align: left;
+  font-weight: 500;
+  margin: 0 20px 10px;
+}
+
+.modal_rsvp3 {
+  display: flex;
+  margin-left: 18px;
+  align-items: baseline;
 }
 
 .modal_rsvp3 > h2 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   text-align: left;
-  font-size: 16px;
+  margin: 0 5px 10px;
+  font-size: 22px;
 }
 
 .modal_rsvp3 > p {
-  font-family: var(--font-style);
-  font-size: 16px;
-  font-weight: lighter;
-}
-
-.modal_closeIcon {
-  margin-top: -100px !important;
-  color: red;
-}
-
-.modal_styles > button {
-  border: none;
-  font-family: var(--font-style);
+  font-family: var(--font-form);
+  text-align: left;
+  margin: 0 5px 10px;
   font-size: 20px;
-  border-radius: 5px;
-  margin: 10px;
+  font-weight: 500;
 }
 
 .LoggedIn {
-  background-color: var(--fellowship-color);
+  background-color: var(--light-circlek-color);
+  color: white;
+  border: none;
+  border-radius: 17px;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--font-form);
 }
+
+.LoggedIn:hover {
+  background-color: var(--circlek-color);
+  cursor: pointer;
+}
+
 
 .notLoggedIn {
-  background-color: var(--light-accent-color);
+  background-color: light-grey;
+  border: none;
+  border-radius: 17px;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 800;
   pointer-events: none;
-}
-@media only screen and (min-width: 768px) {
-  .modal_styles {
-    border-radius: 5px;
-    width: 500px;
-  }
-
-  .modal_styles > h1 {
-    font-family: var(--font-style);
-  }
-
-  .modal_styles > h2 {
-    font-family: var(--font-style);
-  }
-
-  .modal_styles > p {
-    font-family: var(--font-style);
-    text-align: left;
-    font-weight: lighter;
-  }
-
-  .modal_rsvp {
-    display: flex;
-    align-items: center;
-  }
-
-  .modal_rsvp > h2 {
-    font-family: var(--font-style);
-    font-size: 18px;
-    font-weight: bolder;
-    margin-right: 5px;
-  }
-
-  .modal_rsvp > h3 {
-    font-weight: lighter;
-    font-family: var(--font-style);
-  }
-
-  .modal_rsvp > p {
-    font-family: var(--font-style);
-    font-size: 16px;
-    font-weight: lighter;
-  }
-
-  .modal_closeIcon {
-    margin-top: -100px !important;
-    color: red;
-  }
-
-  .modal_closeIcon:hover {
-    cursor: pointer;
-    background-color: var(--light-accent-color);
-    border-radius: 50%;
-  }
-
-  .modal_styles > button {
-    border: none;
-    font-family: var(--font-style);
-    font-size: 20px;
-    border-radius: 5px;
-    margin: 10px;
-  }
-
-  .modal_styles > button:hover {
-    cursor: pointer;
-  }
-
-  .LoggedIn {
-    background-color: var(--circlek-color);
-  }
-
-  .notLoggedIn {
-    background-color: var(--light-accent-color);
-    pointer-events: none;
-  }
+  font-family: var(--font-form);
 }

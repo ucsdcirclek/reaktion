@@ -1,44 +1,83 @@
 .calendarCogs_months {
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  font-family: var(--font-style);
-  font-size: 16px;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 1350px;
+  margin: 0 auto 20px;
 }
 
-.calendarCogs_monthIcon {
-  background-color: var(--circlek-color);
-  border-radius: 5px;
-  margin: 10px;
+.calendarCogs_months > h1{
+  color: var(--circlek-color);
+  font-family: var(--font-form);
+  font-size: 70px;
+  font-weight: 800;
 }
 
-.calendarCogs_monthIcon:hover {
+.calendarCogs_monthIcon_left {
+  position: relative;
+  right: 10px;
+  background-color: var(--light-circlek-color);
+  border-radius: 50% !important;
+  color: white;
+  transform: scale(1.5);
+  margin-top: 4px;
+}
+
+.calendarCogs_monthIcon_right {
+  background-color: var(--light-circlek-color);
+  border-radius: 50% !important;
+  color: white;
+  transform: scale(1.5);
+  margin-left: 20px;
+  position: relative;
+  right: 10px;
+  font-weight: 1000;
+}
+
+.calendarCogs_monthIcon_left:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  background-color: var(--circlek-color);
+}
+
+.calendarCogs_monthIcon_right:hover {
+  cursor: pointer;
+  background-color: var(--circlek-color);
 }
 
 .calendarCogs_calendar {
-  table-layout: fixed;
-  width: 100%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 10px 0;
 }
 
 .calendarCogs_days {
-  font-family: var(--font-style);
-  font-size: 20px;
-  text-wrap: nowrap;
   overflow: hidden;
+  color: white;
+  background-color: var(--light-circlek-color);
+  border-radius: 15px 15px 0 0;
+  line-height: 40px;
+  font-family: var(--font-form);
+  font-size: 20px;
+  font-weight: 500;
 }
 
-tr {
+.calendarCogs_week {
   height: 120px;
 }
 
-th {
-  border-radius: 5px;
-  background-color: var(--light-accent-color);
+.calendarCogs_week > th {
+  min-width: 180px;
+  background-color: white;
+  border-bottom: 2px solid black;
 }
 
-@media only screen and (min-width: 1024px) {
+
+
+
+
+
+
+/*@media only screen and (min-width: 1024px) {
   .calendarCogs_months {
     display: flex;
     justify-content: center;
@@ -76,4 +115,4 @@ th {
     width: 200px;
     background-color: var(--light-accent-color);
   }
-}
+}*/
