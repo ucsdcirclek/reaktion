@@ -1,0 +1,83 @@
+.general {
+    margin: 200px 0 0;
+}
+
+.general_sub {
+    margin: 0 auto 0;
+    width: 90%;
+    max-width: 1500px;
+}
+
+.general_text1 {
+    display: flex;
+    margin: 40px 0;
+}
+
+.general_text1 > h2 {
+    flex: 0.2;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--circlek-color);
+}
+
+.general_text1 > p {
+    flex: 0.8;
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.general_events {
+    display: flex;
+    margin: 20px;
+}
+
+.general_events > h2 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--circlek-color);
+    position: relative;
+    margin: 0 80px 0 0;
+    top: 10px;
+    right: 20px;
+
+}
+
+.general_eventsList > li {
+    font-family: var(--font-form);
+    margin: 10px 20px;
+    font-weight: 500;
+    font-size: 22px;
+    list-style: none;
+}
+
+.general_sub > h1 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--circlek-color);
+    margin: 40px 0 20px;
+}
+
+.general_tenetSub {
+    display: flex;
+    margin: 20px 0;
+}
+
+.general_tenetSub > h2 {
+    flex: 0.2;
+    text-align: left;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 28px;
+    color: black;
+}
+
+.general_tenetSub > p {
+    flex: 0.8;
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+}

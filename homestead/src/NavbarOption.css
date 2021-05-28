@@ -1,12 +1,24 @@
 .navbarOption {
-  padding: 5px;
-  font-size: 14px;
-  font-family: var(--font-style);
-  color: var(--dark-color);
-  font-weight: lighter;
+  margin: 5px;
+  padding: 0 0 10px;
 }
 
-@media only screen and (min-width: 768px) {
+.navbarOption:hover {
+  border-bottom: 2px solid var(--background-color);
+  position: relative; 
+  bottom: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbarOption > h1{
+  padding: 5px;
+  font-size: 27px;
+  text-align: center;
+  font-family: var(--font-form);
+  color: var(--background-color);
+}
+
+/*@media only screen and (min-width: 768px) {
   .navbarOption {
     padding: 5px 10px;
     color: black;
@@ -17,4 +29,4 @@
     background-color: var(--fellowship-color);
     border-radius: 5px;
   }
-}
+}*/

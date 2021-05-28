@@ -1,0 +1,55 @@
+.login {
+    width: 300px;  
+    /* position: fixed; */
+  }
+
+  .login button {
+    border-radius: 10px;
+    font-family: var(--font-form);
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  .login_signout {
+    position: relative;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightest-circlek-color);
+    border-radius: 20px;
+    width: 340px;
+  }
+  
+  .login_signout > h2 {
+    margin: 20px 0px 10px;
+    font-family: var(--font-form);
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .login_signout > img {
+    width: 150px;
+    display: block;
+    margin: 0px auto;
+    border-radius: 50%;
+  }
+  
+  .login_signout > h3 {
+    margin-top: 5px;
+    font-family: var(--font-form);
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .login_signout > button {
+    background-color: var(--lighter-circlek-color);
+    font-family: var(--font-form);
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .login_signout > button:hover {
+    background-color: var(--light-circlek-color);
+    cursor: pointer;
+    color: white;
+  }

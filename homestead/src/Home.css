@@ -1,151 +1,106 @@
 .home_masthead {
   display: block;
-  margin: 10px auto;
-  max-width: 95%;
+  margin: 120px auto 20px;
+  max-width: 90%;
+}
+
+.home_background {
+  background-color: var(--lightest-circlek-color);
+  padding: 40px 0 0;
 }
 
 .home_upper {
-  border-radius: 5px;
-  padding: 5px 0px 0px;
-  border-top: 5px solid var(--fellowship-color);
-  background-color: var(--light-accent-color);
+  display: flex;
+  margin: 0px auto;
+  max-width: 90%;
+  padding: 0 0 20px;
 }
 
 .home_propagandaBubble {
-  padding: 20px;
-  border-radius: 5px 5px 0px 0px;
+  flex: 0.64;
 }
 
 .home_propagandaBubble > h2 {
-  font-family: var(--font-style);
-  color: var(--dark-color);
-  font-size: 22px;
-  margin: 0px 0px 10px;
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 36px;
+  color: var(--circlek-color);
 }
 
 .home_propagandaBubble > p {
-  font-family: var(--font-style);
-  font-size: 16px;
+  font-family: var(--font-form);
+  font-weight: 500;
+  font-size: 22px;
+  margin: 20px 0;
 }
 
 .home_propagandaVideo {
-  text-align: center;
-  padding: 0px 0px 20px;
-  border-radius: 0px 0px 5px 5px;
+  flex: 0.36;
 }
 
 .home_mid {
-  margin: 20px 0px 0px;
-  border-radius: 5px;
-  padding: 20px;
-  border-top: 5px solid var(--leadership-color);
-  background-color: var(--light-accent-color);
+  margin: 30px auto 0;
+  max-width: 90%;
+}
+
+.home_mid > h2 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 36px;
+  color: var(--circlek-color);
+  margin: 0 0 30px;
+}
+
+.home_mid > p {
+  font-family: var(--font-form);
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0 0 30px;
+}
+
+.home_family {
+  display: flex;
+}
+
+.home_midLower {
+  margin: 150px auto 0;
+  max-width: 90%;
+}
+
+.home_midLower > h2 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 36px;
+  color: var(--circlek-color);
+  margin: 0 0 30px;
+}
+
+.home_midLower > h3 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.home_midLower > p {
+  font-family: var(--font-form);
+  font-weight: 500;
+  font-size: 22px;
+  padding: 0 0 30px;
+}
+
+.home_midLowerS {
+  border-bottom: 1px solid grey;
+}
+
+.home_tenents {
+  margin: 30px auto 0;
+  max-width: 90%;
 }
 
 .home_tenents > h2 {
-  text-align: center;
-  margin: 10px 0px;
-  font-family: var(--font-style);
-  font-size: 24px;
-}
-
-.home_lower {
-  margin: 20px 0px 0px;
-  border-top: 5px solid var(--service-color);
-  border-radius: 5px;
-  padding: 20px;
-  background-color: var(--light-accent-color);
-}
-
-.home_lower > h2 {
-  text-align: center;
-  margin-top: 10px;
-  font-family: var(--font-style);
-  font-size: 24px;
-}
-
-@media only screen and (min-width: 1024px) {
-  .home_masthead {
-    display: block;
-    margin: 0px auto;
-    max-width: 90%;
-  }
-
-  .home_upper {
-    display: flex;
-    margin: 0px auto;
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 90%;
-    background-color: var(--light-accent-color);
-  }
-
-  .home_propagandaBubble {
-    flex: 0.4;
-    margin: 30px;
-    border-right: 1px solid black;
-  }
-
-  .home_propagandaBubble > h2 {
-    font-family: var(--font-style);
-    font-size: 24px;
-  }
-
-  .home_propagandaBubble > p {
-    width: 450px;
-    font-family: var(--font-style);
-    font-size: 18px;
-  }
-
-  .home_propagandaVideo {
-    flex: 0.6;
-    padding: 10px;
-    margin: 0px auto;
-    text-align: center;
-    max-width: 550px;
-  }
-
-  .home_mid {
-    display: flex;
-    margin: 10px auto 0px;
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 90%;
-    background-color: var(--light-accent-color);
-  }
-  .home_tenents {
-    flex: 0.5;
-  }
-
-  .home_tenents > h2 {
-    text-align: center;
-    margin: 10px 0px;
-    font-family: var(--font-style);
-    font-size: 24px;
-  }
-
-  .home_fb {
-    flex: 0.5;
-  }
-
-  .home_lower {
-    margin: 10px auto 0px;
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 90%;
-    background-color: var(--light-accent-color);
-  }
-
-  .home_lower > h2 {
-    text-align: center;
-    margin-top: 10px;
-    font-family: var(--font-style);
-    font-size: 24px;
-  }
-
-  .home_family {
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 30px 30px 30px;
-  }
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 36px;
+  color: var(--circlek-color);
 }

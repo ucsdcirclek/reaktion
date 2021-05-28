@@ -4,6 +4,10 @@ import Navbar from './Navbar.js';
 import About from './about/About.js';
 import Calendar from './calendar/Calendar.js';
 import Account from './account/Account.js';
+import LParent from './login/LParent.js';
+import General from './about/subCategories/General.js';
+import OurClub from './about/subCategories/OurClub.js';
+import Structure from './about/subCategories/Structure.js';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -19,9 +23,12 @@ function App() {
       <Router>
         <Navbar />
           <Switch>
-            <Route path='/account'><Account /></Route>
+            <Route path='/about/ourclub'><OurClub /></Route>
+            <Route path='/about/structure'><Structure /></Route>
+            <Route path='/about'><General /></Route>
+            <Route path='/login'><LParent /></Route>
+            <Route path='/resources'><Account /></Route>
             <Route path='/calendar'><Calendar /></Route>
-            <Route path='/about'><About /></Route>
             <Route path='/'><Home /></Route>
           </Switch>
       </Router>

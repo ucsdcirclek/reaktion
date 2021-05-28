@@ -65,11 +65,11 @@ function Login() {
     return (
       <div className="login">
         <span>
-          <div className="login_signout">
-            <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
-            <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
-            <h3>Go to our Calendar to sign up for events!</h3>
-            <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
+            <div className="login_signout">
+                <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
+                <img alt="profile picture" src={firebase.auth().currentUser.photoURL} />
+                <h3>Go to our Calendar to sign up for events!</h3>
+                <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
             </div>
         </span>
       </div>

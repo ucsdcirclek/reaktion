@@ -1,0 +1,30 @@
+.aboutNavbar {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+.aboutNavbar > h3 {
+    text-align: left;
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 32px;
+    color: black;
+    padding: 0 30px;
+}
+
+.aboutNavbar h2 {
+    text-align: left;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 32px;
+    color: black;
+    padding: 0 20px 5px;
+}
+
+.aboutNavbar h2:hover {
+    border-bottom: 2px solid black;
+    position: relative; 
+    bottom: 2px;
+    transition: all 0.3s ease-in-out;
+}
