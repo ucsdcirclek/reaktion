@@ -204,6 +204,13 @@
   border-radius: 20px;
 }
 
+.account_lower button:hover {
+  cursor: pointer;
+  background-color: var(--light-circlek-color);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
 .account_lowerApp {
   flex: 0.33;
   text-align: center;
