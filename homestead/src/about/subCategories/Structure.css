@@ -1,3 +1,122 @@
 .structure {
     margin: 200px 0 0;
 }
+
+.structure_sub {
+    margin: 0 auto 0;
+    width: 90%;
+    max-width: 1500px;
+}
+
+.structure_text1 {
+    display: flex;
+    margin: 40px 0;
+}
+
+.structure_text1 > h2 {
+    flex: 0.2;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--circlek-color);
+}
+
+.structure_text1 > p {
+    flex: 0.8;
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.structure_text1 > div {
+    flex: 0.8;
+}
+
+.structure_text1 > div > p {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0 0 40px;
+}
+
+.structure_text1 > div > h3 {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.structure_district {
+    display: flex;
+}
+
+.structure_district > h2 {
+    flex: 0.3;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--circlek-color);
+}
+
+.structure_district > ul {
+    flex: 0.7;
+    list-style: none;
+}
+
+.structure_district > ul > li {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.structure_clubs {
+    display: flex;
+}
+
+.structure_clubs > h2 {
+    flex: 0.3;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--circlek-color)
+}
+
+.structure_list {
+    flex: 0.7;
+}
+
+
+.structure_row1 {
+    display: flex;
+} 
+
+.structure_row1 > h2 {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 10px;
+    flex: 0.33;
+}
+
+.structure_row2 {
+    display: flex;
+}
+
+.structure_row2 > h2 {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 10px;
+    flex: 0.33;
+}
+
+.structure_row3 {
+    display: flex;
+}
+
+.structure_row3 > h2 {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 10px;
+    flex: 0.33;
+}

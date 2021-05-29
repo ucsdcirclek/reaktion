@@ -9,6 +9,25 @@
   padding: 10px;
 }
 
+.board {
+  padding: 20px 30px;
+}
+
+.board > h3 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 22px;
+  color: black;
+}
+
+.board > p {
+  font-family: var(--font-form);
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+}
+
+
 
 @media only screen and (min-width: 768px) {
   .board_image {

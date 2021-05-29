@@ -1,3 +1,128 @@
 .ourClub {
     margin: 200px 0 0;
 }
+
+.ourClub_sub {
+    margin: 0 auto 0;
+    width: 90%;
+    max-width: 1500px;
+}
+
+.ourClub_text1 {
+    display: flex;
+    margin: 40px 0;
+}
+
+.ourClub_text1 > h2 {
+    flex: 0.25;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--circlek-color);
+}
+
+.ourClub_text1 > p {
+    flex: 0.75;
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.ourClub_events {
+    display: flex;
+    margin: 40px 0;
+}
+
+.ourClub_events > h2 {
+    flex: 0.25;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 36px;
+    color: var(--circlek-color);
+}
+
+.ourClub_events > div {
+    flex: 0.85;
+}
+
+.ourClub_rows {
+    display: flex;
+}
+
+.ourClub_rows > p {
+    flex: 0.5;
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 5px 30px;
+}
+
+.ourClub_events > ul {
+    flex: 0.375;
+    list-style: none;
+    position: relative;
+    right: 20px;
+}
+
+.ourClub_events > ul > li {
+    flex: 0.5;
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.ourClub_text1 > div {
+    flex: 0.75;
+}
+
+.ourClub_text1 > div > p {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0 0 30px;
+}
+
+.ourClub_text1 > div > h3 {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.ourClub_board {
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--lightest-circlek-color);
+}
+
+.ourClub_board > h2 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 32px;
+    color: black;
+}
+
+.ourClub_board > h3 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 28px;
+    color: black;
+    margin: 30px 0;
+}
+
+.ourClub_execBoard {
+    display: flex;
+    justify-content: center;
+}
+
+.ourClub_appointedBoard1 {
+    display: flex;
+    justify-content: center;
+}
+
+.ourClub_appointedBoard2 {
+    display: flex;
+    justify-content: center;
+}
+
+.ourClub_footer {
+}
