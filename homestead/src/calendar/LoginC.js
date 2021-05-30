@@ -67,24 +67,24 @@ function LoginC() {
 
   if (!signedIn) {
     return (
-      <div className="login">
+      <div className="loginC">
         <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
       </div>
     );
   }
   return (
-    <div className="login">
-      <div className="login_total">
-        <div className="login_signout">
+    <div className="loginC">
+      <div className="loginC_total">
+        <div className="loginC_signout">
           <h2>Welcome {firebase.auth().currentUser.displayName}!</h2>
           <img alt="profile" src={firebase.auth().currentUser.photoURL} />
           <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
-          <CalendarInput className="login_input" pid={firebase.auth().currentUser.uid} name={firebase.auth().currentUser.displayName} priority={priority}/>
+          <CalendarInput className="loginC_input" pid={firebase.auth().currentUser.uid} name={firebase.auth().currentUser.displayName} priority={priority}/>
           <h2> Profiles Coming Soon! </h2>
         </div>
-        <div className="login_entry">
+        <div className="loginC_entry">
           <h1>My Events</h1>
-          <MyEvents className="login_myEvents" pid={firebase.auth().currentUser.uid}/>
+          <MyEvents className="loginC_myEvents" pid={firebase.auth().currentUser.uid}/>
         </div>
       </div>
     </div>

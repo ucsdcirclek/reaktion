@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from '@material-ui/icons/CancelOutlined';
 import "./NewEventModule.css";
 import db from "../firebase";
 import Select from "react-select";
@@ -10,8 +10,7 @@ const MODAL_STYLES = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   backgroundColor: '#FFF',
-  padding: '50px',
-  maxheight: '50px',
+  padding: '20px',
   zIndex: 1000,
 }
 

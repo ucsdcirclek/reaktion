@@ -1,19 +1,21 @@
 .service1 {
-  background-color: var(--light-accent-color);
+  background-color: var(--lightest-circlek-color);
   border-top: 5px solid var(--service-color);
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 20px 0px;
   padding: 20px;
 }
 
 .service1 > p {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
+  margin: 2px 0;
 }
 
 .service1 > h1 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 24px;
+  margin: 0 0 10px;
 }
 
 .service1 > .button_class > button {
@@ -22,7 +24,7 @@
   border-radius: 5px;
   margin: 5px 0px 0px;
   background-color: var(--service-color);
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
 }
 
@@ -32,21 +34,23 @@
 }
 
 .social1 {
-  background-color: var(--light-accent-color);
+  background-color: var(--lightest-circlek-color);
   border-top: 5px solid var(--social-color);
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 20px 0px;
   padding: 20px;
 }
 
 .social1 > p {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
+  margin: 2px 0;
 }
 
 .social1 > h1 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 24px;
+  margin: 0 0 10px;
 }
 
 .social1 > .button_class > button {
@@ -55,7 +59,7 @@
   border-radius: 5px;
   margin: 5px 0px 0px;
   background-color: var(--social-color);
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
 }
 
@@ -66,21 +70,23 @@
 
 
 .committee1 {
-  background-color: var(--light-accent-color);
+  background-color: var(--lightest-circlek-color);
   border-top: 5px solid var(--committee-color);
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 20px 0px;
   padding: 20px;
 }
 
 .committee1 > p {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
+  margin: 2px 0;
 }
 
 .committee1 > h1 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 24px;
+  margin: 0 0 10px;
 }
 
 .committee1 > .button_class > button {
@@ -89,7 +95,7 @@
   border-radius: 5px;
   margin: 5px 0px 0px;
   background-color: var(--committee-color);
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
 }
 
@@ -99,21 +105,23 @@
 }
 
 .kiwanis1 {
-  background-color: var(--light-accent-color);
+  background-color: var(--lightest-circlek-color);
   border-top: 5px solid var(--kiwanis-color);
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 20px 0px;
   padding: 20px;
 }
 
 .kiwanis1 > p {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
+  margin: 2px 0;
 }
 
 .kiwanis1 > h1 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 24px;
+  margin: 0 0 10px;
 }
 
 .kiwanis1 > .button_class > button {
@@ -122,7 +130,7 @@
   border-radius: 5px;
   margin: 5px 0px 0px;
   background-color: var(--kiwanis-color);
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
 }
 
@@ -132,21 +140,23 @@
 }
 
 .fundraising1 {
-  background-color: var(--light-accent-color);
+  background-color: var(--lightest-circlek-color);
   border-top: 5px solid var(--fundraising-color);
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 20px 0px;
   padding: 20px;
 }
 
 .fundraising1 > p {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
+  margin: 2px 0;
 }
 
 .fundraising1 > h1 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 24px;
+  margin: 0 0 10px;
 }
 
 .fundraising1 > .button_class > button {
@@ -155,7 +165,7 @@
   border-radius: 5px;
   margin: 5px 0px 0px;
   background-color: var(--fundraising-color);
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
 }
 
@@ -166,21 +176,23 @@
 
 
 .division1 {
-  background-color: var(--light-accent-color);
+  background-color: var(--lightest-circlek-color);
   border-top: 5px solid var(--division-color);
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 20px 0px;
   padding: 20px;
 }
 
 .division1 > p {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
+  margin: 2px 0;
 }
 
 .division1 > h1 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 24px;
+  margin: 0 0 10px;
 }
 
 .division1 > .button_class > button {
@@ -189,7 +201,7 @@
   border-radius: 5px;
   margin: 5px 0px 0px;
   background-color: var(--division-color);
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 18px;
 }
 

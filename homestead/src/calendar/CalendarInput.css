@@ -1,3 +1,11 @@
+.calendarInput > h2 {
+  font-family: var(--font-form);
+  font-size: 22px;
+  margin: 10px;
+  
+}
+
+
 .calendarInput_form {
   display: flex;
   flex-direction: column;
@@ -8,7 +16,7 @@
 }
 
 .calendarInput_time > h2 {
-  font-family: var(--font-style);
+  font-family: var(--font-form);
   font-size: 16px;
   margin: 10px 10px 10px 0;
   background-color: white;
@@ -26,7 +34,7 @@
   border: none;
   margin: 5px 0px;
   padding: 10px;
-  font-family: var(--font-style);
+  font-family: var(--font-form);
 }
 
 .input_large {
@@ -35,20 +43,22 @@
   margin: 5px 0px;
   height: 200px;
   padding: 10px;
-  font-family: var(--font-style);
+  font-family: var(--font-form);
 }
 
 .calendarInput_form > button {
+  background-color: var(--lighter-circlek-color);
+  font-family: var(--font-form);
+  font-size: 22px;
+  font-weight: 700;
+  height: 40px;
+  margin: 10px 0;
+  border-radius: 25px;
   border: none;
-  margin: 10px 0px 20px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: var(--circlek-color);
-  font-family: var(--font-style);
-  font-size: 20px;
 }
 
 .calendarInput_form > button:hover {
-  font-weight: 600;
+  background-color: var(--light-circlek-color);
   cursor: pointer;
+  color: white;
 }

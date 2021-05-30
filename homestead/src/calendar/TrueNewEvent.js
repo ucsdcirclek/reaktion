@@ -30,6 +30,11 @@ function TrueNewEvents({ userList, title, starttime, endtime, occupancy, locatio
 
   category = category + "1";
 
+  let protoList = userList.slice(0);
+  for (var i = 0; i < protoList.length; i++) {
+    protoList[i] = String(protoList[i]) + ", ";
+  }
+
   if (isValid.current === true) {
     return (
       <div className={category}>
@@ -39,7 +44,7 @@ function TrueNewEvents({ userList, title, starttime, endtime, occupancy, locatio
         <p><b>Maximum Occupancy:</b> {occupancy}</p>
         <p><b>Location:</b> {location}</p>
         <p>{description}</p>
-        <p><b>Whos Going?</b> {userList}</p>
+        <p><b>Whos Going?</b> {protoList}</p>
         {isHost.current ? (
           <div className="button_class">
             <button onClick={() => setIsOpen(true)}>Edit Event</button>
