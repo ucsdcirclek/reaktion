@@ -72,7 +72,7 @@ function Account() {
         </div>
         <div className="account_lowerMembership">
           <PaymentIcon />
-          <h2>MembershipDues</h2>
+          <h2>Membership Dues</h2>
           <p>Dues cost $35 for the 2020-2021 school year. Pay by cash, check to UCSD
           Circle K, or venmo @UCSDCircleK.</p>
           <a href="https://venmo.com/UCSDCircleK"><button className="aboutMembership_venmo">Venmo Page</button></a>

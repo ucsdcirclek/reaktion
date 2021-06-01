@@ -13,6 +13,14 @@
   flex-direction: column;
 }
 
+.loginC button {
+  border-radius: 10px;
+  font-family: var(--font-form);
+  font-size: 22px;
+  font-weight: 500;
+  border: none;
+}
+
 .loginC_signout > h2 {
   font-family: var(--font-form);
 }

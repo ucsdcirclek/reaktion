@@ -1,14 +1,12 @@
 .modal_styles1 {
   max-height: 90%;
-  width: 800px;
+  width: 80%;
   border-radius: 10px;
 }
 
 .modal_closeIcon1 {
   color: #D93A32;
   transform: scale(1.5);
-  position: relative;
-  left: 770px;
 }
 
 .modal_styles1 > h2 {
@@ -83,4 +81,93 @@
   background-color: var(--light-circlek-color);
   cursor: pointer;
   color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  .modal_styles1 {
+    max-height: 90%;
+    width: 800px;
+    border-radius: 10px;
+  }
+  
+  .modal_closeIcon1 {
+    color: #D93A32;
+    transform: scale(1.5);
+    position: relative;
+    left: 770px;
+  }
+  
+  .modal_styles1 > h2 {
+    font-family: var(--font-form);
+    font-size: 28px;
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  
+  .modal_closeIcon1:hover {
+    cursor: pointer;
+    color: #FF6961;
+  }
+  
+  .calendarInput_form1 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightest-circlek-color);
+    padding: 25px;
+    border-radius: 20px;
+  }
+  
+  .calendarInput_time1 {
+    display: flex;
+  }
+  
+  .calendarInput_time1 > h2 {
+    font-family: var(--font-form);
+    font-size: 20px;
+    margin: 10px 10px 10px 0;
+    background-color: white;
+    border-radius: 5px;
+    flex: 0.2;
+    padding: 10px;
+  }
+  
+  .calendarInput_time1 input {
+    flex: 0.8;
+  }
+  
+  .input1 {
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0px;
+    padding: 10px;
+    font-family: var(--font-form);
+    background-color: white;
+  }
+  
+  .input_large1 {
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0px;
+    height: 130px;
+    padding: 10px;
+    font-family: var(--font-form);
+    background-color: white;
+  }
+  
+  .calendarInput_form1 > button {
+    background-color: var(--lighter-circlek-color);
+    font-family: var(--font-form);
+    font-size: 22px;
+    font-weight: 700;
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: none;
+  }
+  
+  .calendarInput_form1 > button:hover {
+    background-color: var(--light-circlek-color);
+    cursor: pointer;
+    color: white;
+  }
 }

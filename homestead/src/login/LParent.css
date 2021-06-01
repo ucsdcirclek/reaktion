@@ -2,11 +2,12 @@
     display: flex;
     max-width: 1000px;
     margin: 200px auto 110px;
+    flex-direction: column;
 }
 
 .lparent_upperLogin {
-    text-align: left;
-    flex: 0.4;
+    text-align: center;
+    
 }
 
 .lparent_upperLogin > h1 {
@@ -59,4 +60,70 @@
     background-color: var(--light-circlek-color);
     color: white;
     transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 1024px) {
+    .lparent_upper {
+        display: flex;
+        max-width: 1000px;
+        margin: 200px auto 110px;
+        flex-direction: row;
+    }
+    
+    .lparent_upperLogin {
+        text-align: left;
+        flex: 0.4;
+    }
+    
+    .lparent_upperLogin > h1 {
+        font-family: var(--font-form);
+        font-weight: 900;
+        font-size: 36px;
+        color: var(--circlek-color);
+    }
+    
+    .lparent_upperRight {
+        background-color: var(--lightest-circlek-color);
+        filter: alpha(opacity=50);
+        border-radius: 20px;
+        padding: 20px;
+        flex: 0.6;
+    }
+    
+    .lparent_upperRight > h1 {
+        text-align: left;
+        font-family: var(--font-form);
+        font-weight: 900;
+        font-size: 32px;
+        color: black;
+        padding: 20px;
+    }
+    
+    .lparent_upperRight > p {
+        text-align: left;
+        font-family: var(--font-form);
+        font-weight: 500;
+        font-size: 22px;
+        color: var(black);
+        padding: 0 20px 20px;
+    }
+    
+    .lparent_button button {
+        background-color: var(--lighter-circlek-color);
+        border: none;
+        font-family: var(--font-form);
+        font-weight: 600;
+        font-size: 22px;
+        color: var(black);
+        margin: 0 20px 20px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .lparent_button button:hover {
+        cursor: pointer;
+        background-color: var(--light-circlek-color);
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }    
 }
