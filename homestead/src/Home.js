@@ -8,7 +8,7 @@ import ReactPlayer from "react-player";
 import Service from "./images/Service.png";
 import Leadership from "./images/Leadership.png";
 import Fellowship from "./images/Fellowship.png";
-import Banner from "./images/CKIMasthead.png";
+import Banner from "./images/banner.png";
 
 function Home() {
   return (
