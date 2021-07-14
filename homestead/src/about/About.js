@@ -24,6 +24,7 @@ function About() {
           <p>CKI (Circle K International) is a collegiate organization that is devoted
           to helping universities join a global network of responsible citizens and leaders
           with a lifelong commitment to service.</p>
+          <p>Hello World!</p>
         </div>
         <div className="about_overview">
           <h2>Overview</h2>
