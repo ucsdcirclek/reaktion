@@ -21,18 +21,18 @@
   border: none;
 }
 
-.loginC_signout > h2 {
+.loginC_signout>h2 {
   font-family: var(--font-form);
 }
 
-.loginC_signout > img {
+.loginC_signout>img {
   width: 150px;
   display: block;
   margin: 10px auto;
   border-radius: 50%;
 }
 
-.loginC_signout > button {
+.loginC_signout>button {
   background-color: var(--lighter-circlek-color);
   font-family: var(--font-form);
   font-size: 22px;
@@ -43,7 +43,7 @@
   border: none;
 }
 
-.loginC_signout > button:hover {
+.loginC_signout>button:hover {
   background-color: var(--light-circlek-color);
   cursor: pointer;
   color: white;
@@ -55,9 +55,22 @@
   padding: 25px;
 }
 
-.loginC_entry > h1 {
+.loginC_entry>h1 {
   font-family: var(--font-form);
   font-weight: 900;
   font-size: 36px;
   color: var(--circlek-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+  justify-content: space-around;
+}
+
+.field {
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
 }
