@@ -15,6 +15,7 @@ function Navbar() {
             <Link to= '/about' style={{ textDecoration: 'none' }}><NavbarOption text='About'/></Link>
             <Link to= '/calendar' style={{ textDecoration: 'none' }}><NavbarOption text='Calendar'/></Link>
             <Link to= '/resources' style={{ textDecoration: 'none' }}><NavbarOption text='Resources'/></Link>
+            <Link to= '/impact' style={{ textDecoration: 'none' }}><NavbarOption text='Impact'/></Link>
             <Link to= '/login' style={{ textDecoration: 'none' }}><NavbarOption text='Login'/></Link>
         </div>
       </div>
