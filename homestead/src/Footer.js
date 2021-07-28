@@ -16,7 +16,7 @@ function Footer() {
       </div>
       <div className="footer_copyRight">
         <CopyrightIcon />
-        <p>2017-2020 UC San Diego Circle K International</p>
+        <p>2017-2021 UC San Diego Circle K International</p>
       </div>
     </div>
   );
