@@ -1,26 +1,32 @@
-.service > .entryEvent > button {
+.service>.entryEvent>button {
   background-color: var(--service-color);
 }
-.social > .entryEvent > button {
+
+.social>.entryEvent>button {
   background-color: var(--social-color);
 }
-.committee > .entryEvent > button {
+
+.committee>.entryEvent>button {
   background-color: var(--committee-color);
 }
-.kiwanis > .entryEvent > button {
+
+.kiwanis>.entryEvent>button {
   background-color: var(--kiwanis-color);
 }
-.fundraising > .entryEvent > button {
+
+.fundraising>.entryEvent>button {
   background-color: var(--fundraising-color);
 }
-.division > .entryEvent > button {
+
+.division>.entryEvent>button {
   background-color: var(--division-color);
 }
+
 .entryEvent_button {
   border: none;
   border-radius: 7px;
   font-size: 16px;
-  width: 100%;
+  width: 180px;
   font-family: var(--font-form);
   overflow: hidden;
   white-space: nowrap;
@@ -31,7 +37,6 @@
   cursor: pointer;
   color: grey;
 }
-
 
 /*@media only screen and (min-width: 768px) {
   .service > .entryEvent > button {
