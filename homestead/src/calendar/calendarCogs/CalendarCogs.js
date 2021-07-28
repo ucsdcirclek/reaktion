@@ -19,9 +19,6 @@ const fullYear = fullDate.getFullYear();
 function CalendarCogs() {
   /*Creates a shift for the present Month*/
   let startingShift = Math.abs(((shiftIndex + 7) - ((fullPresent % 7) - 1)) % 7);
-  console.log(fullPresent);
-  console.log(shiftIndex);
-  console.log(startingShift);
 
   const [year, setYear] = useState(fullYear);
   const [index, setIndex] = useState(monthIndex);

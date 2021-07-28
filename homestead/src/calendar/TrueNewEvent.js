@@ -2,15 +2,24 @@ import React, { useState, useRef } from "react";
 import NewEventModule from "./NewEventModule.js";
 import "./TrueNewEvent.css";
 
+const raw_date = new Date().getMonth();
+const raw_year = new Date().getFullYear();
+
 function TrueNewEvents({ userList, title, starttime, endtime, occupancy, location, description, category, list, pid, date, docID}) {
-  let presentDate = Date();
-
-  const abbreviatedMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-  const parseMonth = presentDate.substring(4, 7);
-
-  let eventDate = date.substring(5, 7);
-  let eventIndex = parseInt(eventDate);
+  const eventDate = parseInt(date.substring(5,7)) - 1;
+  const eventYear = parseInt(date.substring(0,4));
+  var lastMonth;
+  if (raw_date === 0) {
+    lastMonth = raw_date + 11;
+  } else {
+    lastMonth = raw_date - 1;
+  }
+  var nextMonth;
+  if (raw_date === 11) {
+    nextMonth = raw_date - 11;
+  } else {
+    nextMonth = raw_date + 1;
+  }
 
   /*This sets css elements to create pop-up when a button is pressed*/
   const[isOpen, setIsOpen] = useState(false);
@@ -35,7 +44,7 @@ function TrueNewEvents({ userList, title, starttime, endtime, occupancy, locatio
     protoList[i] = String(protoList[i]) + ", ";
   }
 
-  if (isValid.current === true) {
+  if (isValid.current === true && (eventDate === nextMonth || eventDate === raw_date || eventDate === lastMonth) && eventYear === raw_year) {
     return (
       <div className={category}>
         <h1>{title}</h1>

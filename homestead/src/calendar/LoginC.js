@@ -39,32 +39,6 @@ function LoginC() {
     }, {merge: true})
   }
 
-
-
-
-  /*Future hour tracking that will eventually be added*/
-  /*componentDidUpdate = () => {
-    if (this.state.isSignedIn) {
-      let user_id = firebase.auth().currentUser.uid
-      db.collection("users").doc(user_id).set({
-        name: firebase.auth().currentUser.displayName,
-        serviceHours: 0,
-        socialHours: 0,
-        committeeHours: 0,
-        kiwanisHours: 0,
-        fundraisingHours: 0,
-        divisionHours: 0,
-        myevents: ""
-      }, {merge: true})
-
-      db.collection("users").doc(user_id).get().then(documentSnapshot => {
-        this.setState({isPrio: documentSnapshot.data().priority})
-      })
-    } else {
-      console.log("not logged in")
-    }
-  }*/
-
   if (!signedIn) {
     return (
       <div className="loginC">
