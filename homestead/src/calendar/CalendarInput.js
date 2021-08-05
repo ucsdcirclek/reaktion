@@ -14,6 +14,11 @@ function CalendarInput({ pid, name, priority }) {
   const[occupancy, setOccupancy] = useState("");
   const[category, setCategory] = useState("service");
 
+  const[titleError, setTitleError] = useState("Title");
+  const[descriptionError, setDescriptionError] = useState("Description");
+  const[locationError, setLocationError] = useState("Location");
+  const[occupancyError, setOccupancyError] = useState("Maximum Number of People");
+
   const options = [
     {value: "service", label: "Service"},
     {value: "social", label: "Social"},
@@ -26,19 +31,21 @@ function CalendarInput({ pid, name, priority }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // some clever db stuff
-    db.collection("posts").add({
-      date: todayDate,
-      endtime: endTime,
-      starttime: startTime,
-      title: title,
-      location: location,
-      description: description,
-      list: [pid],
-      categories: category,
-      occupancy: occupancy,
-      userList: [name]
-      //when get back need to actually add values to respective fields
-    })
+    if (startTime !== "" && endTime !== "" && title !== "" && description !== "" && todayDate !== "" && location !== "" && category !== "") {
+
+      db.collection("posts").add({
+        date: todayDate,
+        endtime: endTime,
+        starttime: startTime,
+        title: title,
+        location: location,
+        description: description,
+        list: [pid],
+        categories: category,
+        occupancy: occupancy,
+        userList: [name]
+        //when get back need to actually add values to respective fields
+      })
 
       setStartTime("");
       setEndTime("");
@@ -48,6 +55,18 @@ function CalendarInput({ pid, name, priority }) {
       setLocation("");
       setOccupancy("");
     //  setType("");
+
+      setTitleError("Title");
+      setDescriptionError("Description");
+      setLocationError("Location");
+      setOccupancyError("Maximum Number of People");
+    } else {
+
+      setTitleError("Please fill out Title field.");
+      setDescriptionError("Please fill out Description field.");
+      setLocationError("Please fill out Location field.");
+      setOccupancyError("Please fill out Occupancy field.")
+    }
   };
 
   function onChangeInput(value) {
@@ -59,17 +78,15 @@ function CalendarInput({ pid, name, priority }) {
     return (
       <div className='calendarInput'>
       <h2>Create an Event!</h2>
-      <form className='calendarInput_form' onSubmit={handleSubmit}>
-        <Select options={options} onChange={onChangeInput} required/>
+      <form className='calendarInput_form'>
+        <Select options={options} onChange={onChangeInput}/>
         <div className='calendarInput_time'>
           <h2>Start Time: </h2>
           <input
             value={startTime}
             onChange={(e) => setStartTime(e.target.value)}
             type="time"
-            className="input"
-            required
-          />
+            className="input" />
         </div>
         <div className='calendarInput_time'>
           <h2>End Time: </h2>
@@ -77,49 +94,39 @@ function CalendarInput({ pid, name, priority }) {
             value={endTime}
             onChange={e => setEndTime(e.target.value)}
             type="time"
-            className="input"
-            required
-          />
+            className="input"  />
         </div>
         <input
           value={title}
           onChange={e => setTitle(e.target.value)}
           className="input"
-          placeholder="Title"
-          required
-        />
+          placeholder={titleError} />
         <input
           value={occupancy}
           onChange={e => setOccupancy(e.target.value)}
           className="input"
-          placeholder='Maximum Number of People'
           type="number"
           min="1"
-          required
-        />
+          placeholder={occupancyError} />
         <input
           value={location}
           onChange={e => setLocation(e.target.value)}
           className="input"
-          placeholder="Location"
-          required
-        />
+          placeholder={locationError}  />
         <textarea
           value={description}
           onChange={e => setDescription(e.target.value)}
           type="text"
           className="input_large"
-          placeholder="Description"
-          required
-        />
+          placeholder={descriptionError} />
         <input
           value={todayDate}
           onChange={e => setTodayDate(e.target.value)}
           type="date"
-          className="input"
-          required
-        />
-        <button type="submit">Submit</button>
+          className="input"/>
+        <button onClick={handleSubmit} type="submit">
+          Submit
+        </button>
       </form>
       </div>
     );

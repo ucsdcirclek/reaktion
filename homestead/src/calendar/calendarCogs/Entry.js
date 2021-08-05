@@ -23,7 +23,7 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
     db.collection("posts").where("date", "==", date).onSnapshot((snapshot) =>
       setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
     );
-  }, [month]);
+  }, [month, date]);
 
   if (number <= shiftIndex) {
     return(<div></div>);

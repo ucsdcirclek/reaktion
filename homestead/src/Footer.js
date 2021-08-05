@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import masthead from "./images/White+Masthead.png";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -16,7 +15,7 @@ function Footer() {
       </div>
       <div className="footer_copyRight">
         <CopyrightIcon />
-        <p>2017-2021 UC San Diego Circle K International</p>
+        <p>2017-2020 UC San Diego Circle K International</p>
       </div>
     </div>
   );

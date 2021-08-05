@@ -19,6 +19,9 @@ const fullYear = fullDate.getFullYear();
 function CalendarCogs() {
   /*Creates a shift for the present Month*/
   let startingShift = Math.abs(((shiftIndex + 7) - ((fullPresent % 7) - 1)) % 7);
+  console.log(fullPresent);
+  console.log(shiftIndex);
+  console.log(startingShift);
 
   const [year, setYear] = useState(fullYear);
   const [index, setIndex] = useState(monthIndex);
@@ -34,7 +37,7 @@ function CalendarCogs() {
 
     /*Calculates the Future Index*/
     let futureIndex = index - 1;
-    if (futureIndex == -1) {
+    if (futureIndex === -1) {
       futureIndex = 11;
     }
 
@@ -50,7 +53,7 @@ function CalendarCogs() {
   function incrementIndex() {
     /*Increments after function ends*/
     setIndex(prevIndex => prevIndex + 1);
-    if (index == 11) {
+    if (index === 11) {
       setIndex(prevIndex => prevIndex - 12);
       setYear(prevYear => prevYear + 1);
     }

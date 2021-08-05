@@ -2,14 +2,14 @@ import React from 'react';
 import NavbarOption from './NavbarOption.js';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import ckilogo from "./images/ckilogo.png"
 
 function Navbar() {
   return(
     <div className='navbar'>
-      <div className='navbar_image'/>
       <div className='navbar_inner'>
         <div className='navbar_upper'>
-          <Link to= '/' style={{ textDecoration: 'none' }}><div className='navbar_title'><h1>Circle K</h1><h2>at UCSD</h2></div></Link>
+          <Link to= '/' style={{ textDecoration: 'none' }}><div className='navbar_title'><img src={ckilogo}/></div></Link>
         </div>
         <div className='navbar_lower'>
             <Link to= '/about' style={{ textDecoration: 'none' }}><NavbarOption text='About'/></Link>
