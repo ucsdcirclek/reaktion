@@ -1,0 +1,34 @@
+* {
+    font-family: var(--font-form);
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 70%;
+    margin: 30px 0px;
+}
+
+.impact {
+    margin: 200px 200px;
+}
+
+.impact-teams {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.what {
+    margin: 50px 0px;
+}
+
+.field {
+    margin: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 20px 0px;
+}
