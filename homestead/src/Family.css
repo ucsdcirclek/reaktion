@@ -7,11 +7,16 @@
   width: 200px;
   height: 200px;
   margin: 0 auto;
+  transition: all .2s ease-in-out;
 }
 
-.family > h3 {
+.family>h3 {
   text-align: center;
   position: relative;
   top: 210px;
   font-family: var(--font-form);
+}
+
+.family:hover {
+  transform: scale(1.1);
 }

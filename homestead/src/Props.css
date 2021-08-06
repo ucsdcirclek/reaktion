@@ -1,24 +1,23 @@
-
 /*where sidebar is centered */
 
-.sidebar > img{
+.sidebar>img {
     height: 290px;
     width: 290px;
-    border-radius: 50%; /*rounds radius*/
-   
+    border-radius: 50%;
+    /*rounds radius*/
     margin: 30px auto;
-    display: flex; /*expands items to fill available free space or shrinks them to prevent overflow*/
-    
+    display: flex;
+    /*expands items to fill available free space or shrinks them to prevent overflow*/
 }
 
-.sidebar > h1{
+.sidebar>h1 {
     font-family: var(--font-form);
     font-size: 22px;
     text-align: center;
     color: var(--background-color);
 }
 
-.numbers{
+.numbers {
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -29,65 +28,60 @@
     margin-bottom: 30px;
     margin-left: 30px;
     margin-right: 30px;
-    
 }
 
-.service{
-    font-family: var(--oswaldo);
-    font-weight: bold;
-
-}
-
-.fellowship{
+.service {
     font-family: var(--oswaldo);
     font-weight: bold;
 }
 
-.leadership{
+.fellowship {
     font-family: var(--oswaldo);
-   
-    
+    font-weight: bold;
 }
 
-.service > h2{
+.leadership {
+    font-family: var(--oswaldo);
+}
+
+.service>h2 {
     color: var(--service-color);
     font-weight: 900;
 }
 
-.fellowship > h2{
+.fellowship>h2 {
     color: var(--fellowship-color);
 }
 
-.leadership > h2{
+.leadership>h2 {
     color: var(--leadership-color);
 }
 
-.sidebar{
-    background-color:rgba(25, 71, 97, 0.5);
+.sidebar {
+    background-color: rgba(25, 71, 97, 0.5);
     border-radius: 30px;
     padding: 30px;
 }
+
 /*sidebar font blueish */
 
-.bigsLil{
+.bigsLil {
     display: flex;
 }
 
-.bigsLil > h4{
+.bigsLil>h4 {
     font-family: Oswald;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 36px;
     flex: 0.5;
-
     text-align: center;
     color: #FFFFFF;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
-
-.bigsLil > h5{
+.bigsLil>h5 {
     flex: 0.5;
     font-family: Oswald;
     font-weight: bolder;
@@ -95,12 +89,11 @@
     line-height: 36x;
     text-align: center;
     color: #FFFFFF;
-
 }
 
 /*End of bigs and littles*/
 
-.nameOne{
+.nameOne {
     display: flex;
     justify-content: space-around;
     background-color: var(--background-color);
@@ -112,12 +105,13 @@
     margin-right: 30px;
 }
 
-.nameOne > img{
+.nameOne>img {
     border-radius: 50%;
     width: 122px;
     height: 122px;
 }
-.nameEmail > h1{
+
+.nameEmail>h1 {
     margin-top: 20px;
     font-family: var(--font-form);
     font-weight: bold;
@@ -127,7 +121,7 @@
     color: #000000;
 }
 
-.nameEmail > h2{
+.nameEmail>h2 {
     font-family: var(--font-form);
     font-weight: normal;
     font-size: 20px;
@@ -138,7 +132,7 @@
 
 /*1) name and email end*/
 
-.nameTwo{
+.nameTwo {
     display: flex;
     justify-content: space-around;
     background-color: var(--background-color);
@@ -150,12 +144,13 @@
     margin-right: 30px;
 }
 
-.nameTwo > img{
+.nameTwo>img {
     border-radius: 50%;
     width: 122px;
     height: 122px;
 }
-.nameEmailTwo > h1{
+
+.nameEmailTwo>h1 {
     font-family: var(--font-form);
     font-weight: bold;
     font-size: 24px;
@@ -165,7 +160,7 @@
     margin-top: 20px;
 }
 
-.nameEmailTwo > h2{
+.nameEmailTwo>h2 {
     font-family: var(--font-form);
     font-weight: normal;
     font-size: 20px;
@@ -175,7 +170,8 @@
 }
 
 /*2) name and email end*/
-.nameThree{
+
+.nameThree {
     display: flex;
     justify-content: space-around;
     background-color: var(--background-color);
@@ -187,12 +183,13 @@
     margin-right: 30px;
 }
 
-.nameThree > img{
+.nameThree>img {
     border-radius: 50%;
     width: 122px;
     height: 122px;
 }
-.nameEmailThree> h1{
+
+.nameEmailThree>h1 {
     margin-top: 20px;
     font-family: var(--font-form);
     font-weight: bold;
@@ -202,7 +199,7 @@
     color: #000000;
 }
 
-.nameEmailThree > h2{
+.nameEmailThree>h2 {
     font-family: var(--font-form);
     font-weight: normal;
     font-size: 20px;
@@ -213,22 +210,21 @@
 
 /*3) name and email end*/
 
-.extra{
-    background-color:rgba(25, 71, 97, 0.5);
+.extra {
+    background-color: rgba(25, 71, 97, 0.5);
     border-radius: 30px;
     padding: 30px;
     margin-top: 30px;
 }
 
-.extra > img{
+.extra>img {
     height: 641px;
     width: 472px;
     margin: 30px auto;
-    display: flex; 
-
+    display: flex;
 }
 
-.extra > h1{
+.extra>h1 {
     font-family: var(--font-form);
     font-style: normal;
     font-weight: bold;
@@ -239,26 +235,23 @@
 
 /*EXTRA end*/
 
-.twoSidebar{
+.twoSidebar {
     flex: 0.25;
 }
 
-.secondBar{
+.secondBar {
     flex: 0.9;
     margin-left: 100px;
 }
 
-
-.flowers{
+.flowers {
     border-radius: 50px;
     width: 100%;
     height: 371px;
     object-fit: cover;
 }
 
-
-
-.welcome > h1{
+.welcome>h1 {
     margin-top: 30px;
     margin-bottom: 30px;
     font-weight: 500px;
@@ -267,10 +260,9 @@
     letter-spacing: 0.02em;
     font-family: var(--oswaldo);
     color: #194761;
-    
 }
 
-.bio > h1{
+.bio>h1 {
     font-family: var(--font-form);
     font-style: normal;
     font-weight: normal;
@@ -280,7 +272,7 @@
     margin-bottom: 30px;
 }
 
-.memberBio{
+.memberBio {
     margin-top: 30px;
     margin-bottom: 30px;
     font-family: var(--oswaldo);
@@ -288,155 +280,139 @@
     font-size: 18px;
     line-height: 53px;
     letter-spacing: 0.02em;
-    
     color: #194761;
-    
 }
 
-.memberOne{
+.memberOne {
     display: flex;
     background: var(--background-color);
     padding: 10px;
     border-radius: 30px;
     margin-bottom: 30px;
-    
 }
 
-.enclosedOne > img{
+.enclosedOne>img {
     border-radius: 50%;
     width: 205px;
     height: 205px;
     padding: 30px;
-    
 }
 
-.enclosedOne > h1{ 
+.enclosedOne>h1 {
     font-family: var(--font-form);
     font-weight: bold;
     font-size: 24px;
     color: #000000;
     margin-left: 30px;
     margin-bottom: 30px;
-    
 }
 
-.description > h2{
+.description>h2 {
     padding: 30px;
     background: var(--background-color);
     border-radius: 10px;
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
-   
 }
+
 /* MEMBER 1 END*/
 
-.memberTwo{
+.memberTwo {
     display: flex;
     background: var(--background-color);
     padding: 10px;
     border-radius: 30px;
     margin-bottom: 30px;
-    
 }
 
-.enclosedTwo > img{
+.enclosedTwo>img {
     border-radius: 50%;
     width: 205px;
     height: 205px;
     padding: 30px;
-    
 }
 
-.enclosedTwo > h1{ 
+.enclosedTwo>h1 {
     font-family: var(--font-form);
     font-weight: bold;
     font-size: 24px;
     color: #000000;
     margin-left: 30px;
     margin-bottom: 30px;
-    
 }
 
-.descriptionTwo > h2{
+.descriptionTwo>h2 {
     padding: 30px;
     background: var(--background-color);
     border-radius: 10px;
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
-   
 }
 
 /*MEMBER 2 END*/
 
-.memberThree{
+.memberThree {
     display: flex;
     background: var(--background-color);
     padding: 10px;
     border-radius: 30px;
     margin-bottom: 30px;
-    
 }
 
-.enclosedThree > img{
+.enclosedThree>img {
     border-radius: 50%;
     width: 205px;
     height: 205px;
     padding: 30px;
-    
 }
 
-.enclosedThree > h1{ 
+.enclosedThree>h1 {
     font-family: var(--font-form);
     font-weight: bold;
     font-size: 24px;
     color: #000000;
     margin-left: 30px;
     margin-bottom: 30px;
-    
 }
 
-.descriptionThree > h2{
+.descriptionThree>h2 {
     padding: 30px;
     background: var(--background-color);
     border-radius: 10px;
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
-   
 }
 
 /*MEMBER 3 END*/
 
-.memberFour{
+.memberFour {
     display: flex;
     background: var(--background-color);
     padding: 10px;
     border-radius: 30px;
     margin-bottom: 30px;
-    
 }
 
-.enclosedFour > img{
+.enclosedFour>img {
     border-radius: 50%;
     width: 205px;
     height: 205px;
     padding: 30px;
-    
 }
 
-.enclosedFour > h1{ 
+.enclosedFour>h1 {
     font-family: var(--font-form);
     font-weight: bold;
     font-size: 24px;
     color: #000000;
     margin-left: 30px;
     margin-bottom: 30px;
-    
 }
 
-.descriptionFour > h2{
+.descriptionFour>h2 {
     padding: 30px;
     background: var(--background-color);
     border-radius: 10px;
@@ -447,34 +423,31 @@
 
 /*MEMBER 4 END*/
 
-.memberFive{
+.memberFive {
     display: flex;
     background: var(--background-color);
     padding: 10px;
     border-radius: 30px;
     margin-bottom: 30px;
-    
 }
 
-.enclosedFive > img{
+.enclosedFive>img {
     border-radius: 50%;
     width: 205px;
     height: 205px;
     padding: 30px;
-    
 }
 
-.enclosedFive > h1{ 
+.enclosedFive>h1 {
     font-family: var(--font-form);
     font-weight: bold;
     font-size: 24px;
     color: #000000;
     margin-left: 30px;
     margin-bottom: 30px;
-    
 }
 
-.descriptionFive > h2{
+.descriptionFive>h2 {
     padding: 30px;
     background: var(--background-color);
     border-radius: 10px;
@@ -483,8 +456,7 @@
     line-height: 25px;
 }
 
-
-.finalFooter{
+.finalFooter {
     margin: 200px auto 0;
     max-width: 95%;
     display: flex;
