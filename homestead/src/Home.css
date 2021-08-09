@@ -149,6 +149,7 @@
   }
   .home_family {
     display: flex;
+    justify-content: space-around;
   }
   .home_midLower {
     margin: 150px auto 0;

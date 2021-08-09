@@ -65,29 +65,24 @@ function Home () {
             <Family
               image='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
               title='Head in the Clouds'
+              familyUrl = '/about/family/'
             />
             <Family
               image='https://i.pinimg.com/originals/84/e6/18/84e61804536e07d96ba088ede497d4dc.png'
               title='White Lotus'
+              familyUrl = '/about/family/'
             />
-            <Link
-              to='/about/family/FarmersOverFlowers'
-              style={{ textDecoration: 'none' }}
-            >
-              <Family
+
+            <Family
                 image='https://c4.wallpaperflare.com/wallpaper/877/604/1005/anime-one-piece-minimalist-monkey-d-luffy-wallpaper-preview.jpg'
                 title='Farmers over Flowers'
-              />
-            </Link>
-            <Link
-              to='/about/family/BreathoftheSun'
-              style={{ textDecoration: 'none' }}
-            >
-              <Family
+                familyUrl = '/about/family/FarmersOverFlowers'
+            />
+            <Family
                 image='https://wallpapercave.com/wp/wp5244984.jpg'
                 title='Breath of the Sun'
-              />
-            </Link>
+                familyUrl = '/about/family/BreathoftheSun'
+            />
           </div>
         </div>
         <div className='home_midLower'>

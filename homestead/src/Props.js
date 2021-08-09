@@ -9,7 +9,15 @@ import { useState, useEffect, useRef } from 'react'
 
 // Questions to ask Jerome:
 // Should we make separate pages for each family or just have one file and take in props?
-// Does Firebase store images? For the member bios, how would we map through the data if it doesn't store images for a specific user? Is it better to just manually create each card?
+
+// Props rename: fmaily or something. Just have one file that takes in props
+
+// Does Firebase store images? For the member bios, how would we map through the data if it doesn't store images for a 
+// specific user? Is it better to just manually create each card?
+
+// It cannot, sorry Khiem. Check Firebase database to see ( maybe)
+// firebase.auth().currentUser.photoURL is what sets the email profile pic, unless another way where users add their own profile pic
+// look up to store images on firebase, cmon Jerome
 
 function Props ({ avatar, title, sidePicture, welcoming, message }) {
   const [user, setUser] = useState([])
