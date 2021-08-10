@@ -1,7 +1,7 @@
 .navbar {
   background-color: var(--circlek-color);
   justify-content: center;
-  height: 150px;
+  height: 100px;
   width: 100%;
   position: fixed;
   z-index: 100;
@@ -14,7 +14,7 @@
 
 .navbar_inner {
   position: relative;
-  top: 30px;
+  top: 10px;
   margin: 0 auto;
   max-width: 1500px;
   width: 95%;
@@ -32,7 +32,7 @@
 }
 
 .navbar_title > h1 {
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
   font-family: var(--font-form);
   color: var(--background-color);
@@ -60,7 +60,7 @@
   .navbar {
     background-color: var(--circlek-color);
     justify-content: center;
-    height: 150px;
+    height: 100px;
     width: 100%;
     position: fixed;
     z-index: 100;
@@ -73,7 +73,7 @@
   
   .navbar_inner {
     position: relative;
-    top: 30px;
+    top: 10px;
     margin: 0 auto;
     max-width: 1500px;
     width: 95%;
@@ -91,7 +91,7 @@
   }
   
   .navbar_title > h1 {
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     font-family: var(--font-form);
     color: var(--background-color);
