@@ -19,7 +19,7 @@
 .entryEvent_button {
   border: none;
   border-radius: 7px;
-  font-size: 16px;
+  font-size: 3vw;
   width: 100%;
   font-family: var(--font-form);
   overflow: hidden;
