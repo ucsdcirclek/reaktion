@@ -1,12 +1,10 @@
 import React from 'react';
-import "./Props.css"
+import "./FamilyPages.css"
 import Playlist from "./images/Playlistsun.png"
 import Footer from "./Footer.js"
 
 
-// name footer for organz.
-
-function Props({avatar, title, sidePicture, welcoming, message}) {
+function FamilyPages({avatar, title, sidePicture, welcoming, message}) {
   return (
     <div className = "props">
       <div className="finalFooter">
@@ -161,4 +159,4 @@ function Props({avatar, title, sidePicture, welcoming, message}) {
   );
 }
 
-export default Props;
+export default FamilyPages;
