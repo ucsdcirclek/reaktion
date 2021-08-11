@@ -27,7 +27,7 @@ function App() {
           <Switch>
 
             // Farmers over Flowers
-            <Route path='/about/family/FarmersOverFlowers'><FamilyPages avatar={"https://c4.wallpaperflare.com/wallpaper/877/604/1005/anime-one-piece-minimalist-monkey-d-luffy-wallpaper-preview.jpg"} title={"Farmers over Flowers"} sidePicture={"https://cdn2.lamag.com/wp-content/uploads/sites/6/2018/03/california-poppies.jpg"} welcoming={"Welcome to Farmers over Flowers"} 
+            <Route path='/about/family/FarmersOverFlowers'><Props avatar={"https://c4.wallpaperflare.com/wallpaper/877/604/1005/anime-one-piece-minimalist-monkey-d-luffy-wallpaper-preview.jpg"} title={"Farmers over Flowers"} sidePicture={"https://cdn2.lamag.com/wp-content/uploads/sites/6/2018/03/california-poppies.jpg"} welcoming={"Welcome to Farmers over Flowers"} 
             message={"Dreamier than any K-drama lead. The family with super cool, fun, and welcoming members. Together, we are F4!"}/></Route>
 
             // Breath of the Sun
