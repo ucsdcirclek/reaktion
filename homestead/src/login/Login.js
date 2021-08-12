@@ -36,11 +36,17 @@ function Login () {
         } catch (err) {}
       })
     let user_id = firebase.auth().currentUser.uid
+    let displayName = firebase.auth().currentUser.displayName
+    let photoUrl = firebase.auth().currentUser.photoURL
+    console.log(displayName)
+    console.log(user_id)
+    console.log(photoUrl)
     db.collection('users')
       .doc(user_id)
       .set(
         {
-          name: firebase.auth().currentUser.displayName
+          name: firebase.auth().currentUser.displayName,
+          image: firebase.auth().currentUser.photoURL
         },
         { merge: true }
       )

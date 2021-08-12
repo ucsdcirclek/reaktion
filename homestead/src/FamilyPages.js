@@ -20,6 +20,11 @@ import { useState, useEffect, useRef } from 'react'
 // firebase.auth().currentUser.photoURL is what sets the email profile pic, unless another way where users add their own profile pic
 // look up to store images on firebase, cmon Jerome
 
+// I got Firebase to store email images when user signs-in. firebase.auth().currentUser.photoURL came in handy, thanks for the suggestion Jerome!
+// It creates a new user document, need to work on updating info in an existing user document.
+// Suggestion: create input field where users can upload description and update it in Firebase.
+// Question: Are we going to manually assign users their families or are they going to input it and we update it in Firebase?
+
 function FamilyPages ({
   avatar,
   title,
@@ -157,7 +162,7 @@ function FamilyPages ({
             <Card
               name={users.data.name}
               description={users.data.description}
-              image={users.data.photoUrl}
+              image={users.data.image}
             />
           ))}
         </div>
@@ -173,11 +178,7 @@ const Card = ({ name, description, image }) => {
   return (
     <div className='memberFive'>
       <div className='enclosedFive'>
-        <img
-          src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-          alt='Family Picture'
-          className='mPhotoFive'
-        />
+        <img src={image} alt='Family Picture' className='mPhotoFive' />
         <h1>{name}</h1>
       </div>
       <div className='descriptionFive'>

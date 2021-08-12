@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from 'firebase'
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -11,12 +11,12 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP,
   measurementId: process.env.REACT_APP_MEASUREMENT_ID
-};
+}
 // Initialize Firebase
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
-const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
+const firebaseApp = firebase.initializeApp(firebaseConfig)
+const db = firebaseApp.firestore()
+const auth = firebase.auth()
+const provider = new firebase.auth.GoogleAuthProvider()
 
-export { auth, provider };
-export default db;
+export { auth, provider }
+export default db
