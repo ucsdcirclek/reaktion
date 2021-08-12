@@ -8,7 +8,7 @@ import LParent from './login/LParent.js';
 import General from './about/subCategories/General.js';
 import OurClub from './about/subCategories/OurClub.js';
 import Structure from './about/subCategories/Structure.js';
-import Props from './Props.js';
+import Props from './FamilyPages.js';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 

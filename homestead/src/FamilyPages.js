@@ -1,5 +1,5 @@
 import React from 'react'
-import './Props.css'
+import './FamilyPages.css'
 import Playlist from './images/Playlistsun.png'
 import Footer from './Footer.js'
 import db from './firebase'
@@ -19,7 +19,7 @@ import { useState, useEffect, useRef } from 'react'
 // firebase.auth().currentUser.photoURL is what sets the email profile pic, unless another way where users add their own profile pic
 // look up to store images on firebase, cmon Jerome
 
-function Props ({ avatar, title, sidePicture, welcoming, message }) {
+function FamilyPages ({ avatar, title, sidePicture, welcoming, message }) {
   const [user, setUser] = useState([])
 
   useEffect(() => {
@@ -254,4 +254,4 @@ const Card = ({ name, description }) => {
   )
 }
 
-export default Props
+export default FamilyPages;
