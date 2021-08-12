@@ -235,11 +235,14 @@
 
 .twoSidebar {
     flex: 0.25;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .secondBar {
     flex: 0.9;
     margin-left: 100px;
+    margin-top: 30px;
 }
 
 .flowers {
@@ -455,8 +458,9 @@
 }
 
 .finalFooter {
-    margin: 200px auto 0;
-    max-width: 95%;
+    margin-top: 150px;
+    height: 100%;
+    width: 100%;
     display: flex;
-    /*background-image: url("https://images-na.ssl-images-amazon.com/images/I/71-aB8lueZL.jpg");*/
+    background-image: url("https://htmlcolorcodes.com/assets/images/colors/pastel-blue-color-solid-background-1920x1080.png");
 }
