@@ -4,7 +4,7 @@ import Playlist from "./images/Playlistsun.png"
 import Footer from "./Footer.js"
 
 
-function FamilyPages({avatar, title, sidePicture, welcoming, message}) {
+function FamilyPages({avatar, title, sidePicture, welcoming, message, backImage}) {
   return (
     <div className = "props">
       <div className="finalFooter">
