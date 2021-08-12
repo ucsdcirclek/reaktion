@@ -3,6 +3,7 @@ import './FamilyPages.css'
 import Playlist from './images/Playlistsun.png'
 import Footer from './Footer.js'
 import db from './firebase'
+import firebase from 'firebase'
 import { useState, useEffect, useRef } from 'react'
 
 // name footer for organz.
@@ -12,22 +13,52 @@ import { useState, useEffect, useRef } from 'react'
 
 // Props rename: fmaily or something. Just have one file that takes in props
 
-// Does Firebase store images? For the member bios, how would we map through the data if it doesn't store images for a 
+// Does Firebase store images? For the member bios, how would we map through the data if it doesn't store images for a
 // specific user? Is it better to just manually create each card?
 
 // It cannot, sorry Khiem. Check Firebase database to see ( maybe)
 // firebase.auth().currentUser.photoURL is what sets the email profile pic, unless another way where users add their own profile pic
 // look up to store images on firebase, cmon Jerome
 
-function FamilyPages ({ avatar, title, sidePicture, welcoming, message }) {
+function FamilyPages ({
+  avatar,
+  title,
+  sidePicture,
+  welcoming,
+  message,
+  family
+}) {
   const [user, setUser] = useState([])
 
   useEffect(() => {
-    db.collection('users')
-      .where('family', '==', 'BreathoftheSun')
-      .onSnapshot(snapshot =>
-        setUser(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
-      )
+    if (family == 'BreathOfTheSun') {
+      db.collection('users')
+        .where('family', '==', 'BreathOfTheSun')
+        .onSnapshot(snapshot =>
+          setUser(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
+        )
+    }
+    if (family == 'FarmersOverFlowers') {
+      db.collection('users')
+        .where('family', '==', 'FarmersOverFlowers')
+        .onSnapshot(snapshot =>
+          setUser(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
+        )
+    }
+    if (family == 'WhiteLotus') {
+      db.collection('users')
+        .where('family', '==', 'WhiteLotus')
+        .onSnapshot(snapshot =>
+          setUser(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
+        )
+    }
+    if (family == 'HeadInTheClouds') {
+      db.collection('users')
+        .where('family', '==', 'HeadInTheClouds')
+        .onSnapshot(snapshot =>
+          setUser(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
+        )
+    }
   }, [])
 
   console.log({ user })
@@ -123,110 +154,12 @@ function FamilyPages ({ avatar, title, sidePicture, welcoming, message }) {
           </div>
 
           {user.map(users => (
-            <Card name={users.data.name} description={users.data.description} />
+            <Card
+              name={users.data.name}
+              description={users.data.description}
+              image={users.data.photoUrl}
+            />
           ))}
-
-          {/*
-          <div className='memberOne'>
-            <div className='enclosedOne'>
-              <img
-                src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-                alt='Family Picture'
-                className='mPhotoOne'
-              />
-              <h1>Jenn Campbell</h1>
-            </div>
-            <div className='description'>
-              <h2>
-                Hi, my name is Jenn Campbell! I’m a third year majoring in
-                Biology with a minor in Business. I am one of the bigs in White
-                Lotus, and I especially enjoy volunteering at the local
-                hospital. I enjoy listening to indie pop, hiking local trails,
-                and going to the beach.
-              </h2>
-            </div>
-          </div>
-
-          <div className='memberTwo'>
-            <div className='enclosedTwo'>
-              <img
-                src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-                alt='Family Picture'
-                className='mPhotoTwo'
-              />
-              <h1>Jenn Campbell</h1>
-            </div>
-            <div className='descriptionTwo'>
-              <h2>
-                Hi, my name is Jenn Campbell! I’m a third year majoring in
-                Biology with a minor in Business. I am one of the bigs in White
-                Lotus, and I especially enjoy volunteering at the local
-                hospital. I enjoy listening to indie pop, hiking local trails,
-                and going to the beach.
-              </h2>
-            </div>
-          </div>
-
-          <div className='memberThree'>
-            <div className='enclosedThree'>
-              <img
-                src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-                alt='Family Picture'
-                className='mPhotoThree'
-              />
-              <h1>Jenn Campbell</h1>
-            </div>
-            <div className='descriptionThree'>
-              <h2>
-                Hi, my name is Jenn Campbell! I’m a third year majoring in
-                Biology with a minor in Business. I am one of the bigs in White
-                Lotus, and I especially enjoy volunteering at the local
-                hospital. I enjoy listening to indie pop, hiking local trails,
-                and going to the beach.
-              </h2>
-            </div>
-          </div>
-
-          <div className='memberFour'>
-            <div className='enclosedFour'>
-              <img
-                src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-                alt='Family Picture'
-                className='mPhotoFour'
-              />
-              <h1>Jenn Campbell</h1>
-            </div>
-            <div className='descriptionFour'>
-              <h2>
-                Hi, my name is Jenn Campbell! I’m a third year majoring in
-                Biology with a minor in Business. I am one of the bigs in White
-                Lotus, and I especially enjoy volunteering at the local
-                hospital. I enjoy listening to indie pop, hiking local trails,
-                and going to the beach.
-              </h2>
-            </div>
-          </div>
-
-          <div className='memberFive'>
-            <div className='enclosedFive'>
-              <img
-                src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-                alt='Family Picture'
-                className='mPhotoFive'
-              />
-              <h1>Jenn Campbell</h1>
-            </div>
-            <div className='descriptionFive'>
-              <h2>
-                Hi, my name is Jenn Campbell! I’m a third year majoring in
-                Biology with a minor in Business. I am one of the bigs in White
-                Lotus, and I especially enjoy volunteering at the local
-                hospital. I enjoy listening to indie pop, hiking local trails,
-                and going to the beach.
-              </h2>
-            </div>
-          </div>
-          */}
         </div>
       </div>
 
@@ -236,7 +169,7 @@ function FamilyPages ({ avatar, title, sidePicture, welcoming, message }) {
 }
 
 // Card Component for member bios
-const Card = ({ name, description }) => {
+const Card = ({ name, description, image }) => {
   return (
     <div className='memberFive'>
       <div className='enclosedFive'>
@@ -254,4 +187,4 @@ const Card = ({ name, description }) => {
   )
 }
 
-export default FamilyPages;
+export default FamilyPages
