@@ -6,24 +6,10 @@ import db from './firebase'
 import firebase from 'firebase'
 import { useState, useEffect, useRef } from 'react'
 
-// name footer for organz.
-
-// Questions to ask Jerome:
-// Should we make separate pages for each family or just have one file and take in props?
-
-// Props rename: fmaily or something. Just have one file that takes in props
-
-// Does Firebase store images? For the member bios, how would we map through the data if it doesn't store images for a
-// specific user? Is it better to just manually create each card?
-
-// It cannot, sorry Khiem. Check Firebase database to see ( maybe)
-// firebase.auth().currentUser.photoURL is what sets the email profile pic, unless another way where users add their own profile pic
-// look up to store images on firebase, cmon Jerome
-
 // I got Firebase to store email images when user signs-in. firebase.auth().currentUser.photoURL came in handy, thanks for the suggestion Jerome!
 // It creates a new user document, need to work on updating info in an existing user document.
 // Suggestion: create input field where users can upload description and update it in Firebase.
-// Question: Are we going to manually assign users their families or are they going to input it and we update it in Firebase?
+// Question: Are we going to manually assign users their information or are they going to input it and we update it in Firebase?
 
 function FamilyPages ({
   avatar,
@@ -33,9 +19,23 @@ function FamilyPages ({
   message,
   family
 }) {
+  // Used to store users of a specific family
   const [user, setUser] = useState([])
 
+  // Big button underline state
+  const [bigUnderline, setBigUnderline] = useState('none')
+
+  // Little button underline state
+  const [littleUnderline, setLittleUnderline] = useState('none')
+
+  // Big button state
+  const [stateBig, setStateBig] = useState(0)
+
+  // Little button state
+  const [stateLittle, setStateLittle] = useState(0)
+
   useEffect(() => {
+    // Conditionally get users of a specific family
     if (family == 'BreathOfTheSun') {
       db.collection('users')
         .where('family', '==', 'BreathOfTheSun')
@@ -66,7 +66,51 @@ function FamilyPages ({
     }
   }, [])
 
-  console.log({ user })
+  // Turn on big if selected first
+  function setInitialStateBig () {
+    if (stateLittle == 0 && stateBig == 0) {
+      setBigUnderline('underline')
+      setStateBig(1)
+    }
+  }
+
+  // Turn on small if selected first
+  function setInitialStateLittle () {
+    if (stateLittle == 0 && stateBig == 0) {
+      setLittleUnderline('underline')
+      setStateLittle(1)
+    }
+  }
+
+  // Change big underline based on state
+  function changeStateBig () {
+    // if little is currently on, turn off and set state to 0
+    if (stateLittle == 1) {
+      setLittleUnderline('none')
+      setStateLittle(0)
+      setBigUnderline('underline')
+      setStateBig(1)
+    }
+    // if big is on, do nothing
+    if (stateBig == 1) {
+      return
+    }
+  }
+
+  // Change little underline based on state
+  function changeStateLittle () {
+    // if big state is on, turn off and set state to 0
+    if (stateBig == 1) {
+      setBigUnderline('none')
+      setStateBig(0)
+      setLittleUnderline('underline')
+      setStateLittle(1)
+    }
+    // if small is on, do nothing
+    else {
+      return
+    }
+  }
 
   return (
     <div className='props'>
@@ -91,12 +135,64 @@ function FamilyPages ({
                 <h3>Leadership</h3>
               </div>
             </div>
-
             <div className='bigsLil'>
-              <h4>BIGS</h4>
-              <h5>LITTLES</h5>
+              {console.log(user)}
+              <button
+                style={{ textDecoration: bigUnderline }}
+                className='bigLittleButton'
+                onClick={() => {
+                  setInitialStateBig()
+                  changeStateBig()
+                }}
+              >
+                BIGS
+              </button>
+              <button
+                style={{ textDecoration: littleUnderline }}
+                className='bigLittleButton'
+                onClick={() => {
+                  setInitialStateLittle()
+                  changeStateLittle()
+                }}
+              >
+                LITTLES
+              </button>
             </div>
 
+            {user.map(users => {
+              if (stateBig == 0 && stateLittle == 0) {
+                return (
+                  <BigLittleBios
+                    name={users.data.name}
+                    email={users.data.email}
+                    image={users.data.image}
+                  />
+                )
+              }
+              if (stateBig == 1) {
+                if (users.data.position === 1) {
+                  return (
+                    <BigLittleBios
+                      name={users.data.name}
+                      image={users.data.image}
+                      email={users.data.email}
+                    />
+                  )
+                }
+              } else if (stateLittle == 1) {
+                if (users.data.position === 0) {
+                  return (
+                    <BigLittleBios
+                      name={users.data.name}
+                      image={users.data.image}
+                      email={users.data.email}
+                    />
+                  )
+                }
+              }
+            })}
+
+            {/*}
             <div className='nameOne'>
               <img
                 src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
@@ -132,6 +228,7 @@ function FamilyPages ({
                 <h2>email@ucsd.edu</h2>
               </div>
             </div>
+            */}
           </div>
 
           <div className='extra'>
@@ -159,7 +256,7 @@ function FamilyPages ({
           </div>
 
           {user.map(users => (
-            <Card
+            <MemberBios
               name={users.data.name}
               description={users.data.description}
               image={users.data.image}
@@ -174,7 +271,7 @@ function FamilyPages ({
 }
 
 // Card Component for member bios
-const Card = ({ name, description, image }) => {
+const MemberBios = ({ name, description, image }) => {
   return (
     <div className='memberFive'>
       <div className='enclosedFive'>
@@ -183,6 +280,19 @@ const Card = ({ name, description, image }) => {
       </div>
       <div className='descriptionFive'>
         <h2>{description}</h2>
+      </div>
+    </div>
+  )
+}
+
+// Card Component for Bigs and Littles
+const BigLittleBios = ({ name, image, email }) => {
+  return (
+    <div className='nameOne'>
+      <img src={image} alt='Family Picture' className='photo' />
+      <div className='nameEmail'>
+        <h1>{name}</h1>
+        <h2>{email}</h2>
       </div>
     </div>
   )

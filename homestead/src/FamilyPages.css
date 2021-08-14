@@ -1,4 +1,4 @@
-.sidebar > img {
+.sidebar>img {
     height: 290px;
     width: 290px;
     border-radius: 50%;
@@ -8,7 +8,7 @@
     /*expands items to fill available free space or shrinks them to prevent overflow*/
 }
 
-.sidebar > h1 {
+.sidebar>h1 {
     font-family: var(--font-form);
     font-size: 22px;
     text-align: center;
@@ -67,7 +67,7 @@
     display: flex;
 }
 
-.bigsLil>h4 {
+.bigsLil>.bigLittleButton {
     font-family: Oswald;
     font-style: normal;
     font-weight: bold;
@@ -76,7 +76,18 @@
     flex: 0.5;
     text-align: center;
     color: #FFFFFF;
-    text-decoration: underline;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    padding: none;
+    transition: all .1s ease-in-out;
+}
+
+.bigLittleButton:hover {
+    text-shadow: 2px 2px 5px black;
 }
 
 .bigsLil>h5 {
