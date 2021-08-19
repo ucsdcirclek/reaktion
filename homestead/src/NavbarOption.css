@@ -1,6 +1,6 @@
 .navbarOption {
   margin: 5px 2px;
-  padding: 0 0 10px;
+  padding: 0 0 0px;
 }
 
 .navbarOption:hover {
@@ -21,7 +21,7 @@
 @media only screen and (min-width: 768px) {
   .navbarOption {
     margin: 5px;
-    padding: 0 0 10px;
+    padding: 0 0 0px;
   }
   
   .navbarOption:hover {

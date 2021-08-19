@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .general {
     margin: 200px 0 0;
 }
@@ -16,8 +17,7 @@
 
 .general_text1 > h2 {
     flex: 0.2;
-    font-family: var(--font-form);
-    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     color: var(--circlek-color);
     margin: 5px 0;
@@ -37,8 +37,7 @@
 }
 
 .general_events > h2 {
-    font-family: var(--font-form);
-    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     color: var(--circlek-color);
     position: relative;
@@ -56,8 +55,7 @@
 }
 
 .general_sub > h1 {
-    font-family: var(--font-form);
-    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     color: var(--circlek-color);
     margin: 40px 0 20px;
@@ -105,8 +103,7 @@
     
     .general_text1 > h2 {
         flex: 0.2;
-        font-family: var(--font-form);
-        font-weight: 900;
+        font-family: 'Oswald', sans-serif;
         font-size: 36px;
         color: var(--circlek-color);
         margin: 0;
@@ -126,8 +123,7 @@
     }
     
     .general_events > h2 {
-        font-family: var(--font-form);
-        font-weight: 900;
+        font-family: 'Oswald', sans-serif;
         font-size: 36px;
         color: var(--circlek-color);
         position: relative;
@@ -146,8 +142,7 @@
     }
     
     .general_sub > h1 {
-        font-family: var(--font-form);
-        font-weight: 900;
+        font-family: 'Oswald', sans-serif;
         font-size: 36px;
         color: var(--circlek-color);
         margin: 40px 0 20px;

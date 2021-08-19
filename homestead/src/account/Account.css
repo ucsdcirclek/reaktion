@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .account {
   margin: 200px auto 0;
   max-width: 95%;
+}
+
+.account > h2 {
+  font-family: 'Oswald', sans-serif;
 }
 
 .account_title {
