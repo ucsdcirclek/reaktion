@@ -1,5 +1,4 @@
 import React from "react";
-import FbWidget from "./FbWidget.js";
 import Family from "./Family.js";
 import Tenet from "./Tenent.js";
 import Footer from "./Footer.js";
@@ -8,7 +7,7 @@ import ReactPlayer from "react-player";
 import Service from "./images/Service.png";
 import Leadership from "./images/Leadership.png";
 import Fellowship from "./images/Fellowship.png";
-import Banner from "./images/Banner2021.png";
+import Banner from "./images/CKIMasthead.png";
 
 function Home() {
   return (

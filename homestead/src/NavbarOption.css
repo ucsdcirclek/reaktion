@@ -1,41 +1,21 @@
 .navbarOption {
-  margin: 5px 2px;
-  padding: 0 0 10px;
+  margin: 30px;
 }
-
+  
 .navbarOption:hover {
-  border-bottom: 2px solid var(--background-color);
-  position: relative; 
-  bottom: 2px;
-  transition: all 0.3s ease-in-out;
+  /*border: 1px solid var(--background-color);*/
+  background-color: var(--background-color);
+  border-radius: 25px;
 }
 
-.navbarOption > h1{
-  padding: 10px 0 0;
+.navbarOption:hover > h1 {
+  color: black;
+}
+  
+.navbarOption > h1 {
+  padding: 10px;
   font-size: 22px;
   text-align: center;
   font-family: var(--font-form);
   color: var(--background-color);
-}
-
-@media only screen and (min-width: 768px) {
-  .navbarOption {
-    margin: 5px;
-    padding: 0 0 10px;
-  }
-  
-  .navbarOption:hover {
-    border-bottom: 2px solid var(--background-color);
-    position: relative; 
-    bottom: 2px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .navbarOption > h1 {
-    padding: 5px;
-    font-size: 27px;
-    text-align: center;
-    font-family: var(--font-form);
-    color: var(--background-color);
-  }
 }

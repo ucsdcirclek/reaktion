@@ -19,6 +19,9 @@ const fullYear = fullDate.getFullYear();
 function CalendarCogs() {
   /*Creates a shift for the present Month*/
   let startingShift = Math.abs(((shiftIndex + 7) - ((fullPresent % 7) - 1)) % 7);
+  console.log(fullPresent);
+  console.log(shiftIndex);
+  console.log(startingShift);
 
   const [year, setYear] = useState(fullYear);
   const [index, setIndex] = useState(monthIndex);
@@ -34,7 +37,7 @@ function CalendarCogs() {
 
     /*Calculates the Future Index*/
     let futureIndex = index - 1;
-    if (futureIndex == -1) {
+    if (futureIndex === -1) {
       futureIndex = 11;
     }
 
@@ -50,7 +53,7 @@ function CalendarCogs() {
   function incrementIndex() {
     /*Increments after function ends*/
     setIndex(prevIndex => prevIndex + 1);
-    if (index == 11) {
+    if (index === 11) {
       setIndex(prevIndex => prevIndex - 12);
       setYear(prevYear => prevYear + 1);
     }
@@ -80,9 +83,8 @@ function CalendarCogs() {
           <ArrowRightIcon className="calendarCogs_monthIcon_right" onClick={incrementIndex}/>
         </div>
       </div>
-      <table className="calendarCogs_calendar">
-        <tbody>
-        <tr>
+      <div className="calendarCogs_calendar">
+        <table className="calendarCogs_weekname">
           <th className="calendarCogs_days">Sunday</th>
           <th className="calendarCogs_days">Monday</th>
           <th className="calendarCogs_days">Tuesday</th>
@@ -90,8 +92,8 @@ function CalendarCogs() {
           <th className="calendarCogs_days">Thursday</th>
           <th className="calendarCogs_days">Friday</th>
           <th className="calendarCogs_days">Saturday</th>
-        </tr>
-        <tr className="calendarCogs_week">
+        </table>
+        <table className="calendarCogs_week">
           <th><Entry number="1" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="2" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="3" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -99,8 +101,8 @@ function CalendarCogs() {
           <th><Entry number="5" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="6" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="7" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
-        </tr>
-        <tr className="calendarCogs_week">
+        </table>
+        <table className="calendarCogs_week">
           <th><Entry number="8" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="9" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="10" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -108,8 +110,8 @@ function CalendarCogs() {
           <th><Entry number="12" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="13" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="14" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
-        </tr>
-        <tr className="calendarCogs_week">
+        </table>
+        <table className="calendarCogs_week">
           <th><Entry number="15" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="16" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="17" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -117,8 +119,8 @@ function CalendarCogs() {
           <th><Entry number="19" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="20" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="21" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
-        </tr>
-        <tr className="calendarCogs_week">
+        </table>
+        <table className="calendarCogs_week">
           <th><Entry number="22" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="23" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="24" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -126,8 +128,8 @@ function CalendarCogs() {
           <th><Entry number="26" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="27" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="28" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
-        </tr>
-        <tr className="calendarCogs_week"> 
+        </table>
+        <table className="calendarCogs_week"> 
           <th><Entry number="29" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="30" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="31" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -135,8 +137,8 @@ function CalendarCogs() {
           <th><Entry number="33" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="34" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="35" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
-        </tr>
-        <tr className="calendarCogs_week">
+        </table>
+        <table className="calendarCogs_week">
           <th><Entry number="36" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="37" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="38" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -144,9 +146,8 @@ function CalendarCogs() {
           <th><Entry number="40" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="41" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
           <th><Entry number="42" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
-        </tr>
-        </tbody>
-      </table>
+        </table>
+      </div>
     </div>
   );
 }

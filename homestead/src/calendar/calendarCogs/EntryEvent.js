@@ -38,7 +38,7 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
       setCatchError("Please login to RSVP");
       isListed.current = false;
     }
-  }, [isOpen]);
+  }, [isOpen, list]);
 
   /*Adds a person's ID to the list*/
   function addPerson() {
