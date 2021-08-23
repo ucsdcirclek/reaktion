@@ -191,44 +191,6 @@ function FamilyPages ({
                 }
               }
             })}
-
-            {/*}
-            <div className='nameOne'>
-              <img
-                src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-                alt='Family Picture'
-                className='photo'
-              />
-              <div className='nameEmail'>
-                <h1>Name</h1>
-                <h2>email@ucsd.edu</h2>
-              </div>
-            </div>
-
-            <div className='nameTwo'>
-              <img
-                src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-                alt='Family Picture'
-                className='photoTwo'
-              />
-              <div className='nameEmailTwo'>
-                <h1>Name</h1>
-                <h2>email@ucsd.edu</h2>
-              </div>
-            </div>
-
-            <div className='nameThree'>
-              <img
-                src='https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg'
-                alt='Family Picture'
-                className='photoThree'
-              />
-              <div className='nameEmailThree'>
-                <h1>Name</h1>
-                <h2>email@ucsd.edu</h2>
-              </div>
-            </div>
-            */}
           </div>
 
           <div className='extra'>
