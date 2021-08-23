@@ -1,15 +1,10 @@
 import React from 'react'
 import './FamilyPages.css'
-import Playlist from './images/Playlistsun.png'
-import Footer from './Footer.js'
-import db from './firebase'
+import Playlist from '../images/Playlistsun.png'
+import Footer from '../Footer.js'
+import db from '../firebase'
 import firebase from 'firebase'
 import { useState, useEffect, useRef } from 'react'
-
-// I got Firebase to store email images when user signs-in. firebase.auth().currentUser.photoURL came in handy, thanks for the suggestion Jerome!
-// It creates a new user document, need to work on updating info in an existing user document.
-// Suggestion: create input field where users can upload description and update it in Firebase.
-// Question: Are we going to manually assign users their information or are they going to input it and we update it in Firebase?
 
 function FamilyPages ({
   avatar,
@@ -113,13 +108,13 @@ function FamilyPages ({
   }
 
   return (
-    <div className='props'>
-      <div className='finalFooter'>
-        <div className='twoSidebar'>
-          <div className='sidebar'>
+    <div className='familypages'>
+      <div className='familypages_container'>
+        <div className='sidebars'>
+          <div className='sidebars_first'>
             <img src={avatar} alt='Family Picture' className='fam_photo' />
             <h1>{title}</h1>
-            <div className='numbers'>
+            <div className='score'>
               <div className='service'>
                 <h2>0.0</h2>
                 <h3>Service</h3>
@@ -135,7 +130,8 @@ function FamilyPages ({
                 <h3>Leadership</h3>
               </div>
             </div>
-            <div className='bigsLil'>
+
+            <div className='bigsLittles_container'>
               {console.log(user)}
               <button
                 style={{ textDecoration: bigUnderline }}
@@ -160,6 +156,7 @@ function FamilyPages ({
             </div>
 
             {user.map(users => {
+              // If Big and Little hasn't been selected, display all family members
               if (stateBig == 0 && stateLittle == 0) {
                 return (
                   <BigLittleBios
@@ -169,6 +166,7 @@ function FamilyPages ({
                   />
                 )
               }
+              // If Big is selected, display all Bigs in the family
               if (stateBig == 1) {
                 if (users.data.position === 1) {
                   return (
@@ -179,6 +177,7 @@ function FamilyPages ({
                     />
                   )
                 }
+                // If Little is selected, diplay all Littles in the family
               } else if (stateLittle == 1) {
                 if (users.data.position === 0) {
                   return (
@@ -193,7 +192,7 @@ function FamilyPages ({
             })}
           </div>
 
-          <div className='extra'>
+          <div className='spotify'>
             <img
               src={Playlist}
               alt='Breathe of the Playlist'
@@ -203,8 +202,12 @@ function FamilyPages ({
           </div>
         </div>
 
-        <div className='secondBar'>
-          <img src={sidePicture} alt='Flowers' className='flowers' />
+        <div className='sidebars_second'>
+          <img
+            src={sidePicture}
+            alt='family_picture'
+            className='family_picture'
+          />
           <div className='welcome'>
             <h1>{welcoming}</h1>
           </div>
@@ -235,12 +238,12 @@ function FamilyPages ({
 // Card Component for member bios
 const MemberBios = ({ name, description, image }) => {
   return (
-    <div className='memberFive'>
-      <div className='enclosedFive'>
-        <img src={image} alt='Family Picture' className='mPhotoFive' />
+    <div className='member_card'>
+      <div className='member_nameImage'>
+        <img src={image} alt='Family Picture' className='member_image' />
         <h1>{name}</h1>
       </div>
-      <div className='descriptionFive'>
+      <div className='member_description'>
         <h2>{description}</h2>
       </div>
     </div>
@@ -250,7 +253,7 @@ const MemberBios = ({ name, description, image }) => {
 // Card Component for Bigs and Littles
 const BigLittleBios = ({ name, image, email }) => {
   return (
-    <div className='nameOne'>
+    <div className='bigLittle_card'>
       <img src={image} alt='Family Picture' className='photo' />
       <div className='nameEmail'>
         <h1>{name}</h1>
