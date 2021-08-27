@@ -5,6 +5,7 @@ import "./LoginC.css";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import db from "../firebase";
+import Profile from "./Profile.js";
 
 const uiConfig = {
   signInFlow: 'popup',
@@ -54,7 +55,11 @@ function LoginC() {
           <img alt="profile" src={firebase.auth().currentUser.photoURL} />
           <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
           <CalendarInput className="loginC_input" pid={firebase.auth().currentUser.uid} name={firebase.auth().currentUser.displayName} priority={priority}/>
-          <h2> Profiles Coming Soon! </h2>
+          <h2> Profile </h2>
+          {/* make white bg, round corners */}
+          <div className="profile">
+            <Profile />
+          </div>
         </div>
         <div className="loginC_entry">
           <h1>My Events</h1>
