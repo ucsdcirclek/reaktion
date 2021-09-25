@@ -4,7 +4,7 @@ import "./EntryEvent.css";
 import firebase from "firebase";
 import db from "../../firebase";
 
-function EntryEntry({ docID, title, starttime, endtime, occupancy, location, description, list, category, userList }) {
+function EntryEntry({ docID, title, starttime, endtime, occupancy, location, description, list, category, userList, drivers, driverList }) {
   /*Firestore records input type time as military so this converts military time to regular*/
   let beginTime = String(starttime).substring(0, 2);
   if (parseInt(beginTime) > 12) {
@@ -18,6 +18,7 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
 
   /*Checks if user is already RSVP'd and Logged In*/
   const isListed = useRef(false);
+  const isDriver = useRef(false);
   const[catchError, setCatchError] = useState("");
   const[initialLogged, setInitialLogged] = useState("notLoggedIn");
 
@@ -31,12 +32,20 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
           isListed.current = true;
         }
       }
+
+      for (var i = 0; i < drivers.length; i++) {
+        if (drivers[i] === pid) {
+          isDriver.current = true;
+        }
+      }
+
       setInitialLogged("LoggedIn");
       setCatchError("");
     } catch(error) {
       setInitialLogged("notLoggedIn");
       setCatchError("Please login to RSVP");
       isListed.current = false;
+      isDriver.current = false;
     }
   }, [isOpen]);
 
@@ -64,6 +73,30 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
     isListed.current = false;
   }
 
+  /* Adds a person's name to the Driver List */
+  function addDriver() {
+    try {
+      drivers.push(firebase.auth().currentUser.uid);
+      driverList.push(firebase.auth().currentUser.displayName);
+      db.collection("posts").doc(docID).update({  driverList: driverList, drivers: drivers  });
+      isDriver.current = true;
+    } catch(error) {
+    }
+  }
+
+  /* Deletes a person's name from the Driver List */
+  function deleteDriver() {
+    let pid = firebase.auth().currentUser.uid;
+    for (var i = 0; i < drivers.length; i++) {
+      if (drivers[i] === pid) {
+        drivers.splice(i, 1);
+        driverList.splice(i, 1);
+      }
+    }
+    db.collection("posts").doc(docID).update({ driverList: driverList, drivers: drivers});
+    isDriver.current = false;
+  }
+
   return (
     <div className={category}>
       <div className="entryEvent">
@@ -84,6 +117,10 @@ function EntryEntry({ docID, title, starttime, endtime, occupancy, location, des
             location={location}
             description={description}
             userList={userList}
+            driverList={driverList}
+            addDriver={addDriver}
+            deleteDriver={deleteDriver}
+            isDriver={isDriver.current}
          />
        </div>
     </div>
