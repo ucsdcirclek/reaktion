@@ -24,7 +24,7 @@ const OVERLAY_STYLES = {
 }
 
 
-export default function Modal({ open, onClose, catchError, isListed, addPerson, deletePerson, initialLogged, title, starttime, endtime, occupancy, location, description, userList }) {
+export default function Modal({ open, onClose, catchError, isListed, isDriver, addPerson, deletePerson, initialLogged, title, starttime, endtime, occupancy, location, description, userList, driverList, addDriver, deleteDriver }) {
   /*Firestore records input type time as military so this converts military time to regular*/
   let beginTime = String(starttime).substring(0, 2);
   let beginMidTime = String(starttime).substring(2, 5);
@@ -45,6 +45,11 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
   let protoList = userList.slice(0);
   for (var i = 0; i < protoList.length; i++) {
     protoList[i] = String(protoList[i]) + ", ";
+  }
+
+  let gasList = driverList.slice(0);
+  for (var i = 0; i < driverList.length; i++) {
+    gasList[i] = String(gasList[i]) + ", ";
   }
 
   if (!open) return null
@@ -68,10 +73,19 @@ export default function Modal({ open, onClose, catchError, isListed, addPerson, 
           <h2>Whos Going:</h2>
           <p>{protoList}</p>
         </div>
+        <div className="modal_rsvp3">
+          <h2>Drivers:</h2>
+          <p>{gasList}</p>
+        </div>
         {(isListed === false) ? (
           <button className={initialLogged} onClick={addPerson}>RSVP Now!</button>
         ):(
           <button className={initialLogged} onClick={deletePerson}>unRSVP</button>
+        )}
+        {(isDriver === false) ? (
+          <button className={initialLogged} onClick={addDriver}>Become a Driver!</button>
+        ):(
+          <button className={initialLogged} onClick={deleteDriver}>Cancel Driving</button>
         )}
         <p>{catchError}</p>
       </div>

@@ -36,7 +36,9 @@ function CalendarInput({ pid, name, priority }) {
       list: [pid],
       categories: category,
       occupancy: occupancy,
-      userList: [name]
+      userList: [name],
+      drivers: [],
+      driverList: []
       //when get back need to actually add values to respective fields
     })
 

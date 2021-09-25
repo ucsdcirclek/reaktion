@@ -43,6 +43,8 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
             description = {post.data.description}
             list = {post.data.list}
             category = {post.data.categories}
+            drivers = {post.data.drivers}
+            driverList = {post.data.driverList}
           />
         ))}
       </div>
