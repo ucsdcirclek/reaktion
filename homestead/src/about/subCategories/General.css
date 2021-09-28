@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .general {
-    margin: 200px 0 0;
+    margin: 150px 0 0;
 }
 
 .general_sub {
@@ -86,7 +86,7 @@
 
 @media only screen and (min-width: 1024px) {
     .general {
-        margin: 200px 0 0;
+        margin: 150px 0 0;
     }
     
     .general_sub {

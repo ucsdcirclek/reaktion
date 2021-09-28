@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .account {
-  margin: 200px auto 0;
+  margin: 110px auto 0;
   max-width: 95%;
 }
 
@@ -252,7 +252,7 @@
 
 @media only screen and (min-width: 1024px) {
   .account {
-    margin: 200px auto 0;
+    margin: 150px auto 0;
     max-width: 90%;
     min-width: 1000px;
   }

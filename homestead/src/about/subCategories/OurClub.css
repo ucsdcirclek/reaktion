@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .ourClub {
-    margin: 200px 0 0;
+    margin: 150px 0 0;
 }
 
 .ourClub_sub {
@@ -132,7 +132,7 @@
 
 @media only screen and (min-width: 1024px) {
     .ourClub {
-        margin: 200px 0 0;
+        margin: 150px 0 0;
     }
     
     .ourClub_sub {

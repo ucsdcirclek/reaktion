@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .home_masthead {
   display: block;
-  margin: 150px auto 0;
+  margin: 100px auto 0;
   max-width: 100%;
   max-height: 600px;
 
@@ -99,7 +99,7 @@
 @media only screen and (min-width: 1024px) {
   .home_masthead {
     display: block;
-    margin: 120px auto 20px;
+    margin: 105px auto 0;
     max-width: 90%;
   }
   
