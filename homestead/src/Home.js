@@ -51,8 +51,8 @@ function Home() {
         <div className="home_midLower">
           <h2>Announcements</h2>
           <h3>Tech Team Applications Now Open!</h3>
-          <p>UCSD Circle K Technology Team is looking for applicants to improve and maintain this website. If you want experience with front-end and 
-            backend webdevelopment or experience designing possible new parts of the website, apply now!
+          <p>UCSD Circle K Technology Team is looking for applicants to improve and maintain this website. If you want hands-on experience with frontend and 
+            backend web development or experience designing new parts of the website, apply now!
           </p>
           <p><a href="https://docs.google.com/document/d/1KRAxS064lkr21rMDgMHHg2xac9DJRUPyj1gqC-i1p4E/edit?usp=sharing" target="_blank">UCSD Technology Team Application</a></p>
           <p className="home_midLowerS">All members who finish the ten week program will receive a certificate of completion.</p>
