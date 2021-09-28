@@ -20,7 +20,7 @@ function LParent() {
                 to helping universities join a global network of responsible citizens and leaders
                 with a lifelong commitment to service.</p>
                 <div className="lparent_button">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQKFtTjYOs6yOsqtHAEMbHIOt3V3NrYWLm41V6Xyk0nE7vyw/viewform"><button>Register</button></a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSehDxOf-b1KG0L86ft-1Ssgbju3t0Rl2fAceTaSZB6JyTx5NQ/viewform"><button>Register</button></a>
                     <Link to= '/about' style={{ textDecoration: 'none' }}><button>Learn More</button></Link>
                 </div>
             </div>

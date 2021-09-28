@@ -68,7 +68,7 @@ function Account() {
           <h2>Application</h2>
           <p>Follow the link below to fill out our online application. The information
           will be used to sort you into a family!</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQKFtTjYOs6yOsqtHAEMbHIOt3V3NrYWLm41V6Xyk0nE7vyw/viewform"><button className="aboutMembership_apply">Apply</button></a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSehDxOf-b1KG0L86ft-1Ssgbju3t0Rl2fAceTaSZB6JyTx5NQ/viewform"><button className="aboutMembership_apply">Apply</button></a>
         </div>
         <div className="account_lowerMembership">
           <PaymentIcon />
