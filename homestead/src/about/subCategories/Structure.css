@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .structure {
-    margin: 200px 0 0;
+    margin: 150px 0 0;
 }
 
 .structure_sub {
@@ -17,7 +18,7 @@
 .structure_text1 > h2 {
     flex: 0.2;
     margin: 10px 0;
-    font-family: var(--font-form);
+    font-family: 'Oswald', sans-serif;
     font-weight: 900;
     font-size: 36px;
     color: var(--circlek-color);
@@ -53,7 +54,7 @@
 
 .structure_district > h2 {
     flex: 0.3;
-    font-family: var(--font-form);
+    font-family: 'Oswald', sans-serif;
     font-weight: 900;
     font-size: 36px;
     color: var(--circlek-color);
@@ -77,7 +78,7 @@
 
 .structure_clubs > h2 {
     flex: 0.3;
-    font-family: var(--font-form);
+    font-family: 'Oswald', sans-serif;
     font-weight: 900;
     font-size: 36px;
     color: var(--circlek-color)
@@ -126,7 +127,7 @@
 
 @media only screen and (min-width: 1024px) {
     .structure {
-        margin: 200px 0 0;
+        margin: 150px 0 0;
     }
     
     .structure_sub {
@@ -144,8 +145,7 @@
     .structure_text1 > h2 {
         flex: 0.2;
         margin: 0;
-        font-family: var(--font-form);
-        font-weight: 900;
+        font-family: 'Oswald', sans-serif;
         font-size: 36px;
         color: var(--circlek-color);
     }
@@ -180,7 +180,7 @@
     
     .structure_district > h2 {
         flex: 0.3;
-        font-family: var(--font-form);
+        font-family: 'Oswald', sans-serif;
         font-weight: 900;
         font-size: 36px;
         color: var(--circlek-color);
@@ -204,7 +204,7 @@
     
     .structure_clubs > h2 {
         flex: 0.3;
-        font-family: var(--font-form);
+        font-family: 'Oswald', sans-serif;
         font-weight: 900;
         font-size: 36px;
         color: var(--circlek-color)

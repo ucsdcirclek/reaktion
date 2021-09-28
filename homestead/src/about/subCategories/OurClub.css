@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .ourClub {
-    margin: 200px 0 0;
+    margin: 150px 0 0;
 }
 
 .ourClub_sub {
@@ -16,8 +17,7 @@
 
 .ourClub_text1 > h2 {
     flex: 0.25;
-    font-family: var(--font-form);
-    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     color: var(--circlek-color);
     margin: 0 0 10px;
@@ -38,8 +38,7 @@
 
 .ourClub_events > h2 {
     flex: 0.25;
-    font-family: var(--font-form);
-    font-weight: 900;
+    font-family: 'Oswald', sans-serif;
     font-size: 36px;
     color: var(--circlek-color);
 }
@@ -101,7 +100,6 @@
 
 .ourClub_board > h2 {
     font-family: var(--font-form);
-    font-weight: 900;
     font-size: 32px;
     color: black;
 }
@@ -134,7 +132,7 @@
 
 @media only screen and (min-width: 1024px) {
     .ourClub {
-        margin: 200px 0 0;
+        margin: 150px 0 0;
     }
     
     .ourClub_sub {
@@ -151,8 +149,7 @@
     
     .ourClub_text1 > h2 {
         flex: 0.25;
-        font-family: var(--font-form);
-        font-weight: 900;
+        font-family: 'Oswald', sans-serif;
         font-size: 36px;
         color: var(--circlek-color);
         margin: 0;
@@ -173,8 +170,7 @@
     
     .ourClub_events > h2 {
         flex: 0.25;
-        font-family: var(--font-form);
-        font-weight: 900;
+        font-family: 'Oswald', sans-serif;
         font-size: 36px;
         color: var(--circlek-color);
     }

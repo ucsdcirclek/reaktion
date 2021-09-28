@@ -9,7 +9,7 @@
 .calendarCogs_months > h1{
   color: var(--circlek-color);
   font-family: var(--font-form);
-  font-size: 50px;
+  font-size: 25px;
   font-weight: 800;
 }
 
