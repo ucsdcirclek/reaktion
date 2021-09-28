@@ -8,6 +8,7 @@ import LParent from './login/LParent.js';
 import General from './about/subCategories/General.js';
 import OurClub from './about/subCategories/OurClub.js';
 import Structure from './about/subCategories/Structure.js';
+import Impact from './Impact.js';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -29,6 +30,7 @@ function App() {
             <Route path='/login'><LParent /></Route>
             <Route path='/resources'><Account /></Route>
             <Route path='/calendar'><Calendar /></Route>
+            <Route path='/impact'><Impact /></Route>
             <Route path='/'><Home /></Route>
           </Switch>
       </Router>
