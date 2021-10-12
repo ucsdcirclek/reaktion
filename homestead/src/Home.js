@@ -21,7 +21,7 @@ function Home() {
             <p>This is literally the best organization on campus! Circle K International is the largest service
             organization in the world, with over 13,000 members worldwide who have served a total of 199,327 hours
             of service.</p>
-            <p>Want to Join? Register an account here and fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQKFtTjYOs6yOsqtHAEMbHIOt3V3NrYWLm41V6Xyk0nE7vyw/viewform">Application!</a></p>
+            <p>Want to Join? Register an account here and fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSehDxOf-b1KG0L86ft-1Ssgbju3t0Rl2fAceTaSZB6JyTx5NQ/viewform">Application!</a></p>
             <p>Want to hang out online? Join our <a href="https://discord.gg/CMmeMUYNzK">Discord!</a></p>
             <p>Feel free to explore the website to learn more about us!</p>
           </div>
