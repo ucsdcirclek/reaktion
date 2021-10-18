@@ -31,22 +31,24 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
     return (
       <div className="entry">
         <p className="entry_number">{number - shiftIndex}</p>
-        {posts.map((post) => (
-          <EntryEvent
-            userList = {post.data.userList}
-            docID = {post.id}
-            title = {post.data.title}
-            starttime = {post.data.starttime}
-            endtime = {post.data.endtime}
-            occupancy = {post.data.occupancy}
-            location = {post.data.location}
-            description = {post.data.description}
-            list = {post.data.list}
-            category = {post.data.categories}
-            drivers = {post.data.drivers}
-            driverList = {post.data.driverList}
-          />
-        ))}
+        <div className="entry_list">
+          {posts.map((post) => (
+            <EntryEvent
+              userList = {post.data.userList}
+              docID = {post.id}
+              title = {post.data.title}
+              starttime = {post.data.starttime}
+              endtime = {post.data.endtime}
+              occupancy = {post.data.occupancy}
+              location = {post.data.location}
+              description = {post.data.description}
+              list = {post.data.list}
+              category = {post.data.categories}
+              drivers = {post.data.drivers}
+              driverList = {post.data.driverList}
+            />
+          ))}
+        </div>
       </div>
     );
   } else { return (<div></div>); }
