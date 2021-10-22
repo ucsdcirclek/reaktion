@@ -92,12 +92,11 @@ function OurClub() {
           <h3>Appointed Board</h3>
           <div className='ourClub_appointedBoard1'>
             <Board image={Sophia} name='Sophia Jordan' title='Kiwanis Family Chair' email='kfam@ucsdcki.org'/>
-            <Board image={Sarah} name='Sarah Fan' title='Media Chair' email='pr@ucsdcki.org'/>
+            <Board image={Sarah} name='Sarah Fan' title='Media Chair' email='historian@ucsdcki.org'/>
             <Board image={Amber} name='Amber Pan' title='Member Relations' email='mr@ucsdcki.org'/>
             <Board image={EmilyKw} name='Emily Kwong' title='Social' email='social@ucsdcki.org'/>
           </div>
           <div className='ourClub_appointedBoard2'>
-            <Board image={Anna} name='Anna Zhou' title='Fellowship' email='fellowship@ucsdcki.org'/>
             <Board image={Marlenne} name='Marlenne Cota' title='Service' email='service@ucsdcki.org'/>
             <Board image={Jerome} name='Jerome Lam' title='Technology' email='technology@ucsdcki.org'/>
           </div>

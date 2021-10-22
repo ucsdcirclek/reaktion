@@ -144,8 +144,8 @@
   font-size: 22px;
 }
 
-.account_bigLittle > button {
-  background-color: light-grey;
+.account_bigLittle button {
+  background-color: var(--lighter-circlek-color);
   border: none;
   font-family: var(--font-form);
   font-weight: 600;
@@ -154,6 +154,13 @@
   margin: 20px 20px 0;
   padding: 20px;
   border-radius: 20px;
+}
+
+.account_bigLittle button:hover {
+  cursor: pointer;
+  background-color: var(--light-circlek-color);
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .account_presentFamilies {
@@ -392,9 +399,9 @@
     font-weight: 500;
     font-size: 22px;
   }
-  
-  .account_bigLittle > button {
-    background-color: light-grey;
+  /*_____________*/
+  .account_bigLittle button {
+    background-color: var(--lighter-circlek-color);
     border: none;
     font-family: var(--font-form);
     font-weight: 600;
@@ -403,6 +410,13 @@
     margin: 20px 20px 0;
     padding: 20px;
     border-radius: 20px;
+  }
+
+  .account_bigLittle button:hover {
+    cursor: pointer;
+    background-color: var(--light-circlek-color);
+    color: white;
+    transition: all 0.3s ease-in-out;
   }
   
   .account_presentFamilies {

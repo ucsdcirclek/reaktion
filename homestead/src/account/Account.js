@@ -48,7 +48,7 @@ function Account() {
           responses they give on this application, a "little" (a new member, typically) is
           to be matched with a "big" (returning member), who will serve as their mentor and
           friend both inside and outside of Circle K.</p>
-          <button>Apply Here!</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3_bsRUbL9lMJQPSjT5Dq0ld20dpxQuzHExiOqe8oJ--WaUA/viewform"><button>Apply Here!</button></a>
         </div>
       </div>
       <div className="account_presentFamilies">

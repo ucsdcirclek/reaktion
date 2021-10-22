@@ -50,15 +50,17 @@ function Home() {
         </div>
         <div className="home_midLower">
           <h2>Announcements</h2>
+          <h3>UCSD CKI 2021-2022 Member Resources</h3>
+          <p>UCSD Circle K Member Resources Drive contains photos, applications, feedback forms, and GBM slides, so members can keep up to date
+            on the latest Circle K has to offer!
+          </p>
+          <p className="home_midLowerS"><a href="https://drive.google.com/drive/folders/1K-QZmqDU7gapnsOlcdHofIB7sDF7Ko8O?usp=sharing" target="_blank">Circle K Member Resources Drive</a></p>
           <h3>Tech Team Applications Now Open!</h3>
           <p>UCSD Circle K Technology Team is looking for applicants to improve and maintain this website. If you want hands-on experience with frontend and 
             backend web development or experience designing new parts of the website, apply now!
           </p>
           <p><a href="https://docs.google.com/document/d/1KRAxS064lkr21rMDgMHHg2xac9DJRUPyj1gqC-i1p4E/edit?usp=sharing" target="_blank">UCSD Technology Team Application</a></p>
-          <p className="home_midLowerS">All members who finish the ten week program will receive a certificate of completion.</p>
-          <h3>Big/Little Applications 2020-2021</h3>
-          <p>Looking for a closer relationship with someone in Circle K? Want someone to guide you through college or just somebody to hang out and get food with?</p>
-          <p>Big/Little Applications are open, and that means you have the chance to make these kinds of connections!! Whether you're a returning member hoping to be a big, or a new member who has no clue what Bigs and Littles are, the Big/Little system welcomes all members who have attended at least 2 socials and 2 services this quarter!</p>
+          <p>All members who finish the ten week program will receive a certificate of completion.</p>
         </div>
         <div className="home_lower">
           <div className="home_tenents">
