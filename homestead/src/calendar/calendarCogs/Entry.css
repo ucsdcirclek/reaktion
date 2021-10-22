@@ -1,9 +1,19 @@
+.entry {
+  margin-top: -10px;
+  height: 100px;
+}
+
+.entry_list {
+  height: 80px;
+  display: relative;
+  overflow-y: auto;
+}
+
 .entry_number {
   font-family: var(--font-form);
   font-size: 20px;
   text-align: right;
   padding-right: 5px;
-  margin-top: -55px;
   position: static;
 }
 
