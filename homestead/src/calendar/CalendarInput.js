@@ -20,7 +20,8 @@ function CalendarInput({ pid, name, priority }) {
     {value: "committee", label: "Committee"},
     {value: "kiwanis", label: "Kiwanis"},
     {value: "fundraising", label: "Fundraising"},
-    {value: "division", label: "Division/District"}
+    {value: "division", label: "Division/District"},
+    {value: "leadership", label: "Leadership"}
   ]
 
   const handleSubmit = (e) => {

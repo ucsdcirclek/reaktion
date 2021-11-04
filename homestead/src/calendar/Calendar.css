@@ -39,8 +39,12 @@
   background-color: var(--fundraising-color);
 }
 
-.calendar_categroiesDivision {
+.calendar_categoriesDivision {
   background-color: var(--division-color);
+}
+
+.calendar_categoriesLeadership {
+  background-color: var(--leadership-color);
 }
 
 .calendar_profile {
@@ -94,6 +98,10 @@
   
   .calendar_categroiesDivision {
     background-color: var(--division-color);
+  }
+
+  .calendar_categoriesLeadership {
+    background-color: var(--leadership-color);
   }
   
   .calendar_profile {
