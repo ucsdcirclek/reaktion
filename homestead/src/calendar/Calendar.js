@@ -13,7 +13,8 @@ function Calendar() {
           <h1 className="calendar_categoriesSocial">Social</h1>
           <h1 className="calendar_categoriesFundraising">Fundraising</h1>
           <h1 className="calendar_categoriesKiwanis">Kiwanis</h1>
-          <h1 className="calendar_categroiesDivision">Division/District</h1>
+          <h1 className="calendar_categoriesDivision">Division/District</h1>
+          <h1 className="calendar_categoriesLeadership">Leadership</h1>
         </div>
       <CalendarCogs/>
       <div className="calendar_profile">

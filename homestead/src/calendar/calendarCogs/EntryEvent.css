@@ -22,6 +22,10 @@
   background-color: var(--division-color);
 }
 
+.leadership>.entryEvent>button {
+  background-color: var(--leadership-color);
+}
+
 .entryEvent_button {
   border: none;
   border-radius: 7px;

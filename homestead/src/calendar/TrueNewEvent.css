@@ -209,3 +209,38 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.leadership1 {
+  background-color: var(--lightest-circlek-color);
+  border-top: 5px solid var(--leadership-color);
+  border-radius: 15px;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.leadership1 > p {
+  font-family: var(--font-form);
+  font-size: 18px;
+  margin: 2px 0;
+}
+
+.leadership1 > h1 {
+  font-family: var(--font-form);
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.leadership1 > .button_class > button {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px 0px;
+  background-color: var(--leadership-color);
+  font-family: var(--font-form);
+  font-size: 18px;
+}
+
+.leadership1 > .button_class > button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
