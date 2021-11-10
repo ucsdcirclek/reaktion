@@ -42,7 +42,7 @@ function Home() {
           <p>Families in UCSD Circle K hold socials, inter-family competitions, service events, have their own cheers, and much more! Find
             out which family you will be sorted into at this year's New Member Install. Click on the family emblems below to learn more!</p>
           <div className="home_family">
-            <Family image="https://static.wikia.nocookie.net/monstersincmovies/images/3/3b/ScottSquishySquibbles.jpg/revision/latest/smart/width/250/height/250?cb=20130517231528" title="Oozma Kappa"/>
+            <Family image="https://static.wikia.nocookie.net/monstersincmovies/images/3/3b/ScottSquishySquibbles.jpg" title="Oozma Kappa"/>
             <Family image="https://i1.sndcdn.com/artworks-ZUbcsB58ZO1dRpSq-yHQ3cg-t500x500.jpg" title="Sigma Squirtle Squad"/>
             <Family image="https://nypost.com/wp-content/uploads/sites/2/2020/01/spirited-away-ghibli.jpg?quality=80&strip=all" title="Ghibli Guild"/>
           </div>
