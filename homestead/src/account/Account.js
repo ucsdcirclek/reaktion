@@ -54,10 +54,9 @@ function Account() {
       <div className="account_presentFamilies">
         <h2>UCSD Circle K Families (2020-2021)</h2>
         <div className="home_family">
-          <Family image="https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg" title="Head in the Clouds"/>
-          <Family image="https://i.pinimg.com/originals/84/e6/18/84e61804536e07d96ba088ede497d4dc.png" title="White Lotus"/>
-          <Family image="https://c4.wallpaperflare.com/wallpaper/877/604/1005/anime-one-piece-minimalist-monkey-d-luffy-wallpaper-preview.jpg" title="Farmers over Flowers"/>
-          <Family image="https://wallpapercave.com/wp/wp5244984.jpg" title="Breath of the Sun"/>
+        <Family image="https://static.wikia.nocookie.net/monstersincmovies/images/3/3b/ScottSquishySquibbles.jpg/revision/latest/smart/width/250/height/250?cb=20130517231528" title="Oozma Kappa"/>
+            <Family image="https://i1.sndcdn.com/artworks-ZUbcsB58ZO1dRpSq-yHQ3cg-t500x500.jpg" title="Sigma Squirtle Squad"/>
+            <Family image="https://nypost.com/wp-content/uploads/sites/2/2020/01/spirited-away-ghibli.jpg?quality=80&strip=all" title="Ghibli Guild"/>
         </div>
       </div>
       <h2 className="account_title">Ready to join</h2>
