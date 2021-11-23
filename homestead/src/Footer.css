@@ -4,7 +4,7 @@
   background-image: url("./images/Black+Masthead.png");
   background-position: center;
   background-size: contain;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   height: 200px;
 }
 
@@ -18,22 +18,19 @@
   cursor: pointer;
 }
 
-.footer_copyRight {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer_copyRight > .MuiSvgIcon-root {
-  color: black;
-  width: 20px;
-}
-
-.footer_copyRight > p {
-  color: black;
-  font-size: 14px;
-}
-
 .footer_image {
   width: 90%;
+}
+
+.footerbar {
+  background-color: var(--circlek-color);
+  justify-content: center;
+  padding-top: 20px;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  background-position: left top;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

@@ -9,14 +9,12 @@ import CopyrightIcon from "@material-ui/icons/Copyright";
 function Footer() {
   return (
     <div className="footer">
-      <div className="footer_socialMedia">
-        <a href="https://www.facebook.com/groups/ucsdcki"><FacebookIcon /></a>
-        <a href="https://instagram.com/ucsdcirclek"><TwitterIcon /></a>
-        <a href="https://twitter.com/ucsdcircle"><InstagramIcon /></a>
-      </div>
-      <div className="footer_copyRight">
-        <CopyrightIcon />
-        <p>2017-2021 UC San Diego Circle K International</p>
+      <div className="footerbar">
+        <div className="footer_socialMedia">
+          <a href="https://www.facebook.com/groups/ucsdcki"><FacebookIcon /></a>
+          <a href="https://instagram.com/ucsdcirclek"><TwitterIcon /></a>
+          <a href="https://twitter.com/ucsdcircle"><InstagramIcon /></a>
+        </div>
       </div>
     </div>
   );
