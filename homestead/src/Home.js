@@ -4,51 +4,43 @@ import Family from "./Family.js";
 import Tenet from "./Tenent.js";
 import Footer from "./Footer.js";
 import "./Home.css";
+import { Link } from 'react-router-dom';
 import ReactPlayer from "react-player";
 import Service from "./images/Service.png";
 import Leadership from "./images/Leadership.png";
 import Fellowship from "./images/Fellowship.png";
-import Banner from "./images/Banner2021.png";
+import Banner from "./images/banner_2.jpg";
+import Gardener from "./images/gardener.jpg"
 
 function Home() {
   return (
     <div className="home">
-      <img src={Banner} alt="CircleK Masthead" className="home_masthead"/>
+      <div className="home_banner">
+        <img src={Banner} alt="CircleK Masthead" className="home_masthead"/>
+        <Link to= '/login' style={{ textDecoration: 'none' }}>
+          <button class="home_joinBtn">JOIN US</button>
+        </Link>
+      </div>
+      <div className="home_propagandaBubble">
+        <div className="home_leftBubble">
+          <div className="home_long_propaganda">
+            <h2>This is literally the best organization on campus!</h2>
+            <p>With over <b>13,000 members</b> worldwide who have served a total of <b>199,327 hours</b> of service, 
+              we are one of the largest service organizations in the world
+            </p>
+          </div>
+          <div className="home_short_propaganda">
+            <h2>This is literally the best organization on campus!</h2>
+            <p><b>13,000+</b> members worldwide</p>
+            <p><b>199,327</b>hours of service</p>
+          </div>
+        </div>
+        <div className="home_rightBubble">
+          <img src={Gardener} alt="CircleK Propaganda" className="home_propaganda_img"/>
+        </div>
+      </div>
       <div className="home_background">
-        <div className="home_upper">
-          <div className="home_propagandaBubble">
-            <h2>Welcome!</h2>
-            <p>This is literally the best organization on campus! Circle K International is the largest service
-            organization in the world, with over 13,000 members worldwide who have served a total of 199,327 hours
-            of service.</p>
-            <p>Want to Join? Register an account here and fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSehDxOf-b1KG0L86ft-1Ssgbju3t0Rl2fAceTaSZB6JyTx5NQ/viewform">Application!</a></p>
-            <p>Want to hang out online? Join our <a href="https://discord.gg/CMmeMUYNzK">Discord!</a></p>
-            <p>Feel free to explore the website to learn more about us!</p>
-          </div>
-          <div className="home_propagandaVideo">
-            <ReactPlayer
-              className="welcomeBar_welcomeVideo"
-              width="480"
-              height="270px"
-              controls
-              url="https://www.youtube.com/watch?v=7D_sK6KqeI4"
-            />
-          </div>
-        </div>
-        <div className="home_mid">
-          <h2>UCSD Circle K Families</h2>
-          <p>The family system is one of the most successful member-retention programs in UCSD Circle K. The family system creates opportunities for club members
-          to make new friends and memories with others.</p>
-          <p>Families in UCSD Circle K hold socials, inter-family competitions, service events, have their own cheers, and much more! Find
-            out which family you will be sorted into at this year's New Member Install. Click on the family emblems below to learn more!</p>
-          <div className="home_family">
-            <Family image="https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg" title="Head in the Clouds"/>
-            <Family image="https://i.pinimg.com/originals/84/e6/18/84e61804536e07d96ba088ede497d4dc.png" title="White Lotus"/>
-            <Family image="https://c4.wallpaperflare.com/wallpaper/877/604/1005/anime-one-piece-minimalist-monkey-d-luffy-wallpaper-preview.jpg" title="Farmers over Flowers"/>
-            <Family image="https://wallpapercave.com/wp/wp5244984.jpg" title="Breath of the Sun"/>
-          </div>
-        </div>
-        <div className="home_midLower">
+        {/* <div className="home_midLower">
           <h2>Announcements</h2>
           <h3>UCSD CKI 2021-2022 Member Resources</h3>
           <p>UCSD Circle K Member Resources Drive contains photos, applications, feedback forms, and GBM slides, so members can keep up to date
@@ -68,6 +60,16 @@ function Home() {
             <Tenet title="Service" image={Service} hours="2103"/>
             <Tenet title="Fellowship" image={Fellowship} hours="1358"/>
             <Tenet title="Leadership" image={Leadership} hours="2576"/>
+          </div>
+        </div> */}
+        <div className="home_mid">
+          <h2>Families</h2>
+          <p>Join the Circle K Families and make new friends!</p>
+          <div className="home_family">
+            <Family image="https://i.pinimg.com/originals/36/3f/63/363f63d90dbe7de5d8290b341085dff3.jpg" title="Head in the Clouds"/>
+            <Family image="https://i.pinimg.com/originals/84/e6/18/84e61804536e07d96ba088ede497d4dc.png" title="White Lotus"/>
+            <Family image="https://c4.wallpaperflare.com/wallpaper/877/604/1005/anime-one-piece-minimalist-monkey-d-luffy-wallpaper-preview.jpg" title="Farmers over Flowers"/>
+            <Family image="https://wallpapercave.com/wp/wp5244984.jpg" title="Breath of the Sun"/>
           </div>
         </div>
         <Footer />
