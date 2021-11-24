@@ -20,7 +20,7 @@ function Entry({ number, shiftIndex, daysOfMonth, month, year }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection("posts").where("date", "==", date).onSnapshot((snapshot) =>
+    db.collection("events").where("date", "==", date).onSnapshot((snapshot) =>
       setPosts(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
     );
   }, [month]);
