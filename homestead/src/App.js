@@ -19,6 +19,7 @@ function App() {
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+        @import url("https://fonts.googleapis.com/css?family=Montserrat");
       </style>
       <Router>
         <Navbar />

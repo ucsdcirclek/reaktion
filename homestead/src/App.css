@@ -1,27 +1,23 @@
 body {
-  --font-form: 'Comfortaa', cursive;
-  --font-form-minor: 'Lato', cursive;
-  --light-circlek-color: #4E6E93;
-  --leadership-color: #FF715B;
-  --service-color: #EDDE95;
-  --committee-color: #B9DBE2;
-  --social-color: #EFD8D8;
-  --fundraising-color: #DBCFEB;
-  --kiwanis-color: #B6D5C8;
-  --division-color: #DAC6AF;
-  --lighter-circlek-color: #B9DBE2;
+  --font-form: "Montserrat", sans-serif;
+  --font-form-minor: "Open Sans", cursive;
+  --light-circlek-color: #4e6e93;
+  --leadership-color: #ff715b;
+  --service-color: #edde95;
+  --committee-color: #b9dbe2;
+  --social-color: #efd8d8;
+  --fundraising-color: #dbcfeb;
+  --kiwanis-color: #b6d5c8;
+  --division-color: #dac6af;
+  --lighter-circlek-color: #b9dbe2;
   --lightest-circlek-color: hsl(190, 41%, 81%, 0.25);
 
-
-
-  --font-style: 'EB Garamond', serif;
-  --leadership-color: #FF715B;
+  --font-style: "EB Garamond", serif;
+  --leadership-color: #ff715b;
   --background-color: #fffcf9;
-  --fellowship-color: #48BF84;
-  --accent-color: #4C5454;
-  --light-accent-color: #DDE1E4;
+  --fellowship-color: #48bf84;
+  --accent-color: #4c5454;
+  --light-accent-color: #dde1e4;
   --circlek-color: #174274;
   --dark-color: #191516;
-
 }
-

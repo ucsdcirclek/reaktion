@@ -10,7 +10,7 @@ const fullPresent = fullDate.getDate();
 let shiftIndex = fullDate.getDay();
 
 /*Constants we need for the Months*/
-const fullMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const fullMonths = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 const monthIndex = fullDate.getMonth();
 
 /*Constants we need for Years*/
@@ -80,16 +80,27 @@ function CalendarCogs() {
           <ArrowRightIcon className="calendarCogs_monthIcon_right" onClick={incrementIndex}/>
         </div>
       </div>
+
+      <div className="calendar_lower">
+        <div className="calendar_categories">
+          <span class="dot" style={{ backgroundColor: "#FFF2A8" }}><h1 className="calendar_categoriesService">Service</h1></span>
+          <span class="dot" style={{ backgroundColor: "#BFDAE1" }}><h1 className="calendar_categoriesCommittee">Committee</h1></span>
+          <span class="dot" style={{ backgroundColor: "#EAD8D9" }}><h1 className="calendar_categoriesSocial">Social</h1></span>
+          <span class="dot" style={{ backgroundColor: "#DAD0E9" }}><h1 className="calendar_categoriesFundraising">Fundraising</h1></span>
+          <span class="dot" style={{ backgroundColor: "#BCD5C8" }}><h1 className="calendar_categoriesKiwanis">Kiwanis</h1></span>
+          <span class="dot" style={{ backgroundColor: "#D7C6B1" }}><h1 className="calendar_categoriesDivision">Division/District</h1></span>
+          <span class="dot" style={{ backgroundColor: "#EAA5A5" }}><h1 className="calendar_categoriesLeadership">Leadership</h1></span>
+        </div>
       <table className="calendarCogs_calendar">
         <tbody>
         <tr>
-          <th className="calendarCogs_days">Sunday</th>
-          <th className="calendarCogs_days">Monday</th>
-          <th className="calendarCogs_days">Tuesday</th>
-          <th className="calendarCogs_days">Wednesday</th>
-          <th className="calendarCogs_days">Thursday</th>
-          <th className="calendarCogs_days">Friday</th>
-          <th className="calendarCogs_days">Saturday</th>
+          <th className="calendarCogs_days">SUN</th>
+          <th className="calendarCogs_days">MON</th>
+          <th className="calendarCogs_days">TUE</th>
+          <th className="calendarCogs_days">WED</th>
+          <th className="calendarCogs_days">THU</th>
+          <th className="calendarCogs_days">FRI</th>
+          <th className="calendarCogs_days">SAT</th>
         </tr>
         <tr className="calendarCogs_week">
           <th><Entry number="1" shiftIndex={shift} daysOfMonth={daysPerMonths[index]} month={index} year={year}/></th>
@@ -147,6 +158,7 @@ function CalendarCogs() {
         </tr>
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

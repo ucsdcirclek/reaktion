@@ -1,6 +1,8 @@
 .entry {
-  margin-top: -10px;
+  margin-top: -150px;
   height: 100px;
+  max-width: inherit;
+  display: block;
 }
 
 .entry_list {
@@ -12,7 +14,7 @@
 .entry_number {
   font-family: var(--font-form);
   font-size: 20px;
-  text-align: right;
+  text-align: left;
   padding-right: 5px;
   position: static;
 }
