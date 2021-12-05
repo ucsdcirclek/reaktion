@@ -1,0 +1,28 @@
+.events {
+  color: #174274;
+  background-color: #dde1e4;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.events__squares {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  /* max-width: 85%; */
+  width: 80%;
+  height: 75%;
+  overflow-x: scroll;
+  /* white-space: nowrap; */
+  margin: 0 auto;
+}
+
+.events__squares::-webkit-scrollbar {
+  display: none;
+}
+
+.events__title {
+  text-align: center;
+  font-size: 40px;
+}
