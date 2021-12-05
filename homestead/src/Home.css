@@ -1,10 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.home_banner {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: relative;
+}
+
+
+.home_banner .home_joinBtn {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:  #006180;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+}
 .home_masthead {
   display: block;
   margin: 100px auto 0;
-  max-width: 100%;
   max-height: 600px;
+  max-width: 100%;
 
+}
+
+.home_banner .home_joinBtn:hover {
+  background-color: black;
 }
 
 .home_background {
@@ -18,10 +46,18 @@
   padding: 0 0 20px;
 }
 
+.home_propagandaBubble {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  margin: auto ;
+}
 
 .home_propagandaBubble > h2 {
   font-family: 'Oswald', sans-serif;
-  font-size: 36px;
+  font-size: 24px;
   color: var(--circlek-color);
 }
 
@@ -30,6 +66,41 @@
   font-weight: 500;
   font-size: 22px;
   margin: 20px 0;
+}
+
+.home_leftBubble {
+  display: flex;
+  justify-content: center;
+  left: 35px;
+  margin-bottom: 0px;
+  width: 300px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: var(--circlek-color);
+  position: absolute;
+  bottom: 70px;
+  z-index: 2;
+  margin: auto;
+  height: auto;
+}
+
+.home_rightBubble {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+} 
+
+.home_short_propaganda {
+  display: inline-block;
+}
+
+.home_long_propaganda {
+  display: none;
+}
+.home_propaganda_img {
+  border-radius: 20px;
 }
 
 .home_mid {
@@ -97,10 +168,35 @@
 }
 
 @media only screen and (min-width: 1024px) {
+
+  .home_banner {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: relative
+  }
+
+  .home_banner .home_joinBtn {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #006180;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+  }
+
   .home_masthead {
     display: block;
     margin: 105px auto 0;
-    max-width: 90%;
+    width: 100%;
+    max-height: 600px;
   }
   
   .home_background {
@@ -116,7 +212,20 @@
   }
   
   .home_propagandaBubble {
+    display: flex;
     flex: 0.64;
+    margin-left: 60px;
+    margin-right: 0px;
+    height: 600px;
+    position: relative;
+  }
+
+  .home_long_propaganda {
+    display: inline-block;
+  }
+
+  .home_short_propaganda {
+    display: none;
   }
   
   .home_propagandaBubble > h2 {
@@ -125,17 +234,57 @@
     color: var(--circlek-color);
   }
   
-  .home_propagandaBubble > p {
+  .home_leftBubble {
+    top: 0;
+    z-index: 0;
+    left: 0;
+    flex: 1;
+    display: block;
+    justify-content: center;
+    /* position: absolute; */
+    /* flex: 50%; */
+    width: 50%;
+    margin: auto auto auto;
+  }
+
+  .home_leftBubble > h2 {
+    font-family: 'Oswald', sans-serif;
+    float:left;
+    font-size: 36px;
+    color: var(--circlek-color);
+    z-index: 0;
+  }
+
+  .home_rightBubble {
+    display: block;
+    z-index: 0;
+    float:left;
+    width: 50%;
+    flex: 1;
+    height: auto;
+    /* flex: 50%; */
+    margin: 30px auto auto;
+  } 
+
+  .gardener {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .home_leftBubble > p {
     font-family: var(--font-form);
     font-weight: 500;
-    font-size: 22px;
+    font-size: 24px;
     margin: 20px 0;
   }
-  
-  .home_propagandaVideo {
-    flex: 0.36;
+
+  .home_propaganda_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
   }
-  
+
   .home_mid {
     margin: 30px auto 0;
     max-width: 90%;
@@ -146,6 +295,7 @@
     font-size: 36px;
     color: var(--circlek-color);
     margin: 0 0 30px;
+    text-align: center;
   }
   
   .home_mid > p {
@@ -153,6 +303,7 @@
     font-weight: 500;
     font-size: 22px;
     margin: 0 0 30px;
+    text-align: center;
   }
   
   .home_family {
