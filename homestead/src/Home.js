@@ -1,4 +1,5 @@
 import React from "react";
+import AnnouncementFeed from "./AnnouncementFeed.js";
 import FbWidget from "./FbWidget.js";
 import Family from "./Family.js";
 import Tenet from "./Tenent.js";
@@ -49,6 +50,7 @@ function Home() {
           </div>
         </div>
         <div className="home_midLower">
+          <AnnouncementFeed />
           <h2>Announcements</h2>
           <h3>UCSD CKI 2021-2022 Member Resources</h3>
           <p>UCSD Circle K Member Resources Drive contains photos, applications, feedback forms, and GBM slides, so members can keep up to date

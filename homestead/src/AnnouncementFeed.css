@@ -1,0 +1,28 @@
+.announcements__background {
+  background-color: white;
+}
+
+.announcement__top > h1 {
+  text-align: center;
+  margin-left: 30px;
+  font-family: "Merriweather", sans-serif;
+  font-size: 25px;
+  color: var(--circlek-color);
+  padding: 30px;
+}
+
+.announcement__bottom > p {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-form);
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--circlek-color);
+  padding: 20px;
+}
+
+.announcement__bottom > p > p2 {
+  color: lightblue;
+  font-size: 20px;
+  cursor: pointer;
+}
