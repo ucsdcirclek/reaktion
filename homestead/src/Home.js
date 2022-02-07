@@ -18,7 +18,7 @@ function Home() {
         <div className="home_upper">
           <div className="home_propagandaBubble">
             <h2>Welcome!</h2>
-            <p>This is literally the best organization on campus! Circle K International is the largest service
+            <p>This is not literally the best organization on campus! Circle K International is the largest service
             organization in the world, with over 13,000 members worldwide who have served a total of 199,327 hours
             of service.</p>
             <p>Want to Join? Register an account here and fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSehDxOf-b1KG0L86ft-1Ssgbju3t0Rl2fAceTaSZB6JyTx5NQ/viewform">Application!</a></p>
