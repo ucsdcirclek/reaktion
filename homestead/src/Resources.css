@@ -1,0 +1,51 @@
+body {
+    background-color: #F2F2EF;
+}
+
+.wholePart{
+    margin-top: 100px;
+}
+
+
+h1 {
+    color: #006180;
+}
+
+#leftPart{
+    margin-left: 30px;
+   font-size: 20px;
+  
+}
+
+#rightPart{
+    float: right;
+    margin-top: -266px;
+    margin-right:70px;
+    font-size: 20px;
+    width: -50px;
+    position: absolute;
+    left: 920px;
+    
+}
+.button1 {
+    background-color: #6D85C5;
+    color: #FFFF;
+    width: 95px;
+    height: 25px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.button2 {
+
+    background-color: #6D85C5;
+    color: #FFFF;
+    width: 95px;
+    height: 25px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    position: absolute;
+    top: 434px;
+}
