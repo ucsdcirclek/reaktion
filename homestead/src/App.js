@@ -27,10 +27,10 @@ function App() {
           <Switch>
             <Route path='/about/ourclub'><OurClub /></Route>
             <Route path='/about/structure'><Structure /></Route>
-            <Route path='/about/res'><Resources /></Route>
+            <Route path='/resources'><Resources /></Route>
             <Route path='/about'><General /></Route>
             <Route path='/login'><LParent /></Route>
-            <Route path='/resources'><Account /></Route>
+            {/* <Route path='/resources'><Account /></Route> */}
             <Route path='/calendar'><Calendar /></Route>
             <Route path='/'><Home /></Route>
           </Switch>
