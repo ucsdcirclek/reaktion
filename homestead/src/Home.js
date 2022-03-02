@@ -49,17 +49,31 @@ function Home() {
         </div>
         <div className="home_midLower">
           <h2>Announcements</h2>
-          <h3>UCSD CKI 2021-2022 Member Resources</h3>
-          <p>UCSD Circle K Member Resources Drive contains photos, applications, feedback forms, and GBM slides, so members can keep up to date
-            on the latest Circle K has to offer!
-          </p>
-          <p className="home_midLowerS"><a href="https://drive.google.com/drive/folders/1K-QZmqDU7gapnsOlcdHofIB7sDF7Ko8O?usp=sharing" target="_blank">Circle K Member Resources Drive</a></p>
-          <h3>Tech Team Applications Now Open!</h3>
+          <h3>Tech Team Applications Now Open! (1/7/2022)</h3>
           <p>UCSD Circle K Technology Team is looking for applicants to improve and maintain this website. If you want hands-on experience with frontend and 
             backend web development or experience designing new parts of the website, apply now!
           </p>
           <p><a href="https://docs.google.com/document/d/1KRAxS064lkr21rMDgMHHg2xac9DJRUPyj1gqC-i1p4E/edit?usp=sharing" target="_blank">UCSD Technology Team Application</a></p>
-          <p>All members who finish the ten week program will receive a certificate of completion.</p>
+          <p className="home_midLowerS">All members who finish the ten week program will receive a certificate of completion.</p>
+          <h3>Fall 2021 Recap (12/31/2021)</h3>
+          <p>Here is a recap of the absolutely amazing Fall Quarter!</p>
+          <ReactPlayer
+              className="propaganda_video"
+              width="480px"
+              height="300px"
+              controls
+              url="https://youtu.be/xPI2iWr18sU"
+            />
+          <p className="home_midLowerS"></p>
+          <h3>UCSD CKI Newsletter (11/15/2021)</h3>
+          <p className="home_midLowerS"><a href="https://www.canva.com/design/DAE5y0Bvfl8/4zdKsA-UEQMzMU_XPRLHXg/view?utm_content=DAE5y0Bvfl8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">The Triton Vol. 2</a></p>
+          <h3>UCSD CKI 2021-2022 Member Resources (10/1/2021)</h3>
+          <p>UCSD Circle K Member Resources Drive contains photos, applications, feedback forms, and GBM slides, so members can keep up to date
+            on the latest Circle K has to offer!
+          </p>
+          <p className="home_midLowerS"><a href="https://drive.google.com/drive/folders/1K-QZmqDU7gapnsOlcdHofIB7sDF7Ko8O?usp=sharing" target="_blank">Circle K Member Resources Drive</a></p>
+          <h3>UCSD CKI Newsletter (9/27/2021)</h3>
+          <p><a href="https://www.canva.com/design/DAE5xMX5yB4/gi7yORbCDrmKH43B0Ouvug/view?utm_content=DAE5xMX5yB4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">The Triton Vol. 1</a></p>
         </div>
         <div className="home_lower">
           <div className="home_tenents">
