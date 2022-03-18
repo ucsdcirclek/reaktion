@@ -1,0 +1,639 @@
+.wholePart {
+  margin-top: 100px;
+  background-color: #f2f2ef;
+}
+
+h1 {
+  color: #006180;
+}
+
+#leftPart {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+#rightPart {
+  float: right;
+  margin-top: -266px;
+  margin-right: 70px;
+  font-size: 20px;
+  width: -50px;
+  position: absolute;
+  left: 920px;
+}
+.button1 {
+  background-color: #6d85c5;
+  color: #ffff;
+  width: 95px;
+  height: 25px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.button2 {
+  background-color: #6d85c5;
+  color: #ffff;
+  width: 95px;
+  height: 25px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 14px;
+  position: absolute;
+  top: 434px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+.account {
+  margin: 110px auto 0;
+  max-width: 95%;
+}
+
+.account_para {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: inherit;
+  margin-bottom: 15px;
+  justify-content: center;
+  scroll-behavior: smooth;
+  order: 2;
+}
+
+.account > h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+.account_title {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 30px;
+  color: var(--circlek-color);
+}
+
+.account_title2 {
+  margin-left: 2vw;
+  padding: 1vw;
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-style: bold;
+  white-space: nowrap;
+  font-size: 30px;
+  width: fit-content;
+  line-height: 50%;
+  color: #226494;
+  background: rgb(255, 255, 255);
+  margin-top: -1.5vw;
+}
+
+.home_family {
+  background-color: rgba(0, 97, 128, 0.15);
+  border-radius: 15px;
+}
+.account_mid {
+  border: none;
+  margin-top: 30px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.account_upper {
+  border-radius: 20px;
+  background-color: var(--lightest-circlek-color);
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0;
+}
+
+.account_upperService {
+  padding: 30px;
+  flex: 0.5;
+  text-align: center;
+}
+
+.account_upperService > h2 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.account_upperService > p {
+  font-family: var(--font-form);
+  margin: 20px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.account_upperService button {
+  background-color: var(--lighter-circlek-color);
+  border: none;
+  font-family: var(--font-form);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(black);
+  margin: 20px 20px 0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.account_upperService button:hover {
+  cursor: pointer;
+  background-color: var(--light-circlek-color);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.account_upperGBM {
+  padding: 30px;
+  flex: 0.5;
+  text-align: center;
+}
+
+.account_upperGBM > h2 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.account_upperGBM > p {
+  font-family: var(--font-form);
+  margin: 20px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.account_upperGBM button {
+  background-color: var(--lighter-circlek-color);
+  border: none;
+  font-family: var(--font-form);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(black);
+  margin: 20px 20px 0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.account_upperGBM button:hover {
+  cursor: pointer;
+  background-color: var(--light-circlek-color);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.account_cont {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  margin: 0px 30px;
+  padding-bottom: 30px;
+}
+
+.account_text {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: inherit;
+  justify-content: space-evenly;
+}
+
+.account_families {
+  text-align: center;
+  margin: 30px 0px;
+  flex: 0.5;
+  flex-direction: column;
+  padding: 0;
+}
+
+.account_families > h2 {
+  font-family: var(--font-form);
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: left;
+}
+
+.account_families > p {
+  font-family: var(--font-form);
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+}
+
+.account_bigLittle {
+  text-align: left;
+  flex: 0.5;
+  padding: 0;
+}
+
+.account_bigLittle > h2 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 24px;
+}
+
+.account_bigLittle > p {
+  font-family: var(--font-form);
+  font-weight: 500;
+  margin: 0;
+  /* font-size: min(1.2, 18px); */
+}
+
+.account_bigLittle button {
+  background-color: var(--lighter-circlek-color);
+  border: none;
+  font-family: var(--font-form);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(black);
+  margin: 20px 20px 0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.account_bigLittle button:hover {
+  cursor: pointer;
+  background-color: var(--light-circlek-color);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.account_presentFamilies {
+  background-color: var(--lightest-circlek-color);
+  padding: 30px 30px 80px;
+  border-radius: 20px;
+}
+
+.account_presentFamilies > h2 {
+  text-align: center;
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 32px;
+  margin: 0 0 20px;
+}
+
+.account_lower {
+  background-color: var(--lightest-circlek-color);
+  padding: 30px;
+  margin: 30px 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.account > h3 {
+  font-family: var(--font-form);
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.account_lower h2 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 32px;
+  margin: 20px;
+}
+
+.account_lower p {
+  font-family: var(--font-form);
+  font-weight: 500;
+  font-size: 22px;
+  min-height: 200px;
+}
+
+.account_lower button {
+  background-color: var(--lighter-circlek-color);
+  border: none;
+  font-family: var(--font-form);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(black);
+  margin: 20px 20px 0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.account_lower button:hover {
+  cursor: pointer;
+  background-color: var(--light-circlek-color);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.account_lowerApp {
+  flex: 0.33;
+  text-align: center;
+  margin: 20px;
+}
+
+.account_lowerMembership {
+  flex: 0.34;
+  text-align: center;
+  margin: 20px;
+}
+
+.account_lowerCST {
+  flex: 0.33;
+  text-align: center;
+  margin: 20px;
+}
+
+.account_ready > h2 {
+  font-family: var(--font-form);
+  font-weight: 900;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.account_ready > p {
+  font-family: var(--font-form);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .account {
+    margin: 150px auto 0;
+    max-width: 90%;
+    min-width: 1000px;
+  }
+
+  .account_para {
+    overflow: hidden;
+    justify-content: flex-start;
+    order: 1;
+    margin-top: 0px;
+  }
+
+  .account_title {
+    font-size: min(2vw, 30px);
+  }
+
+  .account_cont {
+    width: 100%;
+  }
+  .account_text {
+    flex-direction: row;
+  }
+
+  .home_family {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .account_upper {
+    border-radius: 20px;
+    background-color: var(--lightest-circlek-color);
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 0;
+  }
+
+  .account_upperService {
+    padding: 30px;
+    flex: 0.5;
+    text-align: center;
+  }
+
+  .account_upperService > h2 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 32px;
+  }
+
+  .account_upperService > p {
+    font-family: var(--font-form);
+    margin: 20px;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .account_upperService button {
+    background-color: var(--lighter-circlek-color);
+    border: none;
+    font-family: var(--font-form);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(black);
+    margin: 20px 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .account_upperService button:hover {
+    cursor: pointer;
+    background-color: var(--light-circlek-color);
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .account_upperGBM {
+    padding: 30px;
+    flex: 0.5;
+    text-align: center;
+  }
+
+  .account_upperGBM > h2 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 32px;
+  }
+
+  .account_upperGBM > p {
+    font-family: var(--font-form);
+    margin: 20px;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .account_upperGBM button {
+    background-color: var(--lighter-circlek-color);
+    border: none;
+    font-family: var(--font-form);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(black);
+    margin: 20px 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .account_upperGBM button:hover {
+    cursor: pointer;
+    background-color: var(--light-circlek-color);
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .account_mid {
+    border: 1px solid #226494;
+    border-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+    height: 600px;
+  }
+
+  .account_families {
+    text-align: center;
+    margin: 30px 50px;
+    flex: 0.5;
+  }
+
+  .account_families > h2 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: min(1.4vw, 22px);
+  }
+
+  .account_families > p {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: min(1.2vw, 18px);
+  }
+
+  .account_bigLittle {
+    text-align: center;
+    margin: 30px 50px;
+    flex: 0.5;
+  }
+
+  .account_bigLittle > h2 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    text-align: left;
+    font-size: min(1.4vw, 22px);
+  }
+
+  .account_bigLittle > p {
+    font-family: var(--font-form);
+    font-weight: 500;
+    text-align: left;
+    font-size: min(1.2vw, 18px);
+  }
+
+  .account_bigLittle button {
+    background-color: var(--lighter-circlek-color);
+    border: none;
+    font-family: var(--font-form);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(black);
+    margin: 20px 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .account_bigLittle button:hover {
+    cursor: pointer;
+    background-color: var(--light-circlek-color);
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .account_presentFamilies {
+    background-color: var(--lightest-circlek-color);
+    padding: 30px 30px 80px;
+    border-radius: 20px;
+  }
+
+  .account_presentFamilies > h2 {
+    text-align: center;
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 32px;
+    margin: 0 0 20px;
+  }
+
+  .account_lower {
+    background-color: var(--lightest-circlek-color);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .account > h3 {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .account_lower h2 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 32px;
+    margin: 20px;
+  }
+
+  .account_lower p {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+    min-height: 200px;
+  }
+
+  .account_lower button {
+    background-color: var(--lighter-circlek-color);
+    border: none;
+    font-family: var(--font-form);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(black);
+    margin: 20px 20px 0;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .account_lower button:hover {
+    cursor: pointer;
+    background-color: var(--light-circlek-color);
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* .account_p {
+    font-size: min(1.4vw, 26px);
+  } */
+  /* 
+  .account_h2 {
+    font-size: min(1.2vw, 22px);
+  } */
+
+  .account_lowerApp {
+    flex: 0.33;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .account_lowerMembership {
+    flex: 0.34;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .account_lowerCST {
+    flex: 0.33;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .account_ready > h2 {
+    font-family: var(--font-form);
+    font-weight: 900;
+    font-size: 28px;
+    margin: 20px 0;
+  }
+
+  .account_ready > p {
+    font-family: var(--font-form);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
