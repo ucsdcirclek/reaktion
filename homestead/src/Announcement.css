@@ -1,0 +1,32 @@
+.announcement {
+  padding: 10px;
+  display: flex;
+}
+
+.announcement__top {
+  display: flex;
+  font-family: "Merriweather", sans-serif;
+  color: var(--circlek-color);
+  font-size: 20px;
+  padding: 10px;
+}
+
+.announcement__desc > p {
+  display: flex;
+  font-family: "Merriweather", sans-serif;
+  font-size: 18px;
+  color: grey;
+  padding: 10px;
+}
+
+.announcement__link > p {
+  display: flex;
+  font-family: "Merriweather", sans-serif;
+  font-size: 18px;
+  color: grey;
+  padding: 10px;
+}
+
+.announcement__link > p > a {
+  text-decoration: none;
+}

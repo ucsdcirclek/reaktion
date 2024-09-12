@@ -1,4 +1,5 @@
 import React from "react";
+import AnnouncementFeed from "./AnnouncementFeed.js";
 import FbWidget from "./FbWidget.js";
 import Family from "./Family.js";
 import Tenet from "./Tenent.js";
@@ -48,6 +49,7 @@ function Home() {
           </div>
         </div>
         <div className="home_midLower">
+          <AnnouncementFeed />
           <h2>Announcements</h2>
           <h3>Tech Team Applications Now Open! (1/7/2022)</h3>
           <p>UCSD Circle K Technology Team is looking for applicants to improve and maintain this website. If you want hands-on experience with frontend and 
